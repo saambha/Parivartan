@@ -12,9 +12,10 @@
 #define NEARRADIUS 110.0f
 #define ENDRADIUS 120.0f
 #define FARRADIUS 140.0f
-#define STARTPOINT CGPointMake(20, 444)
+#define STARTPOINT CGPointMake(200, 444)
+#define STARTPOINTFORITEM CGPointMake(200, 444)
 #define TIMEOFFSET 0.026f
-#define ROTATEANGLE 0
+#define ROTATEANGLE 5.5
 #define MENUWHOLEANGLE  M_PI*3/5
 
 static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float angle)
@@ -158,16 +159,21 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
     {
         QuadCurveMenuItem *item = [_menusArray objectAtIndex:i];
         item.tag = 1000 + i;
-        item.startPoint = STARTPOINT;
-        CGPoint endPoint = CGPointMake(STARTPOINT.x + ENDRADIUS * sinf(i * MENUWHOLEANGLE / count), STARTPOINT.y - ENDRADIUS * cosf(i * MENUWHOLEANGLE / count));
-        item.endPoint = RotateCGPointAroundCenter(endPoint, STARTPOINT, ROTATEANGLE);
-        CGPoint nearPoint = CGPointMake(STARTPOINT.x + NEARRADIUS * sinf(i * MENUWHOLEANGLE / count), STARTPOINT.y - NEARRADIUS * cosf(i * MENUWHOLEANGLE / count));
-        item.nearPoint = RotateCGPointAroundCenter(nearPoint, STARTPOINT, ROTATEANGLE);
-        CGPoint farPoint = CGPointMake(STARTPOINT.x + FARRADIUS * sinf(i * MENUWHOLEANGLE / count), STARTPOINT.y - FARRADIUS * cosf(i * MENUWHOLEANGLE / count));
-        item.farPoint = RotateCGPointAroundCenter(farPoint, STARTPOINT, ROTATEANGLE);  
+        item.startPoint = STARTPOINTFORITEM;
+        CGPoint endPoint = CGPointMake(STARTPOINTFORITEM.x + ENDRADIUS * sinf(i * MENUWHOLEANGLE / count), STARTPOINTFORITEM.y - ENDRADIUS * cosf(i * MENUWHOLEANGLE / count));
+        item.endPoint = RotateCGPointAroundCenter(endPoint, STARTPOINTFORITEM, ROTATEANGLE);
+        CGPoint nearPoint = CGPointMake(STARTPOINTFORITEM.x + NEARRADIUS * sinf(i * MENUWHOLEANGLE / count), STARTPOINTFORITEM.y - NEARRADIUS * cosf(i * MENUWHOLEANGLE / count));
+        item.nearPoint = RotateCGPointAroundCenter(nearPoint, STARTPOINTFORITEM, ROTATEANGLE);
+        CGPoint farPoint = CGPointMake(STARTPOINTFORITEM.x + FARRADIUS * sinf(i * MENUWHOLEANGLE / count), STARTPOINTFORITEM.y - FARRADIUS * cosf(i * MENUWHOLEANGLE / count));
+        item.farPoint = RotateCGPointAroundCenter(farPoint, STARTPOINTFORITEM, ROTATEANGLE);
         item.center = item.startPoint;
         item.delegate = self;
         [self addSubview:item];
+        //NSLog(@"Item Details : %@", item);
+        NSLog(@"\nendPoint : %f , %f", endPoint.x, endPoint.y);
+        NSLog(@"\nfarPoint : %f , %f", farPoint.x, farPoint.y);
+        NSLog(@"\nnearPoint : %f , %f", nearPoint.x, nearPoint.y);
+        
     }
 }
 - (BOOL)isExpanding
@@ -233,6 +239,8 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
     
     _flag ++;
     
+   NSLog(@"item %@", item);
+    
 }
 
 - (void)_close
@@ -273,6 +281,7 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
     [item.layer addAnimation:animationgroup forKey:@"Close"];
     item.center = item.startPoint;
     _flag --;
+    NSLog(@"item %@", item);
 }
 
 - (CAAnimationGroup *)_blowupAnimationAtPoint:(CGPoint)p

@@ -41,10 +41,10 @@ CGFloat kHeaderHeightBuffer = 170;
     
     UIImage *image = [UIImage imageNamed:@"HomePlaceHolder"];
     
-    UIGraphicsBeginImageContext(CGSizeMake(mainViewFrame.size.width, mainViewFrame.size.height));
-    [image drawInRect:CGRectMake(kSizeZero, kSizeZero, mainViewFrame.size.width, mainViewFrame.size.height)];
-    image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+//    UIGraphicsBeginImageContext(CGSizeMake(mainViewFrame.size.width, mainViewFrame.size.height));
+//    [image drawInRect:CGRectMake(kSizeZero, kSizeZero, mainViewFrame.size.width, mainViewFrame.size.height)];
+//    image = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
     
     imageView = [[UIImageView alloc] initWithImage:image];
     CGRect frame = imageView.frame;
@@ -101,7 +101,7 @@ CGFloat kHeaderHeightBuffer = 170;
 
     
     
-    QuadCurveMenu *menu = [[QuadCurveMenu alloc] initWithFrame:CGRectMake(10, 200, 200, 200) menus:menus];
+    QuadCurveMenu *menu = [[QuadCurveMenu alloc] initWithFrame:CGRectMake(0, 200, 200, 200) menus:menus];
     menu.delegate = self;
     [self.view addSubview:menu];
     
