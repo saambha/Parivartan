@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "QuadCurveMenu.h"
+#import  "DCFacebookManager.h"
 
-@interface DCTimeLineViewController : UIViewController <UITableViewDataSource, UITableViewDelegate,QuadCurveMenuDelegate>
+
+@interface DCTimeLineViewController : UIViewController <UITableViewDataSource, UITableViewDelegate,QuadCurveMenuDelegate , FbManagerDelegate>
 
 
 @end

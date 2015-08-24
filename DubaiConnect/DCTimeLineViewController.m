@@ -30,9 +30,19 @@ CGFloat kHeaderHeightBuffer = 170;
 
 @implementation DCTimeLineViewController
 
+-(void)fetchedFaceBookData {
+    
+    NSLog(@"Called");
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[DCFacebookManager getSharedInstance] getFBData];
+    [DCFacebookManager getSharedInstance].fbDelegate = self;
+
     
     mainViewFrame = self.view.bounds;
     tableView = [[UITableView alloc] initWithFrame:mainViewFrame];

@@ -34,6 +34,13 @@
 		6E451B2A1B88BC8C007188AB /* icon-plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E451B1C1B88BC8C007188AB /* icon-plus@2x.png */; };
 		6E451B2B1B88BC8C007188AB /* icon-star.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E451B1D1B88BC8C007188AB /* icon-star.png */; };
 		6E451B2C1B88BC8C007188AB /* icon-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E451B1E1B88BC8C007188AB /* icon-star@2x.png */; };
+		9AD5D66C1B8B5A2D00DD10DC /* DCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5D66B1B8B5A2D00DD10DC /* DCLoginViewController.m */; };
+		9AD5D6741B8B5ADB00DD10DC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD5D6721B8B5ADB00DD10DC /* FBSDKCoreKit.framework */; };
+		9AD5D6751B8B5ADB00DD10DC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD5D6731B8B5ADB00DD10DC /* FBSDKLoginKit.framework */; };
+		9AD5D6771B8B5BAC00DD10DC /* Facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AD5D6761B8B5BAC00DD10DC /* Facebook.png */; };
+		9AD5D67E1B8B5C1C00DD10DC /* DCFacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5D67A1B8B5C1C00DD10DC /* DCFacebookManager.m */; };
+		9AD5D67F1B8B5C1C00DD10DC /* ServiceCallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5D67D1B8B5C1C00DD10DC /* ServiceCallManager.m */; };
+		9AD5D6811B8B5D1500DD10DC /* DCTimeLineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD5D6801B8B5D1500DD10DC /* DCTimeLineViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +90,16 @@
 		6E451B1C1B88BC8C007188AB /* icon-plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-plus@2x.png"; sourceTree = "<group>"; };
 		6E451B1D1B88BC8C007188AB /* icon-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-star.png"; sourceTree = "<group>"; };
 		6E451B1E1B88BC8C007188AB /* icon-star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-star@2x.png"; sourceTree = "<group>"; };
+		9AD5D66A1B8B5A2D00DD10DC /* DCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCLoginViewController.h; path = DubaiConnect/DCLoginViewController.h; sourceTree = SOURCE_ROOT; };
+		9AD5D66B1B8B5A2D00DD10DC /* DCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCLoginViewController.m; path = DubaiConnect/DCLoginViewController.m; sourceTree = SOURCE_ROOT; };
+		9AD5D6721B8B5ADB00DD10DC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = DubaiConnect/FrameWorks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		9AD5D6731B8B5ADB00DD10DC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = DubaiConnect/FrameWorks/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		9AD5D6761B8B5BAC00DD10DC /* Facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Facebook.png; sourceTree = "<group>"; };
+		9AD5D6791B8B5C1C00DD10DC /* DCFacebookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFacebookManager.h; sourceTree = "<group>"; };
+		9AD5D67A1B8B5C1C00DD10DC /* DCFacebookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFacebookManager.m; sourceTree = "<group>"; };
+		9AD5D67C1B8B5C1C00DD10DC /* ServiceCallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCallManager.h; sourceTree = "<group>"; };
+		9AD5D67D1B8B5C1C00DD10DC /* ServiceCallManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCallManager.m; sourceTree = "<group>"; };
+		9AD5D6801B8B5D1500DD10DC /* DCTimeLineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCTimeLineViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +107,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AD5D6741B8B5ADB00DD10DC /* FBSDKCoreKit.framework in Frameworks */,
+				9AD5D6751B8B5ADB00DD10DC /* FBSDKLoginKit.framework in Frameworks */,
 				6E451B0F1B88B7D2007188AB /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +126,8 @@
 		6E451AC81B88AE4D007188AB = {
 			isa = PBXGroup;
 			children = (
+				9AD5D6721B8B5ADB00DD10DC /* FBSDKCoreKit.framework */,
+				9AD5D6731B8B5ADB00DD10DC /* FBSDKLoginKit.framework */,
 				6E451B0E1B88B7D2007188AB /* QuartzCore.framework */,
 				6E451AD31B88AE4D007188AB /* DubaiConnect */,
 				6E451AF01B88AE4D007188AB /* DubaiConnectTests */,
@@ -126,8 +147,12 @@
 		6E451AD31B88AE4D007188AB /* DubaiConnect */ = {
 			isa = PBXGroup;
 			children = (
-				6E451B0B1B88B7B2007188AB /* Framework */,
+				9AD5D6781B8B5C1C00DD10DC /* FBManager */,
+				9AD5D67B1B8B5C1C00DD10DC /* ServiceManager */,
+				9AD5D6711B8B5AC300DD10DC /* FrameWorks */,
 				6E451B041B88B763007188AB /* CurveMenu */,
+				9AD5D66A1B8B5A2D00DD10DC /* DCLoginViewController.h */,
+				9AD5D66B1B8B5A2D00DD10DC /* DCLoginViewController.m */,
 				6E451AFF1B88B2EB007188AB /* DCTimeLineDetailViewController.h */,
 				6E451B001B88B2EB007188AB /* DCTimeLineDetailViewController.m */,
 				6E451B011B88B2EB007188AB /* DCTimeLineDetailViewController.xib */,
@@ -135,6 +160,7 @@
 				6E451AD91B88AE4D007188AB /* AppDelegate.m */,
 				6E451ADE1B88AE4D007188AB /* DCTimeLineViewController.h */,
 				6E451ADF1B88AE4D007188AB /* DCTimeLineViewController.m */,
+				9AD5D6801B8B5D1500DD10DC /* DCTimeLineViewController.xib */,
 				6E451AE11B88AE4D007188AB /* Main.storyboard */,
 				6E451AE61B88AE4D007188AB /* LaunchScreen.xib */,
 				6E451ADB1B88AE4D007188AB /* DubaiConnect.xcdatamodeld */,
@@ -182,16 +208,10 @@
 			path = CurveMenu;
 			sourceTree = "<group>";
 		};
-		6E451B0B1B88B7B2007188AB /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Framework;
-			sourceTree = "<group>";
-		};
 		6E451B101B88BC8C007188AB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9AD5D6761B8B5BAC00DD10DC /* Facebook.png */,
 				6E451B111B88BC8C007188AB /* bg-addbutton-highlighted.png */,
 				6E451B121B88BC8C007188AB /* bg-addbutton-highlighted@2x.png */,
 				6E451B131B88BC8C007188AB /* bg-addbutton.png */,
@@ -208,6 +228,31 @@
 				6E451B1E1B88BC8C007188AB /* icon-star@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		9AD5D6711B8B5AC300DD10DC /* FrameWorks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FrameWorks;
+			sourceTree = "<group>";
+		};
+		9AD5D6781B8B5C1C00DD10DC /* FBManager */ = {
+			isa = PBXGroup;
+			children = (
+				9AD5D6791B8B5C1C00DD10DC /* DCFacebookManager.h */,
+				9AD5D67A1B8B5C1C00DD10DC /* DCFacebookManager.m */,
+			);
+			path = FBManager;
+			sourceTree = "<group>";
+		};
+		9AD5D67B1B8B5C1C00DD10DC /* ServiceManager */ = {
+			isa = PBXGroup;
+			children = (
+				9AD5D67C1B8B5C1C00DD10DC /* ServiceCallManager.h */,
+				9AD5D67D1B8B5C1C00DD10DC /* ServiceCallManager.m */,
+			);
+			path = ServiceManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,11 +337,13 @@
 			files = (
 				6E451B211B88BC8C007188AB /* bg-addbutton.png in Resources */,
 				6E451AFE1B88B024007188AB /* Images.xcassets in Resources */,
+				9AD5D6811B8B5D1500DD10DC /* DCTimeLineViewController.xib in Resources */,
 				6E451B251B88BC8C007188AB /* bg-menuitem.png in Resources */,
 				6E451B201B88BC8C007188AB /* bg-addbutton-highlighted@2x.png in Resources */,
 				6E451B291B88BC8C007188AB /* icon-plus.png in Resources */,
 				6E451B271B88BC8C007188AB /* icon-plus-highlighted.png in Resources */,
 				6E451B221B88BC8C007188AB /* bg-addbutton@2x.png in Resources */,
+				9AD5D6771B8B5BAC00DD10DC /* Facebook.png in Resources */,
 				6E451B2C1B88BC8C007188AB /* icon-star@2x.png in Resources */,
 				6E451B2A1B88BC8C007188AB /* icon-plus@2x.png in Resources */,
 				6E451B261B88BC8C007188AB /* bg-menuitem@2x.png in Resources */,
@@ -325,9 +372,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AD5D67E1B8B5C1C00DD10DC /* DCFacebookManager.m in Sources */,
 				6E451ADA1B88AE4D007188AB /* AppDelegate.m in Sources */,
+				9AD5D66C1B8B5A2D00DD10DC /* DCLoginViewController.m in Sources */,
 				6E451ADD1B88AE4D007188AB /* DubaiConnect.xcdatamodeld in Sources */,
 				6E451AE01B88AE4D007188AB /* DCTimeLineViewController.m in Sources */,
+				9AD5D67F1B8B5C1C00DD10DC /* ServiceCallManager.m in Sources */,
 				6E451B091B88B763007188AB /* QuadCurveMenu.m in Sources */,
 				6E451B021B88B2EB007188AB /* DCTimeLineDetailViewController.m in Sources */,
 				6E451B0A1B88B763007188AB /* QuadCurveMenuItem.m in Sources */,
@@ -409,7 +459,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -446,7 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -460,8 +510,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DubaiConnect/Framework",
+					/Users/Emirates/DBTrans/SampleFaceBook/SampleFaceBook,
+					"$(PROJECT_DIR)/DubaiConnect/FrameWorks",
 				);
 				INFOPLIST_FILE = DubaiConnect/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -474,8 +527,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DubaiConnect/Framework",
+					/Users/Emirates/DBTrans/SampleFaceBook/SampleFaceBook,
+					"$(PROJECT_DIR)/DubaiConnect/FrameWorks",
 				);
 				INFOPLIST_FILE = DubaiConnect/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -534,6 +590,7 @@
 				6E451AF91B88AE4D007188AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E451AFA1B88AE4D007188AB /* Build configuration list for PBXNativeTarget "DubaiConnectTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +599,7 @@
 				6E451AFC1B88AE4D007188AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
