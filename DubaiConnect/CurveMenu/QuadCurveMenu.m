@@ -170,9 +170,9 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
         item.delegate = self;
         [self addSubview:item];
         //NSLog(@"Item Details : %@", item);
-        NSLog(@"\nendPoint : %f , %f", endPoint.x, endPoint.y);
-        NSLog(@"\nfarPoint : %f , %f", farPoint.x, farPoint.y);
-        NSLog(@"\nnearPoint : %f , %f", nearPoint.x, nearPoint.y);
+//        NSLog(@"\nendPoint : %f , %f", endPoint.x, endPoint.y);
+//        NSLog(@"\nfarPoint : %f , %f", farPoint.x, farPoint.y);
+//        NSLog(@"\nnearPoint : %f , %f", nearPoint.x, nearPoint.y);
         
     }
 }
