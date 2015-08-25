@@ -12,11 +12,16 @@
 #import "DCTimeLineDetailViewController.h"
 
 
+#import "SquareCashStyleBar.h"
+#import "DCSquareCashStyleBehaviorDefiner.h"
+#import "BLKDelegateSplitter.h"
+
+#import "DCBookingViewController.h"
+
 CGFloat kSizeZero = 0;
 CGFloat kHeaderHeightBuffer = 170;
 
 @interface DCTimeLineViewController () {
-    UITableView *tableView;
     UIImageView *imageView;
     UIView *scrollPanel;
     float defaultY;
@@ -24,7 +29,12 @@ CGFloat kHeaderHeightBuffer = 170;
     CGFloat defaultHeight;
     CGFloat prePointY;
     CGRect mainViewFrame;
+
 }
+@property (nonatomic) SquareCashStyleBar *myCustomBar;
+
+@property (nonatomic) BLKDelegateSplitter *delegateSplitter;
+@property (weak, nonatomic) IBOutlet UIButton *bookNowBtn;
 
 @end
 
@@ -39,43 +49,114 @@ CGFloat kHeaderHeightBuffer = 170;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setNeedsStatusBarAppearanceUpdate];
     
+    //Setup FaceBook
     [[DCFacebookManager getSharedInstance] getFBData];
     [DCFacebookManager getSharedInstance].fbDelegate = self;
 
+    mainViewFrame = self.view.frame;
+    self.tableView.frame = mainViewFrame;
+//    
+//    defaultSize = CGSizeMake(50, 20);
+//    scrollPanel = [[UIView alloc] initWithFrame:CGRectMake(-defaultSize.width, kSizeZero, defaultSize.width, defaultSize.height)];
+//    scrollPanel.backgroundColor = [UIColor blackColor];
+//    scrollPanel.alpha = 0.45;
     
-    mainViewFrame = self.view.bounds;
-    tableView = [[UITableView alloc] initWithFrame:mainViewFrame];
-    tableView.delegate = self;
-    tableView.dataSource = self;
+    [self.view addSubview:[self setUpQuadMenu]];
+
     
-    UIImage *image = [UIImage imageNamed:@"HomePlaceHolder"];
+    // Setup the bar
+    self.myCustomBar = [[SquareCashStyleBar alloc] initWithFrame:CGRectMake(0.0, 0.0, CGRectGetWidth(self.view.frame), 100.0)];
     
-//    UIGraphicsBeginImageContext(CGSizeMake(mainViewFrame.size.width, mainViewFrame.size.height));
-//    [image drawInRect:CGRectMake(kSizeZero, kSizeZero, mainViewFrame.size.width, mainViewFrame.size.height)];
-//    image = UIGraphicsGetImageFromCurrentImageContext();
-//    UIGraphicsEndImageContext();
+    DCSquareCashStyleBehaviorDefiner *behaviorDefiner = [[DCSquareCashStyleBehaviorDefiner alloc] init];
+    [behaviorDefiner addSnappingPositionProgress:0.0 forProgressRangeStart:0.0 end:0.5];
+    [behaviorDefiner addSnappingPositionProgress:1.0 forProgressRangeStart:0.5 end:1.0];
+    behaviorDefiner.snappingEnabled = YES;
+    behaviorDefiner.elasticMaximumHeightAtTop = YES;
+    self.myCustomBar.behaviorDefiner = behaviorDefiner;
     
-    imageView = [[UIImageView alloc] initWithImage:image];
-    CGRect frame = imageView.frame;
-    frame.origin.y -= 130;
-    defaultY = frame.origin.y;
-    imageView.frame = frame;
+    // Configure a separate UITableViewDelegate and UIScrollViewDelegate (optional)
+    self.delegateSplitter = [[BLKDelegateSplitter alloc] initWithFirstDelegate:behaviorDefiner secondDelegate:self];
+    self.tableView.delegate = (id<UITableViewDelegate>)self.delegateSplitter;
     
-    tableView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:self.myCustomBar];
     
-    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(kSizeZero, kSizeZero, mainViewFrame.size.width, kHeaderHeightBuffer)];
-    header.backgroundColor = [UIColor clearColor];
+//    // Setup the table view
+//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    self.tableView.contentInset = UIEdgeInsetsMake(self.myCustomBar.maximumBarHeight, 0.0, 0.0, 0.0);
+//
     
-    tableView.tableHeaderView = header;
+    // Add close button - it's pinned to the top right corner, so it doesn't need to respond to bar height changes
+    UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    closeButton.frame = CGRectMake(self.myCustomBar.frame.size.width-40.0, 25.0, 30.0, 30.0);
+    closeButton.tintColor = [UIColor whiteColor];
+    [closeButton setImage:[UIImage imageNamed:@"BookNow"] forState:UIControlStateNormal];
+    [closeButton addTarget:self action:@selector(closeViewController:) forControlEvents:UIControlEventTouchUpInside];
+    [self.myCustomBar addSubview:closeButton];
     
-    [self.view addSubview:imageView];
-    [self.view addSubview:tableView];
+}
+
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    defaultSize = CGSizeMake(50, 20);
-    scrollPanel = [[UIView alloc] initWithFrame:CGRectMake(-defaultSize.width, kSizeZero, defaultSize.width, defaultSize.height)];
-    scrollPanel.backgroundColor = [UIColor blackColor];
-    scrollPanel.alpha = 0.45;
+    static NSString *cellIdentifier = @"Cell";
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    UIView *view = [cell viewWithTag:1];
+    UITextView *textView = (UITextView *)[cell viewWithTag:2];
+    
+    if (!view) {
+        view = [[UIView alloc] initWithFrame:CGRectMake(kSizeZero, kSizeZero, mainViewFrame.size.width, 50)];
+        view.tag = 1;
+        [cell addSubview:view];
+    }
+    
+    if (!textView) {
+        textView = [[UITextView alloc] initWithFrame:CGRectMake(kSizeZero, kSizeZero, 100, 20)];
+        textView.tag = 2;
+        [cell addSubview:textView];
+    }
+    
+    textView.text = [NSString stringWithFormat:@"%ld", (long)indexPath.section];
+    view.backgroundColor = [UIColor whiteColor];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+//    DCTimeLineDetailViewController *tlDetailVC = [[DCTimeLineDetailViewController alloc] initWithNibName:@"DCTimeLineDetailViewController" bundle:nil];
+//    [self presentViewController:tlDetailVC animated:YES completion:NULL];
+    
+}
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 100;
+}
+
+//- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
+//    return 30;
+//}
+
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 20;
+}
+
+
+#pragma Mark ScrollView Delegates
+
+
+#pragma mark -
+
+-(QuadCurveMenu*) setUpQuadMenu{
     
     
     UIImage *storyMenuItemImage = [UIImage imageNamed:@"bg-menuitem.png"];
@@ -108,121 +189,23 @@ CGFloat kHeaderHeightBuffer = 170;
                                                                    ContentImage:starImage
                                                         highlightedContentImage:nil];
     NSArray *menus = [NSArray arrayWithObjects:starMenuItem1, starMenuItem2, starMenuItem3, starMenuItem4, starMenuItem5, starMenuItem6, nil];
-
     
     
-    QuadCurveMenu *menu = [[QuadCurveMenu alloc] initWithFrame:CGRectMake(0, 200, 200, 200) menus:menus];
+    
+    QuadCurveMenu *menu = [[QuadCurveMenu alloc] initWithFrame:CGRectMake(0 , 200, 40, 40) menus:menus];
     menu.delegate = self;
-    [self.view addSubview:menu];
     
-}
-
-- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [self->tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-    }
-    
-    UIView *view = [cell viewWithTag:1];
-    UITextView *textView = (UITextView *)[cell viewWithTag:2];
-    
-    if (!view) {
-        view = [[UIView alloc] initWithFrame:CGRectMake(kSizeZero, kSizeZero, mainViewFrame.size.width, 50)];
-        view.tag = 1;
-        [cell addSubview:view];
-    }
-    
-    if (!textView) {
-        textView = [[UITextView alloc] initWithFrame:CGRectMake(kSizeZero, kSizeZero, 100, 20)];
-        textView.tag = 2;
-        [cell addSubview:textView];
-    }
-    
-    textView.text = [NSString stringWithFormat:@"%ld", (long)indexPath.section];
-    view.backgroundColor = [UIColor whiteColor];
-    
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    DCTimeLineDetailViewController *tlDetailVC = [[DCTimeLineDetailViewController alloc] initWithNibName:@"DCTimeLineDetailViewController" bundle:nil];
-    [self presentViewController:tlDetailVC animated:YES completion:NULL];
-    
-}
-
-- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
-}
-
-- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
-    return 30;
-}
-
--(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50;
-}
-
-- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 20;
+    return menu;
 }
 
 
-#pragma Mark ScrollView Delegates
-- (void) scrollViewDidScroll:(UIScrollView *)scrollView {
+- (IBAction)closeViewController:(id)sender
+{
+    DCBookingViewController *dcBookingVC = [[DCBookingViewController alloc] initWithNibName:@"DCBookingViewController" bundle:nil];
     
-    float offsetY = scrollView.contentOffset.y;
-    
-    CGRect frame = imageView.frame;
-    
-    if (offsetY < kSizeZero) {
-        frame.origin.y = defaultY - offsetY * 0.7;
-    } else {
-        frame.origin.y = defaultY - offsetY;
-    }
-    imageView.frame = frame;
-    
-    UIView *scrollIndicator = scrollView.subviews.lastObject;
-    
-    if (scrollIndicator.frame.size.height < defaultHeight) {
-        
-        CGRect panelFrame = scrollPanel.frame;
-        
-        if (scrollIndicator.frame.origin.y > kSizeZero) {
-            panelFrame.origin.y = prePointY - (defaultHeight - scrollIndicator.frame.size.height);
-        } else {
-            panelFrame.origin.y = prePointY;
-        }
-        
-        scrollPanel.frame = panelFrame;
-    } else {
-        prePointY = scrollPanel.frame.origin.y;
-    }
+    //dcBookingVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:dcBookingVC animated:YES completion:nil];
 }
-
-- (void) scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-//    if (!scrollPanel.superview) {
-//        
-//        UIView *scrollIndicator = [scrollView.subviews lastObject];
-//        defaultHeight = scrollIndicator.frame.size.height;
-//        
-//        [scrollIndicator.layer addSublayer:scrollPanel.layer];
-//        
-//        CGRect panelFrame = scrollPanel.frame;
-//        panelFrame.size = defaultSize;
-//        panelFrame.origin.y = (scrollIndicator.frame.size.height - scrollPanel.frame.size.height) / 2.0;
-//        scrollPanel.frame = panelFrame;
-//    }
-}
-
-- (void) scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
-    [scrollView removeFromSuperview];
-}
-
-#pragma mark -
 
 - (void)quadCurveMenu:(QuadCurveMenu *)menu didSelectIndex:(NSInteger)idx
 {

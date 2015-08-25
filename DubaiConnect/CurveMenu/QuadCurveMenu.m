@@ -239,7 +239,7 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
     
     _flag ++;
     
-   NSLog(@"item %@", item);
+//   NSLog(@"item %@", item);
     
 }
 
