@@ -129,6 +129,8 @@ CGFloat kHeaderHeightBuffer = 170;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    //self.tableView.sectionIndexColor = [UIColor clearColor];
+    
 //    DCTimeLineDetailViewController *tlDetailVC = [[DCTimeLineDetailViewController alloc] initWithNibName:@"DCTimeLineDetailViewController" bundle:nil];
 //    [self presentViewController:tlDetailVC animated:YES completion:NULL];
     
@@ -146,9 +148,10 @@ CGFloat kHeaderHeightBuffer = 170;
     return 50;
 }
 
-- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 20;
-}
+//- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+//    return 20;
+//}
+
 
 
 #pragma Mark ScrollView Delegates
