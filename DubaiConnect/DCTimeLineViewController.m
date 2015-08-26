@@ -204,11 +204,17 @@ CGFloat kHeaderHeightBuffer = 170;
 
 - (IBAction)closeViewController:(id)sender
 {
-    DCBookingViewController *dcBookingVC = [[DCBookingViewController alloc] initWithNibName:@"DCBookingViewController" bundle:nil];
+//    [self presentViewController:dcBookingVC animated:YES completion:nil];
     
-    //dcBookingVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    UIStoryboard *storyboard = self.storyboard;
+    DCBookingViewController *dcBookingVC = [storyboard instantiateViewControllerWithIdentifier:@"DCTimeLineDetailViewController"];
+    dcBookingVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    
+    // Configure the new view controller here.
+    
     [self presentViewController:dcBookingVC animated:YES completion:nil];
 }
+
 
 - (void)quadCurveMenu:(QuadCurveMenu *)menu didSelectIndex:(NSInteger)idx
 {

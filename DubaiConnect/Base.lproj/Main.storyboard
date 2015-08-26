@@ -124,22 +124,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQ7-99-uzE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-89" y="126"/>
+            <point key="canvasLocation" x="-89" y="101"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="sYZ-YA-Y92">
+        <!--Flight Search-->
+        <scene sceneID="G7I-Hu-acq">
             <objects>
-                <tableViewController id="bsw-lQ-LIW" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BL1-yT-cv8">
+                <tableViewController storyboardIdentifier="DCBookingViewController" id="ou8-Gu-c9H" customClass="DCSearchResultsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cpj-ZT-B2g">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="JWO-PA-7Xb">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Uea-x2-ajg">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JWO-PA-7Xb" id="Qry-EG-Jcb">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uea-x2-ajg" id="Qp2-Ns-GvG">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
@@ -148,45 +148,39 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="bsw-lQ-LIW" id="0fW-Tb-Tnc"/>
-                            <outlet property="delegate" destination="bsw-lQ-LIW" id="BzJ-mn-k7S"/>
+                            <outlet property="dataSource" destination="ou8-Gu-c9H" id="Obi-UF-LIW"/>
+                            <outlet property="delegate" destination="ou8-Gu-c9H" id="t8L-uk-fHm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="KLh-Wg-yKo"/>
+                    <navigationItem key="navigationItem" title="Flight Search" id="Qt8-pf-Dc0">
+                        <barButtonItem key="backBarButtonItem" title="Done" id="ukj-cW-kQU"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="eNo-nH-2Vz">
+                            <connections>
+                                <action selector="closeSearchResultsVCAction:" destination="ou8-Gu-c9H" id="9XW-tK-PBd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GHD-Ku-zHp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dkw-c2-Twb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1464" y="-240"/>
+            <point key="canvasLocation" x="1208" y="-728"/>
         </scene>
-        <!--Time Line Detail View Controller-->
-        <scene sceneID="r8X-Ku-HGa">
+        <!--Navigation Controller-->
+        <scene sceneID="Ajv-Zb-HKW">
             <objects>
-                <viewController id="qi5-Fg-WVS" customClass="DCTimeLineDetailViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sH1-1V-1PU"/>
-                        <viewControllerLayoutGuide type="bottom" id="gv8-tt-ezD"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="v3u-ag-EiK">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCj-2r-GXe">
-                                <rect key="frame" x="220" y="227" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="dismissViewAction:" destination="qi5-Fg-WVS" eventType="touchUpInside" id="AVA-vJ-rqk"/>
-                                </connections>
-                            </button>
-                        </subviews>
+                <navigationController storyboardIdentifier="DCTimeLineDetailViewController" id="3pS-tJ-fnV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o8g-xy-dJt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="RvA-gc-wBS"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B5W-Qj-bP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ou8-Gu-c9H" kind="relationship" relationship="rootViewController" id="L7R-3N-neZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0TS-jz-Mvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="644" y="755"/>
+            <point key="canvasLocation" x="414" y="-728"/>
         </scene>
     </scenes>
     <resources>

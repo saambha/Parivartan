@@ -40,9 +40,8 @@
 		6E4E0CF41B8B9A5E003A3F60 /* BLKFlexibleHeightBarSubviewLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0CEA1B8B9A5E003A3F60 /* BLKFlexibleHeightBarSubviewLayoutAttributes.m */; };
 		6E4E0CF61B8B9A5E003A3F60 /* DCSquareCashStyleBehaviorDefiner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0CEE1B8B9A5E003A3F60 /* DCSquareCashStyleBehaviorDefiner.m */; };
 		6E4E0CF71B8B9A5E003A3F60 /* UIView+BLKFlexibleHeightBarSubview.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0CF01B8B9A5E003A3F60 /* UIView+BLKFlexibleHeightBarSubview.m */; };
-		6E4E0CFA1B8BA33C003A3F60 /* AnoopPP.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4E0CF91B8BA33C003A3F60 /* AnoopPP.png */; };
 		6E4E0D011B8BB14A003A3F60 /* DCBookingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0CFF1B8BB14A003A3F60 /* DCBookingViewController.m */; };
-		6E4E0D021B8BB14A003A3F60 /* DCBookingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E4E0D001B8BB14A003A3F60 /* DCBookingViewController.xib */; };
+		6E4E0D101B8DC3C2003A3F60 /* DCSearchResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0D0F1B8DC3C2003A3F60 /* DCSearchResultsTableViewController.m */; };
 		9AD5D66C1B8B5A2D00DD10DC /* DCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5D66B1B8B5A2D00DD10DC /* DCLoginViewController.m */; };
 		9AD5D6741B8B5ADB00DD10DC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD5D6721B8B5ADB00DD10DC /* FBSDKCoreKit.framework */; };
 		9AD5D6751B8B5ADB00DD10DC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD5D6731B8B5ADB00DD10DC /* FBSDKLoginKit.framework */; };
@@ -111,10 +110,10 @@
 		6E4E0CEE1B8B9A5E003A3F60 /* DCSquareCashStyleBehaviorDefiner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSquareCashStyleBehaviorDefiner.m; sourceTree = "<group>"; };
 		6E4E0CEF1B8B9A5E003A3F60 /* UIView+BLKFlexibleHeightBarSubview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BLKFlexibleHeightBarSubview.h"; sourceTree = "<group>"; };
 		6E4E0CF01B8B9A5E003A3F60 /* UIView+BLKFlexibleHeightBarSubview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BLKFlexibleHeightBarSubview.m"; sourceTree = "<group>"; };
-		6E4E0CF91B8BA33C003A3F60 /* AnoopPP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AnoopPP.png; sourceTree = "<group>"; };
 		6E4E0CFE1B8BB14A003A3F60 /* DCBookingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCBookingViewController.h; path = ../DCBookingViewController.h; sourceTree = "<group>"; };
 		6E4E0CFF1B8BB14A003A3F60 /* DCBookingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCBookingViewController.m; path = ../DCBookingViewController.m; sourceTree = "<group>"; };
-		6E4E0D001B8BB14A003A3F60 /* DCBookingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DCBookingViewController.xib; path = ../DCBookingViewController.xib; sourceTree = "<group>"; };
+		6E4E0D0E1B8DC3C2003A3F60 /* DCSearchResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSearchResultsTableViewController.h; sourceTree = "<group>"; };
+		6E4E0D0F1B8DC3C2003A3F60 /* DCSearchResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSearchResultsTableViewController.m; sourceTree = "<group>"; };
 		9AD5D66A1B8B5A2D00DD10DC /* DCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCLoginViewController.h; path = DubaiConnect/DCLoginViewController.h; sourceTree = SOURCE_ROOT; };
 		9AD5D66B1B8B5A2D00DD10DC /* DCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCLoginViewController.m; path = DubaiConnect/DCLoginViewController.m; sourceTree = SOURCE_ROOT; };
 		9AD5D6721B8B5ADB00DD10DC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = DubaiConnect/FrameWorks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -178,11 +177,12 @@
 				6E451B041B88B763007188AB /* CurveMenu */,
 				6E4E0CFE1B8BB14A003A3F60 /* DCBookingViewController.h */,
 				6E4E0CFF1B8BB14A003A3F60 /* DCBookingViewController.m */,
-				6E4E0D001B8BB14A003A3F60 /* DCBookingViewController.xib */,
 				9AD5D66A1B8B5A2D00DD10DC /* DCLoginViewController.h */,
 				9AD5D66B1B8B5A2D00DD10DC /* DCLoginViewController.m */,
 				6E451AFF1B88B2EB007188AB /* DCTimeLineDetailViewController.h */,
 				6E451B001B88B2EB007188AB /* DCTimeLineDetailViewController.m */,
+				6E4E0D0E1B8DC3C2003A3F60 /* DCSearchResultsTableViewController.h */,
+				6E4E0D0F1B8DC3C2003A3F60 /* DCSearchResultsTableViewController.m */,
 				6E451ADE1B88AE4D007188AB /* DCTimeLineViewController.h */,
 				6E451ADF1B88AE4D007188AB /* DCTimeLineViewController.m */,
 				6E451AE11B88AE4D007188AB /* Main.storyboard */,
@@ -237,7 +237,6 @@
 		6E451B101B88BC8C007188AB /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				6E4E0CF91B8BA33C003A3F60 /* AnoopPP.png */,
 				9AD5D6761B8B5BAC00DD10DC /* Facebook.png */,
 				6E451B111B88BC8C007188AB /* bg-addbutton-highlighted.png */,
 				6E451B121B88BC8C007188AB /* bg-addbutton-highlighted@2x.png */,
@@ -402,11 +401,9 @@
 				6E451B2C1B88BC8C007188AB /* icon-star@2x.png in Resources */,
 				6E451B2A1B88BC8C007188AB /* icon-plus@2x.png in Resources */,
 				6E451B261B88BC8C007188AB /* bg-menuitem@2x.png in Resources */,
-				6E4E0CFA1B8BA33C003A3F60 /* AnoopPP.png in Resources */,
 				6E451AE31B88AE4D007188AB /* Main.storyboard in Resources */,
 				6E451AE81B88AE4D007188AB /* LaunchScreen.xib in Resources */,
 				6E451B281B88BC8C007188AB /* icon-plus-highlighted@2x.png in Resources */,
-				6E4E0D021B8BB14A003A3F60 /* DCBookingViewController.xib in Resources */,
 				6E451B2B1B88BC8C007188AB /* icon-star.png in Resources */,
 				6E451B231B88BC8C007188AB /* bg-menuitem-highlighted.png in Resources */,
 				6E451B241B88BC8C007188AB /* bg-menuitem-highlighted@2x.png in Resources */,
@@ -435,6 +432,7 @@
 				6E451ADD1B88AE4D007188AB /* DubaiConnect.xcdatamodeld in Sources */,
 				6E4E0CE11B8B9A23003A3F60 /* SquareCashStyleBar.m in Sources */,
 				6E451AE01B88AE4D007188AB /* DCTimeLineViewController.m in Sources */,
+				6E4E0D101B8DC3C2003A3F60 /* DCSearchResultsTableViewController.m in Sources */,
 				6E4E0CF61B8B9A5E003A3F60 /* DCSquareCashStyleBehaviorDefiner.m in Sources */,
 				9AD5D67F1B8B5C1C00DD10DC /* ServiceCallManager.m in Sources */,
 				6E4E0CF11B8B9A5E003A3F60 /* BLKDelegateSplitter.m in Sources */,
