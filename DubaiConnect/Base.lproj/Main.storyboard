@@ -40,7 +40,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btn_SkipAction:" destination="dz3-OA-LWq" eventType="touchUpInside" id="Q0h-pf-oao"/>
-                                    <segue destination="Sv2-ps-sGG" kind="show" id="aoa-LM-IqC"/>
+                                    <segue destination="hVZ-nD-cmq" kind="show" id="zlE-vV-RUD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cC-NP-XY6">
@@ -51,7 +51,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btn_FacebookAction:" destination="dz3-OA-LWq" eventType="touchUpInside" id="PFw-f1-65M"/>
-                                    <segue destination="Sv2-ps-sGG" kind="show" id="6yA-Vw-oUF"/>
+                                    <segue destination="hVZ-nD-cmq" kind="show" id="QGJ-TI-LwS"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quickly Connect" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbf-Q4-1XS">
@@ -68,7 +68,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vfa-Xy-Ewi" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-796" y="101"/>
+            <point key="canvasLocation" x="-1048" y="101"/>
+        </scene>
+        <!--Swipe Splash View Controller-->
+        <scene sceneID="HGN-TH-uZE">
+            <objects>
+                <viewController id="hVZ-nD-cmq" customClass="DCSwipeSplashViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Axn-gG-Aeq"/>
+                        <viewControllerLayoutGuide type="bottom" id="uMW-OD-OVp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dlt-bg-Hwl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwx-Zx-szI">
+                                <rect key="frame" x="282" y="136" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Sv2-ps-sGG" kind="show" id="pCk-5U-psF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zWe-Bf-nBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-252" y="101"/>
         </scene>
         <!--Time Line View Controller-->
         <scene sceneID="Nrv-ct-PjH">
@@ -124,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQ7-99-uzE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-89" y="101"/>
+            <point key="canvasLocation" x="414" y="101"/>
         </scene>
         <!--Flight Search-->
         <scene sceneID="G7I-Hu-acq">
@@ -187,6 +216,6 @@
         <image name="Facebook.png" width="200" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aoa-LM-IqC"/>
+        <segue reference="zlE-vV-RUD"/>
     </inferredMetricsTieBreakers>
 </document>

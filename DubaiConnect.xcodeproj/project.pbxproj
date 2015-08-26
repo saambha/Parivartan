@@ -42,6 +42,10 @@
 		6E4E0CF71B8B9A5E003A3F60 /* UIView+BLKFlexibleHeightBarSubview.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0CF01B8B9A5E003A3F60 /* UIView+BLKFlexibleHeightBarSubview.m */; };
 		6E4E0D011B8BB14A003A3F60 /* DCBookingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0CFF1B8BB14A003A3F60 /* DCBookingViewController.m */; };
 		6E4E0D101B8DC3C2003A3F60 /* DCSearchResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0D0F1B8DC3C2003A3F60 /* DCSearchResultsTableViewController.m */; };
+		6E4E0D211B8DF3B8003A3F60 /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0D1C1B8DF3B8003A3F60 /* DraggableView.m */; };
+		6E4E0D221B8DF3B8003A3F60 /* DraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0D1E1B8DF3B8003A3F60 /* DraggableViewBackground.m */; };
+		6E4E0D231B8DF3B8003A3F60 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0D201B8DF3B8003A3F60 /* OverlayView.m */; };
+		6E4E0D261B8E007A003A3F60 /* DCSwipeSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0D251B8E007A003A3F60 /* DCSwipeSplashViewController.m */; };
 		9AD5D66C1B8B5A2D00DD10DC /* DCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5D66B1B8B5A2D00DD10DC /* DCLoginViewController.m */; };
 		9AD5D6741B8B5ADB00DD10DC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD5D6721B8B5ADB00DD10DC /* FBSDKCoreKit.framework */; };
 		9AD5D6751B8B5ADB00DD10DC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD5D6731B8B5ADB00DD10DC /* FBSDKLoginKit.framework */; };
@@ -114,6 +118,14 @@
 		6E4E0CFF1B8BB14A003A3F60 /* DCBookingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCBookingViewController.m; path = ../DCBookingViewController.m; sourceTree = "<group>"; };
 		6E4E0D0E1B8DC3C2003A3F60 /* DCSearchResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSearchResultsTableViewController.h; sourceTree = "<group>"; };
 		6E4E0D0F1B8DC3C2003A3F60 /* DCSearchResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSearchResultsTableViewController.m; sourceTree = "<group>"; };
+		6E4E0D1B1B8DF3B8003A3F60 /* DraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableView.h; sourceTree = "<group>"; };
+		6E4E0D1C1B8DF3B8003A3F60 /* DraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableView.m; sourceTree = "<group>"; };
+		6E4E0D1D1B8DF3B8003A3F60 /* DraggableViewBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableViewBackground.h; sourceTree = "<group>"; };
+		6E4E0D1E1B8DF3B8003A3F60 /* DraggableViewBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableViewBackground.m; sourceTree = "<group>"; };
+		6E4E0D1F1B8DF3B8003A3F60 /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
+		6E4E0D201B8DF3B8003A3F60 /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
+		6E4E0D241B8E007A003A3F60 /* DCSwipeSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCSwipeSplashViewController.h; path = DubaiConnect/DCSwipeSplashViewController.h; sourceTree = SOURCE_ROOT; };
+		6E4E0D251B8E007A003A3F60 /* DCSwipeSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCSwipeSplashViewController.m; path = DubaiConnect/DCSwipeSplashViewController.m; sourceTree = SOURCE_ROOT; };
 		9AD5D66A1B8B5A2D00DD10DC /* DCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCLoginViewController.h; path = DubaiConnect/DCLoginViewController.h; sourceTree = SOURCE_ROOT; };
 		9AD5D66B1B8B5A2D00DD10DC /* DCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCLoginViewController.m; path = DubaiConnect/DCLoginViewController.m; sourceTree = SOURCE_ROOT; };
 		9AD5D6721B8B5ADB00DD10DC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = DubaiConnect/FrameWorks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -170,11 +182,14 @@
 		6E451AD31B88AE4D007188AB /* DubaiConnect */ = {
 			isa = PBXGroup;
 			children = (
+				6E4E0D111B8DF23F003A3F60 /* Swipe Control */,
 				6E4E0CDE1B8B9A23003A3F60 /* TimeLineHeader */,
 				9AD5D6781B8B5C1C00DD10DC /* FBManager */,
 				9AD5D67B1B8B5C1C00DD10DC /* ServiceManager */,
 				9AD5D6711B8B5AC300DD10DC /* FrameWorks */,
 				6E451B041B88B763007188AB /* CurveMenu */,
+				6E4E0D241B8E007A003A3F60 /* DCSwipeSplashViewController.h */,
+				6E4E0D251B8E007A003A3F60 /* DCSwipeSplashViewController.m */,
 				6E4E0CFE1B8BB14A003A3F60 /* DCBookingViewController.h */,
 				6E4E0CFF1B8BB14A003A3F60 /* DCBookingViewController.m */,
 				9AD5D66A1B8B5A2D00DD10DC /* DCLoginViewController.h */,
@@ -283,6 +298,19 @@
 				6E4E0CF01B8B9A5E003A3F60 /* UIView+BLKFlexibleHeightBarSubview.m */,
 			);
 			path = BLKFlexibleHeightBar;
+			sourceTree = "<group>";
+		};
+		6E4E0D111B8DF23F003A3F60 /* Swipe Control */ = {
+			isa = PBXGroup;
+			children = (
+				6E4E0D1B1B8DF3B8003A3F60 /* DraggableView.h */,
+				6E4E0D1C1B8DF3B8003A3F60 /* DraggableView.m */,
+				6E4E0D1D1B8DF3B8003A3F60 /* DraggableViewBackground.h */,
+				6E4E0D1E1B8DF3B8003A3F60 /* DraggableViewBackground.m */,
+				6E4E0D1F1B8DF3B8003A3F60 /* OverlayView.h */,
+				6E4E0D201B8DF3B8003A3F60 /* OverlayView.m */,
+			);
+			path = "Swipe Control";
 			sourceTree = "<group>";
 		};
 		9AD5D6711B8B5AC300DD10DC /* FrameWorks */ = {
@@ -434,16 +462,20 @@
 				6E451AE01B88AE4D007188AB /* DCTimeLineViewController.m in Sources */,
 				6E4E0D101B8DC3C2003A3F60 /* DCSearchResultsTableViewController.m in Sources */,
 				6E4E0CF61B8B9A5E003A3F60 /* DCSquareCashStyleBehaviorDefiner.m in Sources */,
+				6E4E0D221B8DF3B8003A3F60 /* DraggableViewBackground.m in Sources */,
 				9AD5D67F1B8B5C1C00DD10DC /* ServiceCallManager.m in Sources */,
 				6E4E0CF11B8B9A5E003A3F60 /* BLKDelegateSplitter.m in Sources */,
 				6E4E0CF41B8B9A5E003A3F60 /* BLKFlexibleHeightBarSubviewLayoutAttributes.m in Sources */,
 				6E451B091B88B763007188AB /* QuadCurveMenu.m in Sources */,
 				6E4E0CF71B8B9A5E003A3F60 /* UIView+BLKFlexibleHeightBarSubview.m in Sources */,
+				6E4E0D211B8DF3B8003A3F60 /* DraggableView.m in Sources */,
 				6E4E0D011B8BB14A003A3F60 /* DCBookingViewController.m in Sources */,
 				6E451B021B88B2EB007188AB /* DCTimeLineDetailViewController.m in Sources */,
+				6E4E0D261B8E007A003A3F60 /* DCSwipeSplashViewController.m in Sources */,
 				6E451B0A1B88B763007188AB /* QuadCurveMenuItem.m in Sources */,
 				6E451AD71B88AE4D007188AB /* main.m in Sources */,
 				6E4E0CF31B8B9A5E003A3F60 /* BLKFlexibleHeightBarBehaviorDefiner.m in Sources */,
+				6E4E0D231B8DF3B8003A3F60 /* OverlayView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
