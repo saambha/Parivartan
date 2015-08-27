@@ -42,8 +42,8 @@
     
     if (success) {
         
-        //DCTimeLineViewController *dctimeLineVC =[[DCTimeLineViewController alloc] initWithNibName:@"DCTimeLineViewController" bundle:nil];
-        //[self presentViewController:dctimeLineVC animated:YES completion:NULL];
+        DCTimeLineViewController *dctimeLineVC =[[DCTimeLineViewController alloc] initWithNibName:@"DCTimeLineViewController" bundle:nil];
+        [self presentViewController:dctimeLineVC animated:YES completion:NULL];
     }
 }
 

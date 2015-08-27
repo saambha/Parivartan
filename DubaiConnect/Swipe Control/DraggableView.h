@@ -41,14 +41,18 @@
 
 @end
 
+
+
 @interface DraggableView : UIView
 
 @property (weak) id <DraggableViewDelegate> delegate;
+
 
 @property (nonatomic, strong)UIPanGestureRecognizer *panGestureRecognizer;
 @property (nonatomic)CGPoint originalPoint;
 @property (nonatomic,strong)OverlayView* overlayView;
 @property (nonatomic,strong)UILabel* information; //%%% a placeholder for any card-specific information
+@property (nonatomic,strong)UIImageView* bgImageView;
 
 -(void)leftClickAction;
 -(void)rightClickAction;

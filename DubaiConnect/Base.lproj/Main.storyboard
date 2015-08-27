@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Helvetica.ttc">
@@ -86,9 +85,6 @@
                                 <rect key="frame" x="282" y="136" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="Sv2-ps-sGG" kind="show" id="pCk-5U-psF"/>
-                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -102,7 +98,7 @@
         <!--Time Line View Controller-->
         <scene sceneID="Nrv-ct-PjH">
             <objects>
-                <viewController id="Sv2-ps-sGG" customClass="DCTimeLineViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DCTimeLineViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sv2-ps-sGG" customClass="DCTimeLineViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yFE-VX-pfV"/>
                         <viewControllerLayoutGuide type="bottom" id="jvf-GW-q9L"/>
@@ -123,37 +119,23 @@
                                     <outlet property="delegate" destination="Sv2-ps-sGG" id="9Ts-Pi-hiW"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VK1-iq-uwg">
-                                <rect key="frame" x="450" y="0.0" width="110" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="110" id="6wN-hQ-T0L"/>
-                                </constraints>
-                                <state key="normal" title="Book Now"/>
-                                <connections>
-                                    <action selector="closeViewController:" destination="Sv2-ps-sGG" eventType="touchUpInside" id="PO7-x9-9AR"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VK1-iq-uwg" firstAttribute="top" secondItem="ZL6-KZ-uHt" secondAttribute="top" id="JbS-jV-Cw1"/>
                             <constraint firstItem="ZL6-KZ-uHt" firstAttribute="leading" secondItem="OmW-PG-85V" secondAttribute="leading" id="VbX-Da-Jem"/>
                             <constraint firstItem="ZL6-KZ-uHt" firstAttribute="top" secondItem="OmW-PG-85V" secondAttribute="top" id="ugW-u7-AWg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VK1-iq-uwg" secondAttribute="trailing" constant="20" id="whe-oR-NyA"/>
                             <constraint firstItem="ZL6-KZ-uHt" firstAttribute="bottom" secondItem="jvf-GW-q9L" secondAttribute="top" id="yde-6Z-h6L"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xM4-ja-Ygt"/>
                     <connections>
-                        <outlet property="bookNowBtn" destination="VK1-iq-uwg" id="FhI-GJ-Cf2"/>
                         <outlet property="tableView" destination="ZL6-KZ-uHt" id="aZ5-FP-8ch"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQ7-99-uzE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="414" y="101"/>
+            <point key="canvasLocation" x="566" y="65"/>
         </scene>
         <!--Flight Search-->
         <scene sceneID="G7I-Hu-acq">

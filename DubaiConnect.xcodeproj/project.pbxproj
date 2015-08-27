@@ -46,6 +46,9 @@
 		6E4E0D221B8DF3B8003A3F60 /* DraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0D1E1B8DF3B8003A3F60 /* DraggableViewBackground.m */; };
 		6E4E0D231B8DF3B8003A3F60 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0D201B8DF3B8003A3F60 /* OverlayView.m */; };
 		6E4E0D261B8E007A003A3F60 /* DCSwipeSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0D251B8E007A003A3F60 /* DCSwipeSplashViewController.m */; };
+		6E4E0D281B8E49F8003A3F60 /* banner_dubai_Al_Arab.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E4E0D271B8E49F8003A3F60 /* banner_dubai_Al_Arab.jpg */; };
+		6E4E0D2B1B8E4CBE003A3F60 /* Burj_Al_Arab400*300.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E4E0D291B8E4CBE003A3F60 /* Burj_Al_Arab400*300.jpg */; };
+		6E4E0D2C1B8E4CBE003A3F60 /* burj-al-arab-dubai-960x640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E4E0D2A1B8E4CBE003A3F60 /* burj-al-arab-dubai-960x640.jpg */; };
 		9AD5D66C1B8B5A2D00DD10DC /* DCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5D66B1B8B5A2D00DD10DC /* DCLoginViewController.m */; };
 		9AD5D6741B8B5ADB00DD10DC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD5D6721B8B5ADB00DD10DC /* FBSDKCoreKit.framework */; };
 		9AD5D6751B8B5ADB00DD10DC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD5D6731B8B5ADB00DD10DC /* FBSDKLoginKit.framework */; };
@@ -126,6 +129,9 @@
 		6E4E0D201B8DF3B8003A3F60 /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
 		6E4E0D241B8E007A003A3F60 /* DCSwipeSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCSwipeSplashViewController.h; path = DubaiConnect/DCSwipeSplashViewController.h; sourceTree = SOURCE_ROOT; };
 		6E4E0D251B8E007A003A3F60 /* DCSwipeSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCSwipeSplashViewController.m; path = DubaiConnect/DCSwipeSplashViewController.m; sourceTree = SOURCE_ROOT; };
+		6E4E0D271B8E49F8003A3F60 /* banner_dubai_Al_Arab.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner_dubai_Al_Arab.jpg; sourceTree = "<group>"; };
+		6E4E0D291B8E4CBE003A3F60 /* Burj_Al_Arab400*300.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Burj_Al_Arab400*300.jpg"; sourceTree = "<group>"; };
+		6E4E0D2A1B8E4CBE003A3F60 /* burj-al-arab-dubai-960x640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "burj-al-arab-dubai-960x640.jpg"; sourceTree = "<group>"; };
 		9AD5D66A1B8B5A2D00DD10DC /* DCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCLoginViewController.h; path = DubaiConnect/DCLoginViewController.h; sourceTree = SOURCE_ROOT; };
 		9AD5D66B1B8B5A2D00DD10DC /* DCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCLoginViewController.m; path = DubaiConnect/DCLoginViewController.m; sourceTree = SOURCE_ROOT; };
 		9AD5D6721B8B5ADB00DD10DC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = DubaiConnect/FrameWorks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -201,8 +207,6 @@
 				6E451ADE1B88AE4D007188AB /* DCTimeLineViewController.h */,
 				6E451ADF1B88AE4D007188AB /* DCTimeLineViewController.m */,
 				6E451AE11B88AE4D007188AB /* Main.storyboard */,
-				6E451AE61B88AE4D007188AB /* LaunchScreen.xib */,
-				6E451ADB1B88AE4D007188AB /* DubaiConnect.xcdatamodeld */,
 				6E451AD41B88AE4D007188AB /* Supporting Files */,
 			);
 			path = DubaiConnect;
@@ -211,6 +215,8 @@
 		6E451AD41B88AE4D007188AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6E451AE61B88AE4D007188AB /* LaunchScreen.xib */,
+				6E451ADB1B88AE4D007188AB /* DubaiConnect.xcdatamodeld */,
 				6E451AD81B88AE4D007188AB /* AppDelegate.h */,
 				6E451AD91B88AE4D007188AB /* AppDelegate.m */,
 				6E451B101B88BC8C007188AB /* Images */,
@@ -252,6 +258,9 @@
 		6E451B101B88BC8C007188AB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6E4E0D291B8E4CBE003A3F60 /* Burj_Al_Arab400*300.jpg */,
+				6E4E0D2A1B8E4CBE003A3F60 /* burj-al-arab-dubai-960x640.jpg */,
+				6E4E0D271B8E49F8003A3F60 /* banner_dubai_Al_Arab.jpg */,
 				9AD5D6761B8B5BAC00DD10DC /* Facebook.png */,
 				6E451B111B88BC8C007188AB /* bg-addbutton-highlighted.png */,
 				6E451B121B88BC8C007188AB /* bg-addbutton-highlighted@2x.png */,
@@ -419,11 +428,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E451B211B88BC8C007188AB /* bg-addbutton.png in Resources */,
+				6E4E0D281B8E49F8003A3F60 /* banner_dubai_Al_Arab.jpg in Resources */,
 				6E451AFE1B88B024007188AB /* Images.xcassets in Resources */,
 				6E451B251B88BC8C007188AB /* bg-menuitem.png in Resources */,
 				6E451B201B88BC8C007188AB /* bg-addbutton-highlighted@2x.png in Resources */,
 				6E451B291B88BC8C007188AB /* icon-plus.png in Resources */,
 				6E451B271B88BC8C007188AB /* icon-plus-highlighted.png in Resources */,
+				6E4E0D2B1B8E4CBE003A3F60 /* Burj_Al_Arab400*300.jpg in Resources */,
 				6E451B221B88BC8C007188AB /* bg-addbutton@2x.png in Resources */,
 				9AD5D6771B8B5BAC00DD10DC /* Facebook.png in Resources */,
 				6E451B2C1B88BC8C007188AB /* icon-star@2x.png in Resources */,
@@ -436,6 +447,7 @@
 				6E451B231B88BC8C007188AB /* bg-menuitem-highlighted.png in Resources */,
 				6E451B241B88BC8C007188AB /* bg-menuitem-highlighted@2x.png in Resources */,
 				6E451B1F1B88BC8C007188AB /* bg-addbutton-highlighted.png in Resources */,
+				6E4E0D2C1B8E4CBE003A3F60 /* burj-al-arab-dubai-960x640.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
