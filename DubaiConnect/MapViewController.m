@@ -2,7 +2,7 @@
 //  MapViewController.m
 //  DubaiConnect
 //
-//  Created by Aman on 8/26/15.
+//  Created by Aman on 8/28/15.
 //  Copyright (c) 2015 Anoop. All rights reserved.
 //
 
@@ -61,6 +61,32 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *cellIdentifier = @"Cell";
+    UITableViewCell *cell = [self.chatTableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+}
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 100;
+}
+
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
+}
+
 
 @end
 
@@ -191,7 +217,7 @@
     mapView.delegate = self;
     
     // add the mapView as a subview
-    [self.view addSubview:mapView];
+    [self.beaconMapView addSubview:mapView];
     
     // "constrain" the mapView to fill the entire screen
     [mapView setTranslatesAutoresizingMaskIntoConstraints:NO];

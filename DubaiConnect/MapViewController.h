@@ -2,14 +2,19 @@
 //  MapViewController.h
 //  DubaiConnect
 //
-//  Created by Aman on 8/26/15.
+//  Created by Aman on 8/28/15.
 //  Copyright (c) 2015 Anoop. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <LocusLabsSDK/LocusLabsSDK.h>
 
-@interface MapViewController : UIViewController @end
+@interface MapViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIView *beaconMapView;
+
+@property (weak, nonatomic) IBOutlet UITableView *chatTableView;
+
+@end
 
 @interface MapViewController(AirportDatabaseDelegate) <LLAirportDatabaseDelegate> @end
 @interface MapViewController(FloorDelegate)           <LLFloorDelegate>           @end
