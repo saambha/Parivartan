@@ -2,7 +2,7 @@
 //  DCLoginViewController.m
 //  DubaiConnect
 //
-//  Created by Krishna on 8/23/15.
+//  Created by Krishna on 8/28/15.
 //  Copyright (c) 2015 Anoop. All rights reserved.
 //
 
@@ -43,8 +43,8 @@
     
     if (success) {
         
-        //DCTimeLineViewController *dctimeLineVC =[[DCTimeLineViewController alloc] initWithNibName:@"DCTimeLineViewController" bundle:nil];
-        //[self presentViewController:dctimeLineVC animated:YES completion:NULL];
+        DCTimeLineViewController *dctimeLineVC =[[DCTimeLineViewController alloc] initWithNibName:@"DCTimeLineViewController" bundle:nil];
+        [self presentViewController:dctimeLineVC animated:YES completion:NULL];
     }
 }
 

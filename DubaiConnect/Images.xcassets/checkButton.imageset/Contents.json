@@ -2,12 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "Oval 3 + Rectangle 11.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "banner_dubai_Al_Arab.jpg",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "Oval 3 + Rectangle 11-1.png"
     },
     {
       "idiom" : "universal",

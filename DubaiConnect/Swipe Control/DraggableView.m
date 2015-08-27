@@ -25,9 +25,11 @@
 //delegate is instance of ViewController
 @synthesize delegate;
 
+
 @synthesize panGestureRecognizer;
 @synthesize information;
 @synthesize overlayView;
+@synthesize bgImageView;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -35,21 +37,28 @@
     if (self) {
         [self setupView];
         
-#warning placeholder stuff, replace with card-specific information {
-        information = [[UILabel alloc]initWithFrame:CGRectMake(0, 50, self.frame.size.width, 100)];
+//#warning placeholder stuff, replace with card-specific information {
+        information = [[UILabel alloc]initWithFrame:CGRectMake(0, self.frame.size.height - 20, self.frame.size.width, 15)];
         information.text = @"no info given";
         [information setTextAlignment:NSTextAlignmentCenter];
         information.textColor = [UIColor blackColor];
         
         self.backgroundColor = [UIColor whiteColor];
-#warning placeholder stuff, replace with card-specific information }
+        
+        bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(2, 2, self.frame.size.width-4, self.frame.size.height-4 )];
+        //bgImageView.layer.contentsRect = CGRectMake(0.0, 0.0, 0.3, 0.3);
+        bgImageView.image = [UIImage imageNamed:@"burj-al-arab-dubai-960x640.jpg"];
+        
+//#warning placeholder stuff, replace with card-specific information }
         
         
         
         panGestureRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(beingDragged:)];
         
         [self addGestureRecognizer:panGestureRecognizer];
+        [self addSubview:bgImageView];
         [self addSubview:information];
+        
         
         overlayView = [[OverlayView alloc]initWithFrame:CGRectMake(self.frame.size.width/2-100, 0, 100, 100)];
         overlayView.alpha = 0;

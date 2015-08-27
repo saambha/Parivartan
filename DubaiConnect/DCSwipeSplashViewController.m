@@ -7,7 +7,7 @@
 //
 
 #import "DCSwipeSplashViewController.h"
-#import "DraggableViewBackground.h"
+#import "DCTimeLineViewController.h"
 
 @interface DCSwipeSplashViewController ()
 
@@ -19,7 +19,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame:self.view.frame];
+    draggableBackground.delegateCardOver = self;
     [self.view addSubview:draggableBackground];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,5 +38,21 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void)didCardLoadingOver{
+    UIStoryboard *storyboard = self.storyboard;
+    DCTimeLineViewController *dcBookingVC = [storyboard instantiateViewControllerWithIdentifier:@"DCTimeLineViewController"];
+    //dcBookingVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    
+    // Configure the new view controller here.
+    dcBookingVC.delegate = self;
+    [self presentViewController:dcBookingVC animated:YES completion:nil];
+
+    
+}
+- (void)dismissViewControllerAnimated: (BOOL)flag completion: (void (^ __nullable)(void))completion {
+    
+    
+}
 
 @end

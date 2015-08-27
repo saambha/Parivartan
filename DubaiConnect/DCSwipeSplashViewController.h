@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DraggableViewBackground.h"
 
-@interface DCSwipeSplashViewController : UIViewController
+@interface DCSwipeSplashViewController : UINavigationController <DCSwipeSplashDelegate>
 
 @end
