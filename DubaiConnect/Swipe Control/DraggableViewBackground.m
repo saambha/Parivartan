@@ -46,32 +46,32 @@ static const float CARD_WIDTH = 250; //%%% width of the draggable card
 -(void)setupView
 {
 #warning customize all of this.  These are just place holders to make it look pretty
-//    self.backgroundColor = [UIColor colorWithRed:.92 green:.93 blue:.95 alpha:1]; //the gray background colors
-    self.backgroundColor = [UIColor colorWithRed:0.84 green:0.10 blue:0.12 alpha:1];
-//    menuButton = [[UIButton alloc]initWithFrame:CGRectMake(17, 34, 22, 15)];
-//    [menuButton setImage:[UIImage imageNamed:@"menuButton"] forState:UIControlStateNormal];
-//    messageButton = [[UIButton alloc]initWithFrame:CGRectMake(284, 34, 18, 18)];
-//    [messageButton setImage:[UIImage imageNamed:@"messageButton"] forState:UIControlStateNormal];
-//    xButton = [[UIButton alloc]initWithFrame:CGRectMake(60, 485, 59, 59)];
+////    self.backgroundColor = [UIColor colorWithRed:.92 green:.93 blue:.95 alpha:1]; //the gray background colors
+//    self.backgroundColor = [UIColor colorWithRed:0.84 green:0.10 blue:0.12 alpha:1];
+////    menuButton = [[UIButton alloc]initWithFrame:CGRectMake(17, 34, 22, 15)];
+////    [menuButton setImage:[UIImage imageNamed:@"menuButton"] forState:UIControlStateNormal];
+////    messageButton = [[UIButton alloc]initWithFrame:CGRectMake(284, 34, 18, 18)];
+////    [messageButton setImage:[UIImage imageNamed:@"messageButton"] forState:UIControlStateNormal];
+////    xButton = [[UIButton alloc]initWithFrame:CGRectMake(60, 485, 59, 59)];
+////    [xButton setImage:[UIImage imageNamed:@"xButton"] forState:UIControlStateNormal];
+////    [xButton addTarget:self action:@selector(swipeLeft) forControlEvents:UIControlEventTouchUpInside];
+////    checkButton = [[UIButton alloc]initWithFrame:CGRectMake(200, 485, 59, 59)];
+////    [checkButton setImage:[UIImage imageNamed:@"checkButton"] forState:UIControlStateNormal];
+////    [checkButton addTarget:self action:@selector(swipeRight) forControlEvents:UIControlEventTouchUpInside];
+////    [self addSubview:menuButton];
+////    [self addSubview:messageButton];
+//    
+//    xButton = [UIButton buttonWithType:UIButtonTypeSystem];
+//    xButton.frame = CGRectMake(50, 10, 22, 15);
 //    [xButton setImage:[UIImage imageNamed:@"xButton"] forState:UIControlStateNormal];
 //    [xButton addTarget:self action:@selector(swipeLeft) forControlEvents:UIControlEventTouchUpInside];
-//    checkButton = [[UIButton alloc]initWithFrame:CGRectMake(200, 485, 59, 59)];
-//    [checkButton setImage:[UIImage imageNamed:@"checkButton"] forState:UIControlStateNormal];
-//    [checkButton addTarget:self action:@selector(swipeRight) forControlEvents:UIControlEventTouchUpInside];
-//    [self addSubview:menuButton];
-//    [self addSubview:messageButton];
-    
-    xButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    xButton.frame = CGRectMake(50, 10, 22, 15);
-    [xButton setImage:[UIImage imageNamed:@"xButton"] forState:UIControlStateNormal];
-    [xButton addTarget:self action:@selector(swipeLeft) forControlEvents:UIControlEventTouchUpInside];
-//    checkButton = [[UIButton alloc]initWithFrame:CGRectMake(200, 485, 59, 59)];
-//    [checkButton setImage:[UIImage imageNamed:@"checkButton"] forState:UIControlStateNormal];
-//    [checkButton addTarget:self action:@selector(swipeRight) forControlEvents:UIControlEventTouchUpInside];
-
-    
-    [self addSubview:xButton];
-    [self addSubview:checkButton];
+////    checkButton = [[UIButton alloc]initWithFrame:CGRectMake(200, 485, 59, 59)];
+////    [checkButton setImage:[UIImage imageNamed:@"checkButton"] forState:UIControlStateNormal];
+////    [checkButton addTarget:self action:@selector(swipeRight) forControlEvents:UIControlEventTouchUpInside];
+//
+//    
+//    [self addSubview:xButton];
+//    [self addSubview:checkButton];
     
 }
 

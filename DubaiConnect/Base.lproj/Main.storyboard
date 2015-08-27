@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sDc-CZ-JrC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="15A263e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dz3-OA-LWq">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Helvetica.ttc">
@@ -40,7 +39,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btn_SkipAction:" destination="dz3-OA-LWq" eventType="touchUpInside" id="Q0h-pf-oao"/>
-                                    <segue destination="hVZ-nD-cmq" kind="show" id="zlE-vV-RUD"/>
+                                    <segue destination="XtK-Vn-3Ob" kind="show" id="TK5-dB-Sux"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cC-NP-XY6">
@@ -51,7 +50,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btn_FacebookAction:" destination="dz3-OA-LWq" eventType="touchUpInside" id="PFw-f1-65M"/>
-                                    <segue destination="hVZ-nD-cmq" kind="show" id="QGJ-TI-LwS"/>
+                                    <segue destination="XtK-Vn-3Ob" kind="show" id="Htn-r0-1H9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quickly Connect" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbf-Q4-1XS">
@@ -71,38 +70,46 @@
             <point key="canvasLocation" x="-1048" y="101"/>
         </scene>
         <!--Swipe Splash View Controller-->
-        <scene sceneID="HGN-TH-uZE">
+        <scene sceneID="zTj-fE-DLm">
             <objects>
-                <viewController id="hVZ-nD-cmq" customClass="DCSwipeSplashViewController" sceneMemberID="viewController">
+                <navigationController id="XtK-Vn-3Ob" customClass="DCSwipeSplashViewController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BbG-g0-mDM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Bgw-FQ-tHW" kind="relationship" relationship="rootViewController" id="pnf-Ay-7QV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kmq-Qq-TAA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-301" y="96"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="G8r-P1-Xih">
+            <objects>
+                <viewController id="Bgw-FQ-tHW" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Axn-gG-Aeq"/>
-                        <viewControllerLayoutGuide type="bottom" id="uMW-OD-OVp"/>
+                        <viewControllerLayoutGuide type="top" id="fXt-5T-jkT"/>
+                        <viewControllerLayoutGuide type="bottom" id="GoL-Nl-g0m"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Dlt-bg-Hwl">
+                    <view key="view" contentMode="scaleToFill" id="uXc-Ja-TRQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwx-Zx-szI">
-                                <rect key="frame" x="282" y="136" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="Sv2-ps-sGG" kind="show" id="pCk-5U-psF"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jhI-IA-mAG"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zWe-Bf-nBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eUs-wg-aFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-252" y="101"/>
+            <point key="canvasLocation" x="338" y="96"/>
         </scene>
         <!--Time Line View Controller-->
         <scene sceneID="Nrv-ct-PjH">
             <objects>
-                <viewController id="Sv2-ps-sGG" customClass="DCTimeLineViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DCTimeLineViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sv2-ps-sGG" customClass="DCTimeLineViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yFE-VX-pfV"/>
                         <viewControllerLayoutGuide type="bottom" id="jvf-GW-q9L"/>
@@ -123,37 +130,23 @@
                                     <outlet property="delegate" destination="Sv2-ps-sGG" id="9Ts-Pi-hiW"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VK1-iq-uwg">
-                                <rect key="frame" x="450" y="0.0" width="110" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="110" id="6wN-hQ-T0L"/>
-                                </constraints>
-                                <state key="normal" title="Book Now"/>
-                                <connections>
-                                    <action selector="closeViewController:" destination="Sv2-ps-sGG" eventType="touchUpInside" id="PO7-x9-9AR"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VK1-iq-uwg" firstAttribute="top" secondItem="ZL6-KZ-uHt" secondAttribute="top" id="JbS-jV-Cw1"/>
                             <constraint firstItem="ZL6-KZ-uHt" firstAttribute="leading" secondItem="OmW-PG-85V" secondAttribute="leading" id="VbX-Da-Jem"/>
                             <constraint firstItem="ZL6-KZ-uHt" firstAttribute="top" secondItem="OmW-PG-85V" secondAttribute="top" id="ugW-u7-AWg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VK1-iq-uwg" secondAttribute="trailing" constant="20" id="whe-oR-NyA"/>
                             <constraint firstItem="ZL6-KZ-uHt" firstAttribute="bottom" secondItem="jvf-GW-q9L" secondAttribute="top" id="yde-6Z-h6L"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xM4-ja-Ygt"/>
                     <connections>
-                        <outlet property="bookNowBtn" destination="VK1-iq-uwg" id="FhI-GJ-Cf2"/>
                         <outlet property="tableView" destination="ZL6-KZ-uHt" id="aZ5-FP-8ch"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQ7-99-uzE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="414" y="101"/>
+            <point key="canvasLocation" x="1102" y="64"/>
         </scene>
         <!--Flight Search-->
         <scene sceneID="G7I-Hu-acq">
@@ -208,6 +201,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="T1h-X1-Xcf">
                                 <rect key="frame" x="0.0" y="420" width="375" height="280"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="sDc-CZ-JrC" id="5tY-2A-38a"/>
@@ -216,9 +210,11 @@
                             </tableView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A4c-PF-MKI" userLabel="beaconMapView">
                                 <rect key="frame" x="0.0" y="20" width="375" height="400"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
@@ -228,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yw6-WL-iYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1224" y="78"/>
+            <point key="canvasLocation" x="1892" y="64"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ajv-Zb-HKW">
@@ -252,6 +248,6 @@
         <image name="Facebook.png" width="200" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zlE-vV-RUD"/>
+        <segue reference="TK5-dB-Sux"/>
     </inferredMetricsTieBreakers>
 </document>
