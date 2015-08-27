@@ -226,6 +226,7 @@ CGFloat kHeaderHeightBuffer = 170;
 {
     NSLog(@"Select the index : %ld",(long)idx);
 
+
     if (idx == 0) {
         MapViewController *map = [[MapViewController alloc]init];
         [self presentViewController:map animated:YES completion:NULL];
@@ -249,7 +250,9 @@ CGFloat kHeaderHeightBuffer = 170;
             //[((DCSwipeSplashViewController*)self.delegate).view removeFromSuperview];
         
             break;
+
         }
+
     }
 }
 @end
