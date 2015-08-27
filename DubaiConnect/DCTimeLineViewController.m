@@ -10,7 +10,7 @@
 #import "DCTimeLineViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "DCTimeLineDetailViewController.h"
-
+#import "MapViewController.h"
 
 #import "SquareCashStyleBar.h"
 #import "DCSquareCashStyleBehaviorDefiner.h"
@@ -219,5 +219,10 @@ CGFloat kHeaderHeightBuffer = 170;
 - (void)quadCurveMenu:(QuadCurveMenu *)menu didSelectIndex:(NSInteger)idx
 {
     NSLog(@"Select the index : %ld",(long)idx);
+    if (idx == 0) {
+        MapViewController *map = [[MapViewController alloc]init];
+        [self presentViewController:map animated:YES completion:NULL];
+
+    }
 }
 @end

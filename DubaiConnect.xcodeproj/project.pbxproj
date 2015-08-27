@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07DBA5481B8E37D80089972F /* LocusLabsSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07DBA5461B8E37D80089972F /* LocusLabsSDK.bundle */; };
+		07DBA5491B8E37D80089972F /* LocusLabsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DBA5471B8E37D80089972F /* LocusLabsSDK.framework */; };
+		07DBA54C1B8E39BF0089972F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DBA54B1B8E39BF0089972F /* MapViewController.m */; };
 		6E451AD71B88AE4D007188AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E451AD61B88AE4D007188AB /* main.m */; };
 		6E451ADA1B88AE4D007188AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E451AD91B88AE4D007188AB /* AppDelegate.m */; };
 		6E451ADD1B88AE4D007188AB /* DubaiConnect.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E451ADB1B88AE4D007188AB /* DubaiConnect.xcdatamodeld */; };
@@ -65,6 +68,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07DBA5461B8E37D80089972F /* LocusLabsSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LocusLabsSDK.bundle; sourceTree = "<group>"; };
+		07DBA5471B8E37D80089972F /* LocusLabsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LocusLabsSDK.framework; sourceTree = "<group>"; };
+		07DBA54A1B8E39BF0089972F /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		07DBA54B1B8E39BF0089972F /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		6E451AD11B88AE4D007188AB /* DubaiConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DubaiConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E451AD51B88AE4D007188AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E451AD61B88AE4D007188AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -142,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07DBA5491B8E37D80089972F /* LocusLabsSDK.framework in Frameworks */,
 				9AD5D6741B8B5ADB00DD10DC /* FBSDKCoreKit.framework in Frameworks */,
 				9AD5D6751B8B5ADB00DD10DC /* FBSDKLoginKit.framework in Frameworks */,
 				6E451B0F1B88B7D2007188AB /* QuartzCore.framework in Frameworks */,
@@ -158,6 +166,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07DBA5451B8E33D60089972F /* BeaconMap */ = {
+			isa = PBXGroup;
+			children = (
+				07DBA54A1B8E39BF0089972F /* MapViewController.h */,
+				07DBA54B1B8E39BF0089972F /* MapViewController.m */,
+			);
+			name = BeaconMap;
+			sourceTree = "<group>";
+		};
 		6E451AC81B88AE4D007188AB = {
 			isa = PBXGroup;
 			children = (
@@ -182,7 +199,11 @@
 		6E451AD31B88AE4D007188AB /* DubaiConnect */ = {
 			isa = PBXGroup;
 			children = (
+
 				6E4E0D111B8DF23F003A3F60 /* Swipe Control */,
+
+				07DBA5451B8E33D60089972F /* BeaconMap */,
+
 				6E4E0CDE1B8B9A23003A3F60 /* TimeLineHeader */,
 				9AD5D6781B8B5C1C00DD10DC /* FBManager */,
 				9AD5D67B1B8B5C1C00DD10DC /* ServiceManager */,
@@ -316,6 +337,8 @@
 		9AD5D6711B8B5AC300DD10DC /* FrameWorks */ = {
 			isa = PBXGroup;
 			children = (
+				07DBA5461B8E37D80089972F /* LocusLabsSDK.bundle */,
+				07DBA5471B8E37D80089972F /* LocusLabsSDK.framework */,
 			);
 			path = FrameWorks;
 			sourceTree = "<group>";
@@ -421,6 +444,7 @@
 				6E451B211B88BC8C007188AB /* bg-addbutton.png in Resources */,
 				6E451AFE1B88B024007188AB /* Images.xcassets in Resources */,
 				6E451B251B88BC8C007188AB /* bg-menuitem.png in Resources */,
+				07DBA5481B8E37D80089972F /* LocusLabsSDK.bundle in Resources */,
 				6E451B201B88BC8C007188AB /* bg-addbutton-highlighted@2x.png in Resources */,
 				6E451B291B88BC8C007188AB /* icon-plus.png in Resources */,
 				6E451B271B88BC8C007188AB /* icon-plus-highlighted.png in Resources */,
@@ -473,6 +497,7 @@
 				6E451B021B88B2EB007188AB /* DCTimeLineDetailViewController.m in Sources */,
 				6E4E0D261B8E007A003A3F60 /* DCSwipeSplashViewController.m in Sources */,
 				6E451B0A1B88B763007188AB /* QuadCurveMenuItem.m in Sources */,
+				07DBA54C1B8E39BF0089972F /* MapViewController.m in Sources */,
 				6E451AD71B88AE4D007188AB /* main.m in Sources */,
 				6E4E0CF31B8B9A5E003A3F60 /* BLKFlexibleHeightBarBehaviorDefiner.m in Sources */,
 				6E4E0D231B8DF3B8003A3F60 /* OverlayView.m in Sources */,

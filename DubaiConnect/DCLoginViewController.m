@@ -11,6 +11,7 @@
 
 #import "DCLoginViewController.h"
 #import "DCTimeLineViewController.h"
+#import "MapViewController.h"
 
 @interface DCLoginViewController ()
 
@@ -48,7 +49,6 @@
 }
 
 -(IBAction)btn_SkipAction:(id)sender {
-    
     //DCTimeLineViewController *dctimeLineVC =[[DCTimeLineViewController alloc] initWithNibName:@"DCTimeLineViewController" bundle:nil];
     //[self presentViewController:dctimeLineVC animated:YES completion:NULL];
 }
