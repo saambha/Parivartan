@@ -2,7 +2,7 @@
 //  DCTimeLineViewController.m
 //  DubaiConnect
 //
-//  Created by Anoop on 8/22/15.
+//  Created by Anoop on 8/28/15.
 //  Copyright (c) 2015 Anoop. All rights reserved.
 //
 
@@ -32,7 +32,6 @@ CGFloat kHeaderHeightBuffer = 170;
 
 }
 @property (nonatomic) SquareCashStyleBar *myCustomBar;
-
 @property (nonatomic) BLKDelegateSplitter *delegateSplitter;
 @property (weak, nonatomic) IBOutlet UIButton *bookNowBtn;
 
@@ -95,6 +94,13 @@ CGFloat kHeaderHeightBuffer = 170;
     [closeButton addTarget:self action:@selector(closeViewController:) forControlEvents:UIControlEventTouchUpInside];
     [self.myCustomBar addSubview:closeButton];
     
+}
+
+-(void) viewDidAppear:(BOOL)animated{
+    
+    if([self.delegate isKindOfClass:[DCSwipeSplashViewController class]]){
+        [((DCSwipeSplashViewController*)self.delegate).view setHidden:NO];
+    }
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -219,5 +225,26 @@ CGFloat kHeaderHeightBuffer = 170;
 - (void)quadCurveMenu:(QuadCurveMenu *)menu didSelectIndex:(NSInteger)idx
 {
     NSLog(@"Select the index : %ld",(long)idx);
+    
+    switch (idx) {
+        case 0:
+            
+            break;
+        case 1:
+            
+            break;
+        case 2:
+            
+            break;
+        case 3:
+            
+            break;
+        default:
+            
+            [self dismissViewControllerAnimated:YES completion:NULL];
+            //[((DCSwipeSplashViewController*)self.delegate).view removeFromSuperview];
+        
+            break;
+    }
 }
 @end

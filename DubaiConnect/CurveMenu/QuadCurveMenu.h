@@ -2,7 +2,7 @@
 //  QuadCurveMenu.h
 //  AwesomeMenu
 //
-//  Created by Levey on 11/30/11.
+//  Created by Levey on 8/28/15.
 //  Copyright (c) 2011 lunaapp.com. All rights reserved.
 //
 

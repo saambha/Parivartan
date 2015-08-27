@@ -21,6 +21,7 @@
     DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame:self.view.frame];
     draggableBackground.delegateCardOver = self;
     [self.view addSubview:draggableBackground];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,9 +45,13 @@
     //dcBookingVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     
     // Configure the new view controller here.
-    
+    dcBookingVC.delegate = self;
     [self presentViewController:dcBookingVC animated:YES completion:nil];
 
+    
+}
+- (void)dismissViewControllerAnimated: (BOOL)flag completion: (void (^ __nullable)(void))completion {
+    
     
 }
 
