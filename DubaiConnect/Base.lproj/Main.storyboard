@@ -6,8 +6,8 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
+        <mutableArray key="Emirates SM.otf">
+            <string>EmiratesSM</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -35,8 +35,9 @@
                                     <constraint firstAttribute="width" constant="46" id="ojE-8c-xii"/>
                                     <constraint firstAttribute="height" constant="30" id="shT-0q-t0t"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="EmiratesSM" family="Emirates SM" pointSize="19"/>
                                 <state key="normal" title="Skip">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -64,8 +65,10 @@
                         <constraints>
                             <constraint firstItem="YV1-Av-OKB" firstAttribute="bottom" secondItem="kLh-m6-tNZ" secondAttribute="top" id="1LL-Cg-afZ"/>
                             <constraint firstItem="5cC-NP-XY6" firstAttribute="top" secondItem="lQD-4x-DCF" secondAttribute="bottom" constant="418" id="4Pt-kL-t2R"/>
+                            <constraint firstItem="axr-do-juM" firstAttribute="top" secondItem="5cC-NP-XY6" secondAttribute="bottom" constant="39" id="4ca-qw-eeI"/>
                             <constraint firstAttribute="trailing" secondItem="YV1-Av-OKB" secondAttribute="trailing" id="AgT-XC-2vt"/>
                             <constraint firstItem="axr-do-juM" firstAttribute="centerX" secondItem="5cC-NP-XY6" secondAttribute="centerX" id="LsY-kD-WVx"/>
+                            <constraint firstItem="5cC-NP-XY6" firstAttribute="top" secondItem="YV1-Av-OKB" secondAttribute="bottom" constant="-162" id="Pas-iT-KcI"/>
                             <constraint firstItem="axr-do-juM" firstAttribute="top" secondItem="5cC-NP-XY6" secondAttribute="bottom" constant="39" id="QPV-8e-0ll"/>
                             <constraint firstItem="YV1-Av-OKB" firstAttribute="leading" secondItem="lIR-vf-mUr" secondAttribute="leading" id="RlX-rH-6aY"/>
                             <constraint firstItem="YV1-Av-OKB" firstAttribute="top" secondItem="lIR-vf-mUr" secondAttribute="topMargin" constant="-2" id="jOl-hJ-RoY"/>

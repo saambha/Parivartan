@@ -73,6 +73,9 @@
     
     return cell;
 }
+- (IBAction)backBtnClicked:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -218,7 +221,9 @@
     
     // add the mapView as a subview
     [self.beaconMapView addSubview:mapView];
-    
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 30)];
+    [self.beaconMapView addSubview:btn];
+    [btn addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
     // "constrain" the mapView to fill the entire screen
     [mapView setTranslatesAutoresizingMaskIntoConstraints:NO];
     NSDictionary *views = NSDictionaryOfVariableBindings(mapView);
@@ -226,6 +231,10 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[mapView]|" options:0 metrics:nil views:views]];
 }
 
+
+-(IBAction)buttonClicked:(id)sender{
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
 @end
 
 
