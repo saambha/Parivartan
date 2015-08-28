@@ -16,7 +16,7 @@
 #import "SquareCashStyleBar.h"
 #import "DCSquareCashStyleBehaviorDefiner.h"
 #import "BLKDelegateSplitter.h"
-
+#import "MapViewController.h"
 #import "DCBookingViewController.h"
 #import "DCTimeLine.h"
 
@@ -382,7 +382,34 @@ CGFloat kHeaderHeightBuffer = 170;
 - (void)quadCurveMenu:(QuadCurveMenu *)menu didSelectIndex:(NSInteger)idx
 {
     NSLog(@"Select the index : %ld",(long)idx);
+    switch (idx) {
+        case 0:{
+                UIStoryboard *storyboard = self.storyboard;
+                MapViewController *map = [storyboard instantiateViewControllerWithIdentifier:@"MapViewController"];
+                map.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+            
+                // Configure the new view controller here.
+            
+                [self presentViewController:map animated:YES completion:nil];
+        }
+            break;
+        case 1:
+            
+            break;
+        case 2:
+            
+            break;
+        case 3:
+            
+            break;
+        case 4:
+            
+            break;
+        default:
+            break;
+    }
 }
+
 -(void)setLimeLineObjects {
     
     if (self.arr_timelineObjs) {
