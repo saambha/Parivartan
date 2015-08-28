@@ -148,7 +148,7 @@ const int kHeaderBtn_X                  = 150;
     //self.tableView.tableHeaderView = self.myCustomBar;
     [self.view addSubview:self.myCustomBar];
 
-    self.myCustomBar.backgroundColor =  [UIColor colorWithPatternImage:[UIImage imageNamed:@"burj-al-arab-dubai-960x640"]];
+    self.myCustomBar.backgroundColor =  [UIColor colorWithPatternImage:[UIImage imageNamed:@"burj-al-arab-dubai-960x640.jpg"]];
     
        // self.myCustomBar.backgroundColor =  [UIColor colorWithPatternImage:[UIImage animatedImageNamed:@"dayNight.gif" duration:30.0]];
     
@@ -168,33 +168,31 @@ const int kHeaderBtn_X                  = 150;
    // self.tableView.contentInset = UIEdgeInsetsMake(40, 0.0, 0.0, 0.0);
 
 //
-    
-    
    
     // Add close button - it's pinned to the top right corner, so it doesn't need to respond to bar height changes
     UIButton *minusButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    minusButton.frame = CGRectMake(self.myCustomBar.frame.size.width-80.0, 25.0, 30.0, 30.0);
+    minusButton.frame = CGRectMake(40.0, 25.0, 30.0, 30.0);
     minusButton.tintColor = [UIColor whiteColor];
-    [minusButton setImage:[UIImage imageNamed:@"Minus.png"] forState:UIControlStateNormal];
+    [minusButton setImage:[UIImage imageNamed:@"minus"] forState:UIControlStateNormal];
     [minusButton addTarget:self action:@selector(minusButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.myCustomBar addSubview:minusButton];
     minusButton.backgroundColor = [UIColor clearColor];
     
     
     
-     _lblHours = [[UILabel alloc] init];
-    _lblHours.frame = CGRectMake(self.myCustomBar.frame.size.width-48.0, 25.0, 18.0, 30.0);
-    _lblHours.text = [NSString stringWithFormat:@"%i",_hours];
-    _lblHours.font = [UIFont fontWithName:@"HelveticaNeue" size:13.0];
-    _lblHours.backgroundColor = [UIColor clearColor];
-    _lblHours.textColor = [UIColor whiteColor];
-    [self.myCustomBar addSubview:_lblHours];
+//     _lblHours = [[UILabel alloc] init];
+//    _lblHours.frame = CGRectMake(self.myCustomBar.frame.size.width-48.0, 25.0, 18.0, 30.0);
+//    _lblHours.text = [NSString stringWithFormat:@"%i",_hours];
+//    _lblHours.font = [UIFont fontWithName:@"HelveticaNeue" size:13.0];
+//    _lblHours.backgroundColor = [UIColor clearColor];
+//    _lblHours.textColor = [UIColor whiteColor];
+//    [self.myCustomBar addSubview:_lblHours];
 
 
     UIButton *plusButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    plusButton.frame = CGRectMake(self.myCustomBar.frame.size.width-32.0, 25.0, 30.0, 30.0);
+    plusButton.frame = CGRectMake(self.myCustomBar.frame.size.width-2*40.0, 25.0, 30.0, 30.0);
     plusButton.tintColor = [UIColor whiteColor];
-    [plusButton setImage:[UIImage imageNamed:@"Plus.png"] forState:UIControlStateNormal];
+    [plusButton setImage:[UIImage imageNamed:@"plus1"] forState:UIControlStateNormal];
     [plusButton addTarget:self action:@selector(plusButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.myCustomBar addSubview:plusButton];
     plusButton.backgroundColor = [UIColor clearColor];
@@ -214,29 +212,40 @@ const int kHeaderBtn_X                  = 150;
     
     header.backgroundColor = [UIColor colorWithRed:231/255.0 green:228/255.0 blue:223/255.0 alpha:1.0];//231 228 223 //[UIColor colorWithRed:0.84 green:0.10 blue:0.12 alpha:1];
     
+    
+    UIButton *lnButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    lnButton.frame = CGRectMake(20, 8, 25.0, 25.0);
+    lnButton.tintColor = [UIColor whiteColor];
+    [lnButton setImage:[UIImage imageNamed:@"like"] forState:UIControlStateNormal];
+    [lnButton addTarget:self action:@selector(lnButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [header addSubview:lnButton];
+    
     UIButton *fbButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    fbButton.frame = CGRectMake(kHeaderBtn_X, 10, 30.0, 20.0);
+    fbButton.frame = CGRectMake(kHeaderBtn_X+47, 8, 25.0, 25.0);
     fbButton.tintColor = [UIColor whiteColor];
-    [fbButton setImage:[UIImage imageNamed:@"like.png"] forState:UIControlStateNormal];
+    [fbButton setImage:[UIImage imageNamed:@"popular.png"] forState:UIControlStateNormal];
     [fbButton addTarget:self action:@selector(fbButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [header addSubview:fbButton];
     
+    UILabel *popularity =[[UILabel alloc] initWithFrame:CGRectMake(kHeaderBtn_X+80, 8, 25.0, 25.0)];
+    popularity.text = @"400";
+    [popularity setFont:[UIFont fontWithName:@"Emirates SB" size:14.0f]];
+    popularity.textColor = [UIColor colorWithRed:49 green:65 blue:132 alpha:1];
+    [header addSubview:popularity];
     
-    UIButton *lnButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    lnButton.frame = CGRectMake(kHeaderBtn_X+50, 10, 30.0, 20.0);
-    lnButton.tintColor = [UIColor whiteColor];
-    [lnButton setImage:[UIImage imageNamed:@"like.png"] forState:UIControlStateNormal];
-    [lnButton addTarget:self action:@selector(lnButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [header addSubview:lnButton];
-
     
     UIButton *twitterButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    twitterButton.frame = CGRectMake(kHeaderBtn_X+100, 10, 30.0, 20.0);
+    twitterButton.frame = CGRectMake(kHeaderBtn_X+140, 8, 25.0, 25.0);
     twitterButton.tintColor = [UIColor whiteColor];
-    [twitterButton setImage:[UIImage imageNamed:@"like.png"] forState:UIControlStateNormal];
+    [twitterButton setImage:[UIImage imageNamed:@"facebook_Friends"] forState:UIControlStateNormal];
     [twitterButton addTarget:self action:@selector(twitterButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [header addSubview:twitterButton];
     
+    UILabel *fbFriends =[[UILabel alloc] initWithFrame:CGRectMake(kHeaderBtn_X+167, 8, 25.0, 25.0)];
+    fbFriends.text = @"400";
+    [fbFriends setFont:[UIFont fontWithName:@"Emirates SB" size:14.0f]];
+    fbFriends.textColor = [UIColor colorWithRed:49 green:65 blue:132 alpha:1];
+    [header addSubview:fbFriends];
     
     self.tableView.tableHeaderView = header;
 
@@ -496,8 +505,8 @@ const int kHeaderBtn_X                  = 150;
 //    self.myCustomBar.backgroundColor =  [UIColor colorWithPatternImage:[UIImage imageNamed:@"Dubai.jpg"]];
 //    [self setLimeLineObjects];
 
-    _hours = _hours + 2;
-        _lblHours.text = [NSString stringWithFormat:@"%i",_hours];
+        _hours = _hours + 2;
+        self.myCustomBar.nameLabel.text = [NSString stringWithFormat:@"%i Hours",_hours];
     
         [self.tableView reloadData];
     

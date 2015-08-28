@@ -31,29 +31,31 @@
     
     
      // Add and configure name label
-     UILabel *nameLabel = [[UILabel alloc] init];
-     nameLabel.font = [UIFont systemFontOfSize:22.0];
-     nameLabel.textColor = [UIColor whiteColor];
-     nameLabel.text = @"Anoop Sharma";
+     _nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 20)];
+    [_nameLabel setTextAlignment:NSTextAlignmentCenter];
+     _nameLabel.font = [UIFont systemFontOfSize:22.0];
+    [_nameLabel setFont:[UIFont fontWithName:@"Emirates SB" size:15.0f]];
+     _nameLabel.textColor = [UIColor whiteColor];
+     _nameLabel.text = @"   9 Hours    ";
     
      BLKFlexibleHeightBarSubviewLayoutAttributes *initialNameLabelLayoutAttributes = [[BLKFlexibleHeightBarSubviewLayoutAttributes alloc] init];
-    initialNameLabelLayoutAttributes.size = [nameLabel sizeThatFits:CGSizeZero];
+    initialNameLabelLayoutAttributes.size = [_nameLabel sizeThatFits:CGSizeZero];
     initialNameLabelLayoutAttributes.center = CGPointMake(self.frame.size.width*0.5, self.maximumBarHeight-50.0);
-    [nameLabel addLayoutAttributes:initialNameLabelLayoutAttributes forProgress:0.0];
+    [_nameLabel addLayoutAttributes:initialNameLabelLayoutAttributes forProgress:0.0];
     
     BLKFlexibleHeightBarSubviewLayoutAttributes *midwayNameLabelLayoutAttributes = [[BLKFlexibleHeightBarSubviewLayoutAttributes alloc] initWithExistingLayoutAttributes:initialNameLabelLayoutAttributes];
     midwayNameLabelLayoutAttributes.center = CGPointMake(self.frame.size.width*0.5, (self.maximumBarHeight-self.minimumBarHeight)*0.4+self.minimumBarHeight-50.0);
-    [nameLabel addLayoutAttributes:midwayNameLabelLayoutAttributes forProgress:0.6];
+    [_nameLabel addLayoutAttributes:midwayNameLabelLayoutAttributes forProgress:0.6];
     
     BLKFlexibleHeightBarSubviewLayoutAttributes *finalNameLabelLayoutAttributes = [[BLKFlexibleHeightBarSubviewLayoutAttributes alloc] initWithExistingLayoutAttributes:midwayNameLabelLayoutAttributes];
     finalNameLabelLayoutAttributes.center = CGPointMake(self.frame.size.width*0.5, self.minimumBarHeight-25.0);
-    [nameLabel addLayoutAttributes:finalNameLabelLayoutAttributes forProgress:1.0];
+    [_nameLabel addLayoutAttributes:finalNameLabelLayoutAttributes forProgress:1.0];
     
-    [self addSubview:nameLabel];
+    [self addSubview:_nameLabel];
     
     
     // Add and configure profile image
-    _profileImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"AnoopPP"]];
+    _profileImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ProfilePhoto"]];
     _profileImageView.contentMode = UIViewContentModeScaleAspectFill;
     _profileImageView.clipsToBounds = YES;
     _profileImageView.layer.cornerRadius = 35.0;

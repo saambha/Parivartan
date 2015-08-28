@@ -16,5 +16,6 @@
 @property (nonatomic , strong) UIButton *btn_Fb;
 @property (nonatomic , strong) UIButton *btn_linkedIn;
 @property (nonatomic , strong) UIButton *btn_transitMate;
+@property (nonatomic , strong)  UILabel *nameLabel;
 
 @end

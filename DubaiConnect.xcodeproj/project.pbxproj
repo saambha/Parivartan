@@ -37,13 +37,6 @@
 		6E451B2B1B88BC8C007188AB /* icon-star.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E451B1D1B88BC8C007188AB /* icon-star.png */; };
 		6E451B2C1B88BC8C007188AB /* icon-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E451B1E1B88BC8C007188AB /* icon-star@2x.png */; };
 		6E4973211B90D96B00DBC922 /* Default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E49730D1B90D96B00DBC922 /* Default.jpg */; };
-		6E4973221B90D96B00DBC922 /* dubai11.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 6E49730E1B90D96B00DBC922 /* dubai11.tiff */; };
-		6E4973231B90D96B00DBC922 /* dubai12.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 6E49730F1B90D96B00DBC922 /* dubai12.tiff */; };
-		6E4973241B90D96B00DBC922 /* dubai13.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 6E4973101B90D96B00DBC922 /* dubai13.tiff */; };
-		6E4973251B90D96B00DBC922 /* dubai14.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 6E4973111B90D96B00DBC922 /* dubai14.tiff */; };
-		6E4973261B90D96B00DBC922 /* dubai15.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 6E4973121B90D96B00DBC922 /* dubai15.tiff */; };
-		6E4973271B90D96B00DBC922 /* dubai16.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 6E4973131B90D96B00DBC922 /* dubai16.tiff */; };
-		6E4973281B90D96B00DBC922 /* dubai17.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 6E4973141B90D96B00DBC922 /* dubai17.tiff */; };
 		6E4973291B90D96B00DBC922 /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4973151B90D96B00DBC922 /* like.png */; };
 		6E49732A1B90D96B00DBC922 /* loc1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6E4973161B90D96B00DBC922 /* loc1.jpeg */; };
 		6E49732B1B90D96B00DBC922 /* loc2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4973171B90D96B00DBC922 /* loc2.png */; };
@@ -83,6 +76,12 @@
 		6E9E9CE31B90B21D00EF8E01 /* DCBarCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E9CE21B90B21D00EF8E01 /* DCBarCodeVC.m */; };
 		6EB22D361B90EC6E0029E21B /* DCTimeLineCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB22D351B90EC6E0029E21B /* DCTimeLineCustomCell.m */; };
 		6EB22D391B90F8E00029E21B /* dubai_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB22D381B90F8E00029E21B /* dubai_icon.png */; };
+		6EB22D3C1B90FBDE0029E21B /* Arrow_Left2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB22D3A1B90FBDE0029E21B /* Arrow_Left2.png */; };
+		6EB22D3D1B90FBDE0029E21B /* Arrow_Right2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB22D3B1B90FBDE0029E21B /* Arrow_Right2.png */; };
+		6EB22D3F1B9100050029E21B /* plus1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB22D3E1B9100050029E21B /* plus1.png */; };
+		6EB22D421B9101930029E21B /* facebook_Friends.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB22D401B9101930029E21B /* facebook_Friends.png */; };
+		6EB22D431B9101930029E21B /* like_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB22D411B9101930029E21B /* like_icon.png */; };
+		6EB22D451B910AD30029E21B /* popular.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB22D441B910AD30029E21B /* popular.png */; };
 		6ED5D4201B90CE8E00977FE4 /* MTBBarcodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5D41F1B90CE8E00977FE4 /* MTBBarcodeScanner.m */; };
 		6ED5D4231B90D0F600977FE4 /* DCScannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5D4221B90D0F600977FE4 /* DCScannerVC.m */; };
 		9A44208E1B903B7900C1CF9A /* DCTimeLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A44208C1B903B7800C1CF9A /* DCTimeLine.m */; };
@@ -148,13 +147,6 @@
 		6E451B1D1B88BC8C007188AB /* icon-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-star.png"; sourceTree = "<group>"; };
 		6E451B1E1B88BC8C007188AB /* icon-star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-star@2x.png"; sourceTree = "<group>"; };
 		6E49730D1B90D96B00DBC922 /* Default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Default.jpg; sourceTree = "<group>"; };
-		6E49730E1B90D96B00DBC922 /* dubai11.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = dubai11.tiff; sourceTree = "<group>"; };
-		6E49730F1B90D96B00DBC922 /* dubai12.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = dubai12.tiff; sourceTree = "<group>"; };
-		6E4973101B90D96B00DBC922 /* dubai13.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = dubai13.tiff; sourceTree = "<group>"; };
-		6E4973111B90D96B00DBC922 /* dubai14.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = dubai14.tiff; sourceTree = "<group>"; };
-		6E4973121B90D96B00DBC922 /* dubai15.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = dubai15.tiff; sourceTree = "<group>"; };
-		6E4973131B90D96B00DBC922 /* dubai16.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = dubai16.tiff; sourceTree = "<group>"; };
-		6E4973141B90D96B00DBC922 /* dubai17.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = dubai17.tiff; sourceTree = "<group>"; };
 		6E4973151B90D96B00DBC922 /* like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like.png; sourceTree = "<group>"; };
 		6E4973161B90D96B00DBC922 /* loc1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loc1.jpeg; sourceTree = "<group>"; };
 		6E4973171B90D96B00DBC922 /* loc2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loc2.png; sourceTree = "<group>"; };
@@ -214,6 +206,12 @@
 		6EB22D341B90EC6E0029E21B /* DCTimeLineCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTimeLineCustomCell.h; sourceTree = "<group>"; };
 		6EB22D351B90EC6E0029E21B /* DCTimeLineCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTimeLineCustomCell.m; sourceTree = "<group>"; };
 		6EB22D381B90F8E00029E21B /* dubai_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dubai_icon.png; sourceTree = "<group>"; };
+		6EB22D3A1B90FBDE0029E21B /* Arrow_Left2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow_Left2.png; sourceTree = "<group>"; };
+		6EB22D3B1B90FBDE0029E21B /* Arrow_Right2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow_Right2.png; sourceTree = "<group>"; };
+		6EB22D3E1B9100050029E21B /* plus1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus1.png; sourceTree = "<group>"; };
+		6EB22D401B9101930029E21B /* facebook_Friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_Friends.png; sourceTree = "<group>"; };
+		6EB22D411B9101930029E21B /* like_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like_icon.png; sourceTree = "<group>"; };
+		6EB22D441B910AD30029E21B /* popular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popular.png; sourceTree = "<group>"; };
 		6ED5D41E1B90CE8E00977FE4 /* MTBBarcodeScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBBarcodeScanner.h; sourceTree = "<group>"; };
 		6ED5D41F1B90CE8E00977FE4 /* MTBBarcodeScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBBarcodeScanner.m; sourceTree = "<group>"; };
 		6ED5D4211B90D0F600977FE4 /* DCScannerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCScannerVC.h; sourceTree = "<group>"; };
@@ -372,15 +370,14 @@
 		6E451B101B88BC8C007188AB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6EB22D441B910AD30029E21B /* popular.png */,
+				6EB22D401B9101930029E21B /* facebook_Friends.png */,
+				6EB22D411B9101930029E21B /* like_icon.png */,
+				6EB22D3E1B9100050029E21B /* plus1.png */,
+				6EB22D3A1B90FBDE0029E21B /* Arrow_Left2.png */,
+				6EB22D3B1B90FBDE0029E21B /* Arrow_Right2.png */,
 				6EB22D381B90F8E00029E21B /* dubai_icon.png */,
 				6E49730D1B90D96B00DBC922 /* Default.jpg */,
-				6E49730E1B90D96B00DBC922 /* dubai11.tiff */,
-				6E49730F1B90D96B00DBC922 /* dubai12.tiff */,
-				6E4973101B90D96B00DBC922 /* dubai13.tiff */,
-				6E4973111B90D96B00DBC922 /* dubai14.tiff */,
-				6E4973121B90D96B00DBC922 /* dubai15.tiff */,
-				6E4973131B90D96B00DBC922 /* dubai16.tiff */,
-				6E4973141B90D96B00DBC922 /* dubai17.tiff */,
 				6E4973151B90D96B00DBC922 /* like.png */,
 				6E4973161B90D96B00DBC922 /* loc1.jpeg */,
 				6E4973171B90D96B00DBC922 /* loc2.png */,
@@ -610,21 +607,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E4973281B90D96B00DBC922 /* dubai17.tiff in Resources */,
+				6EB22D3D1B90FBDE0029E21B /* Arrow_Right2.png in Resources */,
+				6EB22D451B910AD30029E21B /* popular.png in Resources */,
 				6E4973301B90D96B00DBC922 /* Sunny.png in Resources */,
-				6E4973251B90D96B00DBC922 /* dubai14.tiff in Resources */,
 				6E49732B1B90D96B00DBC922 /* loc2.png in Resources */,
 				6E4973331B90D96B00DBC922 /* dubai11.gif in Resources */,
 				6E4973311B90D96B00DBC922 /* Uber.jpeg in Resources */,
-				6E4973221B90D96B00DBC922 /* dubai11.tiff in Resources */,
-				6E4973231B90D96B00DBC922 /* dubai12.tiff in Resources */,
 				6E9E9CC01B90757200EF8E01 /* Emirates SM.otf in Resources */,
 				6E451B211B88BC8C007188AB /* bg-addbutton.png in Resources */,
 				6E49732A1B90D96B00DBC922 /* loc1.jpeg in Resources */,
 				6E4973321B90D96B00DBC922 /* dayNight.gif in Resources */,
-				6E4973271B90D96B00DBC922 /* dubai16.tiff in Resources */,
+				6EB22D431B9101930029E21B /* like_icon.png in Resources */,
 				6E49732E1B90D96B00DBC922 /* Plus.png in Resources */,
 				6E9E9CBE1B90757200EF8E01 /* Emirates SB.otf in Resources */,
+				6EB22D3C1B90FBDE0029E21B /* Arrow_Left2.png in Resources */,
 				6E4E0D281B8E49F8003A3F60 /* banner_dubai_Al_Arab.jpg in Resources */,
 				6E451AFE1B88B024007188AB /* Images.xcassets in Resources */,
 				6E451B251B88BC8C007188AB /* bg-menuitem.png in Resources */,
@@ -634,14 +630,13 @@
 				9A4420921B903D0C00C1CF9A /* Dubai.jpg in Resources */,
 				6E451B201B88BC8C007188AB /* bg-addbutton-highlighted@2x.png in Resources */,
 				6E451B291B88BC8C007188AB /* icon-plus.png in Resources */,
-				6E4973241B90D96B00DBC922 /* dubai13.tiff in Resources */,
 				6E49732C1B90D96B00DBC922 /* Metro.png in Resources */,
 				6E4973341B90D96B00DBC922 /* walk.png in Resources */,
-				6E4973261B90D96B00DBC922 /* dubai15.tiff in Resources */,
 				6E451B271B88BC8C007188AB /* icon-plus-highlighted.png in Resources */,
 				6E4E0D2B1B8E4CBE003A3F60 /* Burj_Al_Arab400*300.jpg in Resources */,
 				6E451B221B88BC8C007188AB /* bg-addbutton@2x.png in Resources */,
 				9AD5D6771B8B5BAC00DD10DC /* Facebook.png in Resources */,
+				6EB22D421B9101930029E21B /* facebook_Friends.png in Resources */,
 				6E451B2C1B88BC8C007188AB /* icon-star@2x.png in Resources */,
 				6E451B2A1B88BC8C007188AB /* icon-plus@2x.png in Resources */,
 				6E451B261B88BC8C007188AB /* bg-menuitem@2x.png in Resources */,
@@ -656,6 +651,7 @@
 				6E9E9CBF1B90757200EF8E01 /* Emirates SL.otf in Resources */,
 				6E451B231B88BC8C007188AB /* bg-menuitem-highlighted.png in Resources */,
 				6E451B241B88BC8C007188AB /* bg-menuitem-highlighted@2x.png in Resources */,
+				6EB22D3F1B9100050029E21B /* plus1.png in Resources */,
 				6E451B1F1B88BC8C007188AB /* bg-addbutton-highlighted.png in Resources */,
 				6E4973211B90D96B00DBC922 /* Default.jpg in Resources */,
 				6E4E0D2C1B8E4CBE003A3F60 /* burj-al-arab-dubai-960x640.jpg in Resources */,

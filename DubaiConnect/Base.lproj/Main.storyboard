@@ -28,20 +28,6 @@
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cC-NP-XY6">
-                                <rect key="frame" x="200" y="362" width="200" height="106"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="cXT-vX-hpO"/>
-                                </constraints>
-                                <state key="normal" image="Facebook.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btn_FacebookAction:" destination="dz3-OA-LWq" eventType="touchUpInside" id="PFw-f1-65M"/>
-                                    <segue destination="XtK-Vn-3Ob" kind="show" id="Htn-r0-1H9"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axr-do-juM">
                                 <rect key="frame" x="277" y="518" width="46" height="30"/>
                                 <animations/>
@@ -58,15 +44,29 @@
                                     <segue destination="XtK-Vn-3Ob" kind="show" id="TK5-dB-Sux"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cC-NP-XY6">
+                                <rect key="frame" x="215" y="438" width="171" height="41"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="171" id="cXT-vX-hpO"/>
+                                </constraints>
+                                <state key="normal" image="Facebook.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn_FacebookAction:" destination="dz3-OA-LWq" eventType="touchUpInside" id="PFw-f1-65M"/>
+                                    <segue destination="XtK-Vn-3Ob" kind="show" id="Htn-r0-1H9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YV1-Av-OKB" firstAttribute="bottom" secondItem="kLh-m6-tNZ" secondAttribute="top" id="1LL-Cg-afZ"/>
-                            <constraint firstItem="5cC-NP-XY6" firstAttribute="top" secondItem="lQD-4x-DCF" secondAttribute="bottom" constant="342" id="4Pt-kL-t2R"/>
+                            <constraint firstItem="5cC-NP-XY6" firstAttribute="top" secondItem="lQD-4x-DCF" secondAttribute="bottom" constant="418" id="4Pt-kL-t2R"/>
                             <constraint firstAttribute="trailing" secondItem="YV1-Av-OKB" secondAttribute="trailing" id="AgT-XC-2vt"/>
                             <constraint firstItem="axr-do-juM" firstAttribute="centerX" secondItem="5cC-NP-XY6" secondAttribute="centerX" id="LsY-kD-WVx"/>
-                            <constraint firstItem="axr-do-juM" firstAttribute="top" secondItem="5cC-NP-XY6" secondAttribute="bottom" constant="50" id="QPV-8e-0ll"/>
+                            <constraint firstItem="axr-do-juM" firstAttribute="top" secondItem="5cC-NP-XY6" secondAttribute="bottom" constant="39" id="QPV-8e-0ll"/>
                             <constraint firstItem="YV1-Av-OKB" firstAttribute="leading" secondItem="lIR-vf-mUr" secondAttribute="leading" id="RlX-rH-6aY"/>
                             <constraint firstItem="YV1-Av-OKB" firstAttribute="top" secondItem="lIR-vf-mUr" secondAttribute="topMargin" constant="-2" id="jOl-hJ-RoY"/>
                             <constraint firstItem="axr-do-juM" firstAttribute="centerX" secondItem="YV1-Av-OKB" secondAttribute="centerX" id="lMw-qa-SP4"/>
@@ -393,7 +393,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Facebook.png" width="395" height="299"/>
+        <image name="Facebook.png" width="302" height="75"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="TK5-dB-Sux"/>
