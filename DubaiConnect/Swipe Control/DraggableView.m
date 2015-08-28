@@ -13,6 +13,8 @@
 #define ROTATION_MAX 1 //%%% the maximum rotation allowed in radians.  Higher = card can keep rotating longer
 #define ROTATION_STRENGTH 320 //%%% strength of rotation. Higher = weaker rotation
 #define ROTATION_ANGLE M_PI/8 //%%% Higher = stronger rotation angle
+#define CAPTION_HEIGHT 60
+#define IMAGE_INSET_BUFFER 8
 
 
 #import "DraggableView.h"
@@ -38,14 +40,15 @@
         [self setupView];
         
 //#warning placeholder stuff, replace with card-specific information {
-        information = [[UILabel alloc]initWithFrame:CGRectMake(0, self.frame.size.height - 20, self.frame.size.width, 15)];
+        information = [[UILabel alloc]initWithFrame:CGRectMake(IMAGE_INSET_BUFFER, self.frame.size.height - CAPTION_HEIGHT, self.frame.size.width - 2*IMAGE_INSET_BUFFER, CAPTION_HEIGHT)];
         information.text = @"no info given";
-        [information setTextAlignment:NSTextAlignmentCenter];
+        [information setTextAlignment:NSTextAlignmentLeft];
+        [information setFont:[UIFont fontWithName:@"Emirates SL" size:12.0f]];
         information.textColor = [UIColor blackColor];
         
         self.backgroundColor = [UIColor whiteColor];
         
-        bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(2, 2, self.frame.size.width-4, self.frame.size.height-4 )];
+        bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(IMAGE_INSET_BUFFER, IMAGE_INSET_BUFFER, self.frame.size.width- 2*IMAGE_INSET_BUFFER, self.frame.size.height- (2*IMAGE_INSET_BUFFER + CAPTION_HEIGHT ))];
         //bgImageView.layer.contentsRect = CGRectMake(0.0, 0.0, 0.3, 0.3);
         bgImageView.image = [UIImage imageNamed:@"burj-al-arab-dubai-960x640.jpg"];
         

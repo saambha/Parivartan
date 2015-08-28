@@ -12,16 +12,23 @@
     NSInteger cardsLoadedIndex; //%%% the index of the card you have loaded into the loadedCards array last
     NSMutableArray *loadedCards; //%%% the array of card loaded (change max_buffer_size to increase or decrease the number of cards this holds)
     
-    UIButton* menuButton;
-    UIButton* messageButton;
+//    UIButton* menuButton;
+//    UIButton* messageButton;
     UIButton* checkButton;
     UIButton* xButton;
+    UILabel *tellMeAboutYouLabel;
+
+    
 }
 //this makes it so only two cards are loaded at a time to
 //avoid performance and memory costs
 static const int MAX_BUFFER_SIZE = 2; //%%% max number of cards loaded at any given time, must be greater than 1
-static const float CARD_HEIGHT = 300; //%%% height of the draggable card
-static const float CARD_WIDTH = 250; //%%% width of the draggable card
+static const float CARD_HEIGHT = 360; //%%% height of the draggable card
+static const float CARD_WIDTH = 280; //%%% width of the draggable card
+static const float BUTTON_SIZE = 59;
+static const float BUTTON_X_BUFFER = 10;
+//static const float BUTTON_SIZE = 59;
+static const float TELL_ME_LABEL = 90;
 
 @synthesize exampleCardLabels; //%%% all the labels I'm using as example data at the moment
 @synthesize allCards;//%%% all the cards
@@ -33,7 +40,7 @@ static const float CARD_WIDTH = 250; //%%% width of the draggable card
     if (self) {
         [super layoutSubviews];
         [self setupView];
-        exampleCardLabels = [[NSArray alloc]initWithObjects:@"first",@"second",@"third",@"fourth",@"last", nil]; //%%% placeholder for card-specific information
+        exampleCardLabels = [[NSArray alloc]initWithObjects:@"first flsdhlkgjdslk", @"dfdfgfdgfdgfd",@"dfdfgfdgfdgfd",@"dfdfgfdgfdgfd",@"dfdfgfdgfdgfd",@"dfdfgfdgfdgfd", nil]; //%%% placeholder for card-specific information
         loadedCards = [[NSMutableArray alloc] init];
         allCards = [[NSMutableArray alloc] init];
         cardsLoadedIndex = 0;
@@ -46,32 +53,22 @@ static const float CARD_WIDTH = 250; //%%% width of the draggable card
 -(void)setupView
 {
 #warning customize all of this.  These are just place holders to make it look pretty
-////    self.backgroundColor = [UIColor colorWithRed:.92 green:.93 blue:.95 alpha:1]; //the gray background colors
-//    self.backgroundColor = [UIColor colorWithRed:0.84 green:0.10 blue:0.12 alpha:1];
-////    menuButton = [[UIButton alloc]initWithFrame:CGRectMake(17, 34, 22, 15)];
-////    [menuButton setImage:[UIImage imageNamed:@"menuButton"] forState:UIControlStateNormal];
-////    messageButton = [[UIButton alloc]initWithFrame:CGRectMake(284, 34, 18, 18)];
-////    [messageButton setImage:[UIImage imageNamed:@"messageButton"] forState:UIControlStateNormal];
-////    xButton = [[UIButton alloc]initWithFrame:CGRectMake(60, 485, 59, 59)];
-////    [xButton setImage:[UIImage imageNamed:@"xButton"] forState:UIControlStateNormal];
-////    [xButton addTarget:self action:@selector(swipeLeft) forControlEvents:UIControlEventTouchUpInside];
-////    checkButton = [[UIButton alloc]initWithFrame:CGRectMake(200, 485, 59, 59)];
-////    [checkButton setImage:[UIImage imageNamed:@"checkButton"] forState:UIControlStateNormal];
-////    [checkButton addTarget:self action:@selector(swipeRight) forControlEvents:UIControlEventTouchUpInside];
-////    [self addSubview:menuButton];
-////    [self addSubview:messageButton];
-//    
-//    xButton = [UIButton buttonWithType:UIButtonTypeSystem];
-//    xButton.frame = CGRectMake(50, 10, 22, 15);
-//    [xButton setImage:[UIImage imageNamed:@"xButton"] forState:UIControlStateNormal];
-//    [xButton addTarget:self action:@selector(swipeLeft) forControlEvents:UIControlEventTouchUpInside];
-////    checkButton = [[UIButton alloc]initWithFrame:CGRectMake(200, 485, 59, 59)];
-////    [checkButton setImage:[UIImage imageNamed:@"checkButton"] forState:UIControlStateNormal];
-////    [checkButton addTarget:self action:@selector(swipeRight) forControlEvents:UIControlEventTouchUpInside];
-//
-//    
-//    [self addSubview:xButton];
-//    [self addSubview:checkButton];
+
+    tellMeAboutYouLabel = [[UILabel alloc] initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, TELL_ME_LABEL, CARD_WIDTH, TELL_ME_LABEL/2)];
+    [tellMeAboutYouLabel setTextAlignment:NSTextAlignmentCenter];
+    [tellMeAboutYouLabel setFont:[UIFont fontWithName:@"Emirates SM" size:15.0f]];
+    tellMeAboutYouLabel.text = @"Tell us more about yourself";
+    
+    xButton = [[UIButton alloc]initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2 +BUTTON_X_BUFFER, 540, BUTTON_SIZE, BUTTON_SIZE)];
+    [xButton setImage:[UIImage imageNamed:@"xButton"] forState:UIControlStateNormal];
+    [xButton addTarget:self action:@selector(swipeLeft) forControlEvents:UIControlEventTouchUpInside];
+    checkButton = [[UIButton alloc]initWithFrame:CGRectMake( CARD_WIDTH - 2*BUTTON_X_BUFFER, 540, BUTTON_SIZE, BUTTON_SIZE)];
+    [checkButton setImage:[UIImage imageNamed:@"checkButton"] forState:UIControlStateNormal];
+    [checkButton addTarget:self action:@selector(swipeRight) forControlEvents:UIControlEventTouchUpInside];
+
+    [self addSubview:tellMeAboutYouLabel];
+    [self addSubview:xButton];
+    [self addSubview:checkButton];
     
 }
 

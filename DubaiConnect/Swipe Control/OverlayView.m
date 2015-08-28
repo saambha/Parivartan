@@ -16,8 +16,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
-        imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"noButton"]];
+        self.backgroundColor = [UIColor clearColor];
+        imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"xButton"]];
         [self addSubview:imageView];
     }
     return self;
@@ -32,9 +32,9 @@
     _mode = mode;
     
     if(mode == GGOverlayViewModeLeft) {
-        imageView.image = [UIImage imageNamed:@"noButton"];
+        imageView.image = [UIImage imageNamed:@"xButton"];
     } else {
-        imageView.image = [UIImage imageNamed:@"yesButton"];
+        imageView.image = [UIImage imageNamed:@"checkButton"];
     }
 }
 

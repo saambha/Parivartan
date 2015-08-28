@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "DraggableViewBackground.h"
 
-@interface DCSwipeSplashViewController : UINavigationController <DCSwipeSplashDelegate>
+
+@interface DCSwipeSplashViewController : UINavigationController <DCSwipeSplashDelegate>{
+   
+//    BKProgressHUD *emiratesHUD;
+//    HUDViewDemoController *emiratesHUD;
+}
 
 @end

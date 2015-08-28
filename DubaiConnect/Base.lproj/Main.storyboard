@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Helvetica.ttc">
@@ -64,6 +65,9 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="bgView" destination="YV1-Av-OKB" id="Efh-mS-RKT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vfa-Xy-Ewi" sceneMemberID="firstResponder"/>
             </objects>
@@ -227,6 +231,142 @@
             <point key="canvasLocation" x="1892" y="64"/>
         </scene>
         <!--Navigation Controller-->
+        <scene sceneID="Klj-iX-x0h">
+            <objects>
+                <navigationController restorationIdentifier="MPNavigationController" storyboardIdentifier="MPNavigationController" id="i0V-5b-g3g" customClass="MPNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NdN-xk-fnW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="72j-cf-aPq" kind="relationship" relationship="rootViewController" id="EXh-AH-jMf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZEc-uJ-ebv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="985" y="1219"/>
+        </scene>
+        <!--Scanner-->
+        <scene sceneID="9lA-tr-o01">
+            <objects>
+                <viewController storyboardIdentifier="DCScannerVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="72j-cf-aPq" customClass="DCScannerVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Yf-g0-iHF"/>
+                        <viewControllerLayoutGuide type="bottom" id="GQx-HW-57J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q8a-RH-thj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mWv-xW-Jra">
+                                <rect key="frame" x="20" y="84" width="560" height="29"/>
+                                <animations/>
+                                <segments>
+                                    <segment title="Scan Boarding Pass"/>
+                                    <segment title="Scan eTicket"/>
+                                    <segment title="Skywards Login"/>
+                                </segments>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dgG-eQ-hf4">
+                                <rect key="frame" x="20" y="133" width="560" height="447"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mWv-xW-Jra" firstAttribute="leading" secondItem="dgG-eQ-hf4" secondAttribute="leading" id="Aqh-cq-fMf"/>
+                            <constraint firstItem="mWv-xW-Jra" firstAttribute="trailing" secondItem="dgG-eQ-hf4" secondAttribute="trailing" id="Smr-XQ-gh3"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="mWv-xW-Jra" secondAttribute="leading" id="VyU-wm-st5"/>
+                            <constraint firstItem="GQx-HW-57J" firstAttribute="top" secondItem="dgG-eQ-hf4" secondAttribute="bottom" constant="20" id="XpB-UI-VPd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mWv-xW-Jra" secondAttribute="trailing" id="egi-Yy-uKn"/>
+                            <constraint firstItem="mWv-xW-Jra" firstAttribute="top" secondItem="8Yf-g0-iHF" secondAttribute="bottom" constant="20" id="iiQ-1G-ypu"/>
+                            <constraint firstItem="dgG-eQ-hf4" firstAttribute="top" secondItem="mWv-xW-Jra" secondAttribute="bottom" constant="21" id="sKI-wu-skB"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Scanner" id="sZx-ji-bQA">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="zIf-Aa-bNK">
+                            <connections>
+                                <action selector="closeBtnAction:" destination="72j-cf-aPq" id="HjH-0y-IYU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="previewView" destination="dgG-eQ-hf4" id="jma-P7-jXV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6NK-py-Xam" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1734" y="1230"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CkK-b1-NYC">
+            <objects>
+                <navigationController id="spt-XX-4Jb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2IL-aD-kGU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1gz-nO-Hbf" kind="relationship" relationship="rootViewController" id="t1j-At-QAb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lHA-ME-gBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="-1712"/>
+        </scene>
+        <!--VISA-->
+        <scene sceneID="88J-Sl-QjT">
+            <objects>
+                <viewController id="1gz-nO-Hbf" customClass="MPViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RQ8-Xe-GSd"/>
+                        <viewControllerLayoutGuide type="bottom" id="2xK-sZ-wyX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K7w-gi-eyA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="VISA" id="7b4-GC-9CN">
+                        <barButtonItem key="backBarButtonItem" title="Done" id="EaO-nL-69y"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="dwF-J7-8CW">
+                            <connections>
+                                <action selector="submitVISA:" destination="1gz-nO-Hbf" id="p9M-DL-i14"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pna-C2-fS4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1157" y="-1720"/>
+        </scene>
+        <!--Bar CodeVC-->
+        <scene sceneID="Bw0-4k-UVp">
+            <objects>
+                <viewController restorationIdentifier="DCBarCodeVC" storyboardIdentifier="DCBarCodeVC" id="UxO-KR-9j0" customClass="DCBarCodeVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rb7-A8-dcw"/>
+                        <viewControllerLayoutGuide type="bottom" id="dhr-wr-MB0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j2d-ui-Ej5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="1" green="0.12612766119999999" blue="0.28677031149999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ooL-dS-S6A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3144" y="-1720"/>
+        </scene>
+        <!--Navigation Controller-->
         <scene sceneID="Ajv-Zb-HKW">
             <objects>
                 <navigationController storyboardIdentifier="DCTimeLineDetailViewController" id="3pS-tJ-fnV" sceneMemberID="viewController">
@@ -245,7 +385,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Facebook.png" width="200" height="48"/>
+        <image name="Facebook.png" width="395" height="299"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="TK5-dB-Sux"/>

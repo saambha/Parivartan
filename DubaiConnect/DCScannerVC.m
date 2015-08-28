@@ -1,0 +1,160 @@
+//
+//  DCScannerVC.m
+//  DubaiConnect
+//
+//  Created by Anoop on 8/28/15.
+//  Copyright © 2015 Anoop. All rights reserved.
+//
+
+#import "DCScannerVC.h"
+#import "MTBBarcodeScanner.h"
+
+
+
+@interface DCScannerVC () <UITableViewDataSource>
+@property (nonatomic, weak) IBOutlet UIView *previewView;
+@property (nonatomic, weak) IBOutlet UIButton *toggleScanningButton;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) MTBBarcodeScanner *scanner;
+@property (nonatomic, strong) NSMutableArray *uniqueCodes;
+@end
+
+@implementation DCScannerVC
+
+#pragma mark - Lifecycle
+- (IBAction)closeBtnAction:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+//    [self.scanner stopScanning];
+    [super viewWillDisappear:animated];
+//    [self startScanning];
+    [MTBBarcodeScanner requestCameraPermissionWithSuccess:^(BOOL success) {
+        if (success) {
+            [self startScanning];
+        } else {
+            [self displayPermissionMissingAlert];
+        }
+    }];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    //    [self.scanner stopScanning];
+    [super viewWillDisappear:animated];
+//    [self startScanning];
+}
+#pragma mark - Scanner
+
+- (MTBBarcodeScanner *)scanner {
+    if (!_scanner) {
+        _scanner = [[MTBBarcodeScanner alloc] initWithPreviewView:_previewView];
+    }
+    return _scanner;
+}
+
+#pragma mark - Scanning
+
+- (void)startScanning {
+    self.uniqueCodes = [[NSMutableArray alloc] init];
+    
+    [self.scanner startScanningWithResultBlock:^(NSArray *codes) {
+        for (AVMetadataMachineReadableCodeObject *code in codes) {
+            if (code.stringValue && [self.uniqueCodes indexOfObject:code.stringValue] == NSNotFound) {
+                [self.uniqueCodes addObject:code.stringValue];
+                
+                NSLog(@"Found unique code: %@", code.stringValue);
+                
+//                // Update the tableview
+//                [self.tableView reloadData];
+//                [self scrollToLastTableViewCell];
+            }
+        }
+    }];
+    
+//    [self.toggleScanningButton setTitle:@"Stop Scanning" forState:UIControlStateNormal];
+//    self.toggleScanningButton.backgroundColor = [UIColor redColor];
+}
+
+- (void)stopScanning {
+    [self.scanner stopScanning];
+    
+    [self.toggleScanningButton setTitle:@"Start Scanning" forState:UIControlStateNormal];
+    self.toggleScanningButton.backgroundColor = self.view.tintColor;
+}
+
+#pragma mark - Actions
+
+- (IBAction)toggleScanningTapped:(id)sender {
+    if ([self.scanner isScanning]) {
+        [self stopScanning];
+    } else {
+        [MTBBarcodeScanner requestCameraPermissionWithSuccess:^(BOOL success) {
+            if (success) {
+                [self startScanning];
+            } else {
+                [self displayPermissionMissingAlert];
+            }
+        }];
+    }
+}
+
+- (IBAction)switchCameraTapped:(id)sender {
+    [self.scanner flipCamera];
+}
+
+- (void)backTapped {
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *reuseIdentifier = @"BarcodeCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier
+                                                            forIndexPath:indexPath];
+    cell.textLabel.text = self.uniqueCodes[indexPath.row];
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.uniqueCodes.count;
+}
+
+#pragma mark - Helper Methods
+
+- (void)displayPermissionMissingAlert {
+    NSString *message = nil;
+    if ([MTBBarcodeScanner scanningIsProhibited]) {
+        message = @"This app does not have permission to use the camera.";
+    } else if (![MTBBarcodeScanner cameraIsPresent]) {
+        message = @"This device does not have a camera.";
+    } else {
+        message = @"An unknown error occurred.";
+    }
+    
+    [[[UIAlertView alloc] initWithTitle:@"Scanning Unavailable"
+                                message:message
+                               delegate:nil
+                      cancelButtonTitle:@"Ok"
+                      otherButtonTitles:nil] show];
+}
+
+//- (void)scrollToLastTableViewCell {
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.uniqueCodes.count - 1
+//                                                inSection:0];
+//    [self.tableView scrollToRowAtIndexPath:indexPath
+//                          atScrollPosition:UITableViewScrollPositionTop
+//                                  animated:YES];
+//}
+
+#pragma mark - Setters
+
+- (void)setUniqueCodes:(NSMutableArray *)uniqueCodes {
+    _uniqueCodes = uniqueCodes;
+    [self.tableView reloadData];
+}
+
+@end
+

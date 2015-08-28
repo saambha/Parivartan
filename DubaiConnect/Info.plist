@@ -49,5 +49,11 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Emirates SB.otf</string>
+		<string>Emirates SL.otf</string>
+		<string>Emirates SM.otf</string>
+	</array>
 </dict>
 </plist>

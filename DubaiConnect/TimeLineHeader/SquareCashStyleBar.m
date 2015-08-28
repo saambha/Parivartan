@@ -23,7 +23,9 @@
 - (void)configureBar
 {
     // Configure bar appearence
-    self.maximumBarHeight = 240.0;
+    //self.maximumBarHeight = 240.0;
+    self.maximumBarHeight = 180;
+
     self.minimumBarHeight = 65.0;
     self.backgroundColor = [UIColor colorWithRed:0.84 green:0.10 blue:0.12 alpha:1];
     
@@ -74,6 +76,34 @@
     [_profileImageView addLayoutAttributes:finalProfileImageViewLayoutAttributes forProgress:0.5];
     
     [self addSubview:_profileImageView];
+    
+    
+//    _btn_Fb = [UIButton buttonWithType:UIButtonTypeCustom];
+//    _btn_Fb.frame = CGRectMake(250, 120.0, 30.0, 30.0);
+//    _btn_Fb.tintColor = [UIColor whiteColor];
+//    [_btn_Fb setImage:[UIImage imageNamed:@"BookNow"] forState:UIControlStateNormal];
+//    [_btn_Fb addTarget:self action:@selector(fbButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+//    
+//    BLKFlexibleHeightBarSubviewLayoutAttributes *initial_btn_FbLayoutAttributes = [[BLKFlexibleHeightBarSubviewLayoutAttributes alloc] init];
+//    initial_btn_FbLayoutAttributes.size = CGSizeMake(30.0, 30.0);
+//    initial_btn_FbLayoutAttributes.center = CGPointMake(self.frame.size.width*0.5, self.maximumBarHeight-20.0);
+//    [_btn_Fb addLayoutAttributes:initialProfileImageViewLayoutAttributes forProgress:0.0];
+//    
+//    BLKFlexibleHeightBarSubviewLayoutAttributes *midway_btn_FbLayoutAttributes = [[BLKFlexibleHeightBarSubviewLayoutAttributes alloc] initWithExistingLayoutAttributes:initialProfileImageViewLayoutAttributes];
+//    midway_btn_FbLayoutAttributes.center = CGPointMake(self.frame.size.width*0.5, (self.maximumBarHeight-self.minimumBarHeight)*0.8+self.minimumBarHeight-110.0);
+//    [_btn_Fb addLayoutAttributes:midwayProfileImageViewLayoutAttributes forProgress:0.2];
+//    
+//    BLKFlexibleHeightBarSubviewLayoutAttributes *final_btn_FbLayoutAttributes = [[BLKFlexibleHeightBarSubviewLayoutAttributes alloc] initWithExistingLayoutAttributes:midwayProfileImageViewLayoutAttributes];
+//    final_btn_FbLayoutAttributes.center = CGPointMake(self.frame.size.width*0.5, (self.maximumBarHeight-self.minimumBarHeight)*0.64+self.minimumBarHeight-110.0);
+//    final_btn_FbLayoutAttributes.transform = CGAffineTransformMakeScale(0.5, 0.5);
+//    final_btn_FbLayoutAttributes.alpha = 0.0;
+//    [_btn_Fb addLayoutAttributes:finalProfileImageViewLayoutAttributes forProgress:0.0];
+////
+
+    
+    
+    [self addSubview:_btn_Fb];
+
     
     
 }

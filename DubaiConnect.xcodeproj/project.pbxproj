@@ -36,6 +36,26 @@
 		6E451B2A1B88BC8C007188AB /* icon-plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E451B1C1B88BC8C007188AB /* icon-plus@2x.png */; };
 		6E451B2B1B88BC8C007188AB /* icon-star.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E451B1D1B88BC8C007188AB /* icon-star.png */; };
 		6E451B2C1B88BC8C007188AB /* icon-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E451B1E1B88BC8C007188AB /* icon-star@2x.png */; };
+		6E4973211B90D96B00DBC922 /* Default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E49730D1B90D96B00DBC922 /* Default.jpg */; };
+		6E4973221B90D96B00DBC922 /* dubai11.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 6E49730E1B90D96B00DBC922 /* dubai11.tiff */; };
+		6E4973231B90D96B00DBC922 /* dubai12.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 6E49730F1B90D96B00DBC922 /* dubai12.tiff */; };
+		6E4973241B90D96B00DBC922 /* dubai13.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 6E4973101B90D96B00DBC922 /* dubai13.tiff */; };
+		6E4973251B90D96B00DBC922 /* dubai14.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 6E4973111B90D96B00DBC922 /* dubai14.tiff */; };
+		6E4973261B90D96B00DBC922 /* dubai15.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 6E4973121B90D96B00DBC922 /* dubai15.tiff */; };
+		6E4973271B90D96B00DBC922 /* dubai16.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 6E4973131B90D96B00DBC922 /* dubai16.tiff */; };
+		6E4973281B90D96B00DBC922 /* dubai17.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 6E4973141B90D96B00DBC922 /* dubai17.tiff */; };
+		6E4973291B90D96B00DBC922 /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4973151B90D96B00DBC922 /* like.png */; };
+		6E49732A1B90D96B00DBC922 /* loc1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6E4973161B90D96B00DBC922 /* loc1.jpeg */; };
+		6E49732B1B90D96B00DBC922 /* loc2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4973171B90D96B00DBC922 /* loc2.png */; };
+		6E49732C1B90D96B00DBC922 /* Metro.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4973181B90D96B00DBC922 /* Metro.png */; };
+		6E49732D1B90D96B00DBC922 /* Minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4973191B90D96B00DBC922 /* Minus.png */; };
+		6E49732E1B90D96B00DBC922 /* Plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E49731A1B90D96B00DBC922 /* Plus.png */; };
+		6E49732F1B90D96B00DBC922 /* RedAlert.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6E49731B1B90D96B00DBC922 /* RedAlert.jpeg */; };
+		6E4973301B90D96B00DBC922 /* Sunny.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E49731C1B90D96B00DBC922 /* Sunny.png */; };
+		6E4973311B90D96B00DBC922 /* Uber.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6E49731D1B90D96B00DBC922 /* Uber.jpeg */; };
+		6E4973321B90D96B00DBC922 /* dayNight.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6E49731E1B90D96B00DBC922 /* dayNight.gif */; };
+		6E4973331B90D96B00DBC922 /* dubai11.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6E49731F1B90D96B00DBC922 /* dubai11.gif */; };
+		6E4973341B90D96B00DBC922 /* walk.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4973201B90D96B00DBC922 /* walk.png */; };
 		6E4E0CE11B8B9A23003A3F60 /* SquareCashStyleBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0CE01B8B9A23003A3F60 /* SquareCashStyleBar.m */; };
 		6E4E0CF11B8B9A5E003A3F60 /* BLKDelegateSplitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0CE41B8B9A5E003A3F60 /* BLKDelegateSplitter.m */; };
 		6E4E0CF21B8B9A5E003A3F60 /* BLKFlexibleHeightBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0CE61B8B9A5E003A3F60 /* BLKFlexibleHeightBar.m */; };
@@ -52,6 +72,17 @@
 		6E4E0D281B8E49F8003A3F60 /* banner_dubai_Al_Arab.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E4E0D271B8E49F8003A3F60 /* banner_dubai_Al_Arab.jpg */; };
 		6E4E0D2B1B8E4CBE003A3F60 /* Burj_Al_Arab400*300.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E4E0D291B8E4CBE003A3F60 /* Burj_Al_Arab400*300.jpg */; };
 		6E4E0D2C1B8E4CBE003A3F60 /* burj-al-arab-dubai-960x640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E4E0D2A1B8E4CBE003A3F60 /* burj-al-arab-dubai-960x640.jpg */; };
+		6E9E9CBE1B90757200EF8E01 /* Emirates SB.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E9CBB1B90757200EF8E01 /* Emirates SB.otf */; };
+		6E9E9CBF1B90757200EF8E01 /* Emirates SL.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E9CBC1B90757200EF8E01 /* Emirates SL.otf */; };
+		6E9E9CC01B90757200EF8E01 /* Emirates SM.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E9CBD1B90757200EF8E01 /* Emirates SM.otf */; };
+		6E9E9CD71B909CEB00EF8E01 /* MPSkewedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E9CD21B909CEB00EF8E01 /* MPSkewedCell.m */; };
+		6E9E9CD81B909CEB00EF8E01 /* MPSkewedCollectionViewLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E9CD41B909CEB00EF8E01 /* MPSkewedCollectionViewLayoutAttributes.m */; };
+		6E9E9CD91B909CEB00EF8E01 /* MPSkewedParallaxLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E9CD61B909CEB00EF8E01 /* MPSkewedParallaxLayout.m */; };
+		6E9E9CDC1B909D1200EF8E01 /* MPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E9CDB1B909D1200EF8E01 /* MPViewController.m */; };
+		6E9E9CDF1B90A33000EF8E01 /* MPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E9CDE1B90A33000EF8E01 /* MPNavigationController.m */; };
+		6E9E9CE31B90B21D00EF8E01 /* DCBarCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E9CE21B90B21D00EF8E01 /* DCBarCodeVC.m */; };
+		6ED5D4201B90CE8E00977FE4 /* MTBBarcodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5D41F1B90CE8E00977FE4 /* MTBBarcodeScanner.m */; };
+		6ED5D4231B90D0F600977FE4 /* DCScannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5D4221B90D0F600977FE4 /* DCScannerVC.m */; };
 		9A44208E1B903B7900C1CF9A /* DCTimeLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A44208C1B903B7800C1CF9A /* DCTimeLine.m */; };
 		9A44208F1B903B7900C1CF9A /* DCTimeLineCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A44208D1B903B7800C1CF9A /* DCTimeLineCustomCell.xib */; };
 		9A4420921B903D0C00C1CF9A /* Dubai.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A4420901B903D0C00C1CF9A /* Dubai.jpg */; };
@@ -114,6 +145,26 @@
 		6E451B1C1B88BC8C007188AB /* icon-plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-plus@2x.png"; sourceTree = "<group>"; };
 		6E451B1D1B88BC8C007188AB /* icon-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-star.png"; sourceTree = "<group>"; };
 		6E451B1E1B88BC8C007188AB /* icon-star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-star@2x.png"; sourceTree = "<group>"; };
+		6E49730D1B90D96B00DBC922 /* Default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Default.jpg; sourceTree = "<group>"; };
+		6E49730E1B90D96B00DBC922 /* dubai11.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = dubai11.tiff; sourceTree = "<group>"; };
+		6E49730F1B90D96B00DBC922 /* dubai12.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = dubai12.tiff; sourceTree = "<group>"; };
+		6E4973101B90D96B00DBC922 /* dubai13.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = dubai13.tiff; sourceTree = "<group>"; };
+		6E4973111B90D96B00DBC922 /* dubai14.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = dubai14.tiff; sourceTree = "<group>"; };
+		6E4973121B90D96B00DBC922 /* dubai15.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = dubai15.tiff; sourceTree = "<group>"; };
+		6E4973131B90D96B00DBC922 /* dubai16.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = dubai16.tiff; sourceTree = "<group>"; };
+		6E4973141B90D96B00DBC922 /* dubai17.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = dubai17.tiff; sourceTree = "<group>"; };
+		6E4973151B90D96B00DBC922 /* like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like.png; sourceTree = "<group>"; };
+		6E4973161B90D96B00DBC922 /* loc1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loc1.jpeg; sourceTree = "<group>"; };
+		6E4973171B90D96B00DBC922 /* loc2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loc2.png; sourceTree = "<group>"; };
+		6E4973181B90D96B00DBC922 /* Metro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Metro.png; sourceTree = "<group>"; };
+		6E4973191B90D96B00DBC922 /* Minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Minus.png; sourceTree = "<group>"; };
+		6E49731A1B90D96B00DBC922 /* Plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plus.png; sourceTree = "<group>"; };
+		6E49731B1B90D96B00DBC922 /* RedAlert.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RedAlert.jpeg; sourceTree = "<group>"; };
+		6E49731C1B90D96B00DBC922 /* Sunny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sunny.png; sourceTree = "<group>"; };
+		6E49731D1B90D96B00DBC922 /* Uber.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Uber.jpeg; sourceTree = "<group>"; };
+		6E49731E1B90D96B00DBC922 /* dayNight.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dayNight.gif; sourceTree = "<group>"; };
+		6E49731F1B90D96B00DBC922 /* dubai11.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dubai11.gif; sourceTree = "<group>"; };
+		6E4973201B90D96B00DBC922 /* walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walk.png; sourceTree = "<group>"; };
 		6E4E0CDF1B8B9A23003A3F60 /* SquareCashStyleBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareCashStyleBar.h; sourceTree = "<group>"; };
 		6E4E0CE01B8B9A23003A3F60 /* SquareCashStyleBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareCashStyleBar.m; sourceTree = "<group>"; };
 		6E4E0CE31B8B9A5E003A3F60 /* BLKDelegateSplitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLKDelegateSplitter.h; sourceTree = "<group>"; };
@@ -143,6 +194,25 @@
 		6E4E0D271B8E49F8003A3F60 /* banner_dubai_Al_Arab.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner_dubai_Al_Arab.jpg; sourceTree = "<group>"; };
 		6E4E0D291B8E4CBE003A3F60 /* Burj_Al_Arab400*300.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Burj_Al_Arab400*300.jpg"; sourceTree = "<group>"; };
 		6E4E0D2A1B8E4CBE003A3F60 /* burj-al-arab-dubai-960x640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "burj-al-arab-dubai-960x640.jpg"; sourceTree = "<group>"; };
+		6E9E9CBB1B90757200EF8E01 /* Emirates SB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Emirates SB.otf"; sourceTree = "<group>"; };
+		6E9E9CBC1B90757200EF8E01 /* Emirates SL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Emirates SL.otf"; sourceTree = "<group>"; };
+		6E9E9CBD1B90757200EF8E01 /* Emirates SM.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Emirates SM.otf"; sourceTree = "<group>"; };
+		6E9E9CD11B909CEB00EF8E01 /* MPSkewedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSkewedCell.h; sourceTree = "<group>"; };
+		6E9E9CD21B909CEB00EF8E01 /* MPSkewedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSkewedCell.m; sourceTree = "<group>"; };
+		6E9E9CD31B909CEB00EF8E01 /* MPSkewedCollectionViewLayoutAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSkewedCollectionViewLayoutAttributes.h; sourceTree = "<group>"; };
+		6E9E9CD41B909CEB00EF8E01 /* MPSkewedCollectionViewLayoutAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSkewedCollectionViewLayoutAttributes.m; sourceTree = "<group>"; };
+		6E9E9CD51B909CEB00EF8E01 /* MPSkewedParallaxLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSkewedParallaxLayout.h; sourceTree = "<group>"; };
+		6E9E9CD61B909CEB00EF8E01 /* MPSkewedParallaxLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSkewedParallaxLayout.m; sourceTree = "<group>"; };
+		6E9E9CDA1B909D1200EF8E01 /* MPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPViewController.h; path = DubaiConnect/MPViewController.h; sourceTree = SOURCE_ROOT; };
+		6E9E9CDB1B909D1200EF8E01 /* MPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPViewController.m; path = DubaiConnect/MPViewController.m; sourceTree = SOURCE_ROOT; };
+		6E9E9CDD1B90A33000EF8E01 /* MPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPNavigationController.h; sourceTree = "<group>"; };
+		6E9E9CDE1B90A33000EF8E01 /* MPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPNavigationController.m; sourceTree = "<group>"; };
+		6E9E9CE11B90B21D00EF8E01 /* DCBarCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBarCodeVC.h; sourceTree = "<group>"; };
+		6E9E9CE21B90B21D00EF8E01 /* DCBarCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBarCodeVC.m; sourceTree = "<group>"; };
+		6ED5D41E1B90CE8E00977FE4 /* MTBBarcodeScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBBarcodeScanner.h; sourceTree = "<group>"; };
+		6ED5D41F1B90CE8E00977FE4 /* MTBBarcodeScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBBarcodeScanner.m; sourceTree = "<group>"; };
+		6ED5D4211B90D0F600977FE4 /* DCScannerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCScannerVC.h; sourceTree = "<group>"; };
+		6ED5D4221B90D0F600977FE4 /* DCScannerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCScannerVC.m; sourceTree = "<group>"; };
 		9A44208B1B903B7800C1CF9A /* DCTimeLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTimeLine.h; sourceTree = "<group>"; };
 		9A44208C1B903B7800C1CF9A /* DCTimeLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTimeLine.m; sourceTree = "<group>"; };
 		9A44208D1B903B7800C1CF9A /* DCTimeLineCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCTimeLineCustomCell.xib; sourceTree = "<group>"; };
@@ -214,6 +284,8 @@
 		6E451AD31B88AE4D007188AB /* DubaiConnect */ = {
 			isa = PBXGroup;
 			children = (
+				6ED5D41D1B90CE8E00977FE4 /* Scanners */,
+				6E9E9CD01B909CEB00EF8E01 /* Skew */,
 				9A44208A1B903B5500C1CF9A /* TimeLine */,
 				6E4E0D111B8DF23F003A3F60 /* Swipe Control */,
 				07DBA5451B8E33D60089972F /* BeaconMap */,
@@ -222,6 +294,12 @@
 				9AD5D67B1B8B5C1C00DD10DC /* ServiceManager */,
 				9AD5D6711B8B5AC300DD10DC /* FrameWorks */,
 				6E451B041B88B763007188AB /* CurveMenu */,
+				6E9E9CDA1B909D1200EF8E01 /* MPViewController.h */,
+				6ED5D4211B90D0F600977FE4 /* DCScannerVC.h */,
+				6ED5D4221B90D0F600977FE4 /* DCScannerVC.m */,
+				6E9E9CDB1B909D1200EF8E01 /* MPViewController.m */,
+				6E9E9CDD1B90A33000EF8E01 /* MPNavigationController.h */,
+				6E9E9CDE1B90A33000EF8E01 /* MPNavigationController.m */,
 				6E4E0D241B8E007A003A3F60 /* DCSwipeSplashViewController.h */,
 				6E4E0D251B8E007A003A3F60 /* DCSwipeSplashViewController.m */,
 				6E4E0CFE1B8BB14A003A3F60 /* DCBookingViewController.h */,
@@ -234,6 +312,8 @@
 				6E4E0D0F1B8DC3C2003A3F60 /* DCSearchResultsTableViewController.m */,
 				6E451ADE1B88AE4D007188AB /* DCTimeLineViewController.h */,
 				6E451ADF1B88AE4D007188AB /* DCTimeLineViewController.m */,
+				6E9E9CE11B90B21D00EF8E01 /* DCBarCodeVC.h */,
+				6E9E9CE21B90B21D00EF8E01 /* DCBarCodeVC.m */,
 				6E451AE11B88AE4D007188AB /* Main.storyboard */,
 				6E451AD41B88AE4D007188AB /* Supporting Files */,
 			);
@@ -243,6 +323,7 @@
 		6E451AD41B88AE4D007188AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6E9E9CBA1B90757200EF8E01 /* Fonts */,
 				6E451AE61B88AE4D007188AB /* LaunchScreen.xib */,
 				6E451ADB1B88AE4D007188AB /* DubaiConnect.xcdatamodeld */,
 				6E451AD81B88AE4D007188AB /* AppDelegate.h */,
@@ -286,6 +367,26 @@
 		6E451B101B88BC8C007188AB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6E49730D1B90D96B00DBC922 /* Default.jpg */,
+				6E49730E1B90D96B00DBC922 /* dubai11.tiff */,
+				6E49730F1B90D96B00DBC922 /* dubai12.tiff */,
+				6E4973101B90D96B00DBC922 /* dubai13.tiff */,
+				6E4973111B90D96B00DBC922 /* dubai14.tiff */,
+				6E4973121B90D96B00DBC922 /* dubai15.tiff */,
+				6E4973131B90D96B00DBC922 /* dubai16.tiff */,
+				6E4973141B90D96B00DBC922 /* dubai17.tiff */,
+				6E4973151B90D96B00DBC922 /* like.png */,
+				6E4973161B90D96B00DBC922 /* loc1.jpeg */,
+				6E4973171B90D96B00DBC922 /* loc2.png */,
+				6E4973181B90D96B00DBC922 /* Metro.png */,
+				6E4973191B90D96B00DBC922 /* Minus.png */,
+				6E49731A1B90D96B00DBC922 /* Plus.png */,
+				6E49731B1B90D96B00DBC922 /* RedAlert.jpeg */,
+				6E49731C1B90D96B00DBC922 /* Sunny.png */,
+				6E49731D1B90D96B00DBC922 /* Uber.jpeg */,
+				6E49731E1B90D96B00DBC922 /* dayNight.gif */,
+				6E49731F1B90D96B00DBC922 /* dubai11.gif */,
+				6E4973201B90D96B00DBC922 /* walk.png */,
 				6E4E0D291B8E4CBE003A3F60 /* Burj_Al_Arab400*300.jpg */,
 				9A4420901B903D0C00C1CF9A /* Dubai.jpg */,
 				9A4420911B903D0C00C1CF9A /* khalifa.jpg */,
@@ -350,6 +451,38 @@
 				6E4E0D201B8DF3B8003A3F60 /* OverlayView.m */,
 			);
 			path = "Swipe Control";
+			sourceTree = "<group>";
+		};
+		6E9E9CBA1B90757200EF8E01 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6E9E9CBB1B90757200EF8E01 /* Emirates SB.otf */,
+				6E9E9CBC1B90757200EF8E01 /* Emirates SL.otf */,
+				6E9E9CBD1B90757200EF8E01 /* Emirates SM.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		6E9E9CD01B909CEB00EF8E01 /* Skew */ = {
+			isa = PBXGroup;
+			children = (
+				6E9E9CD11B909CEB00EF8E01 /* MPSkewedCell.h */,
+				6E9E9CD21B909CEB00EF8E01 /* MPSkewedCell.m */,
+				6E9E9CD31B909CEB00EF8E01 /* MPSkewedCollectionViewLayoutAttributes.h */,
+				6E9E9CD41B909CEB00EF8E01 /* MPSkewedCollectionViewLayoutAttributes.m */,
+				6E9E9CD51B909CEB00EF8E01 /* MPSkewedParallaxLayout.h */,
+				6E9E9CD61B909CEB00EF8E01 /* MPSkewedParallaxLayout.m */,
+			);
+			path = Skew;
+			sourceTree = "<group>";
+		};
+		6ED5D41D1B90CE8E00977FE4 /* Scanners */ = {
+			isa = PBXGroup;
+			children = (
+				6ED5D41E1B90CE8E00977FE4 /* MTBBarcodeScanner.h */,
+				6ED5D41F1B90CE8E00977FE4 /* MTBBarcodeScanner.m */,
+			);
+			path = Scanners;
 			sourceTree = "<group>";
 		};
 		9A44208A1B903B5500C1CF9A /* TimeLine */ = {
@@ -469,14 +602,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E4973281B90D96B00DBC922 /* dubai17.tiff in Resources */,
+				6E4973301B90D96B00DBC922 /* Sunny.png in Resources */,
+				6E4973251B90D96B00DBC922 /* dubai14.tiff in Resources */,
+				6E49732B1B90D96B00DBC922 /* loc2.png in Resources */,
+				6E4973331B90D96B00DBC922 /* dubai11.gif in Resources */,
+				6E4973311B90D96B00DBC922 /* Uber.jpeg in Resources */,
+				6E4973221B90D96B00DBC922 /* dubai11.tiff in Resources */,
+				6E4973231B90D96B00DBC922 /* dubai12.tiff in Resources */,
+				6E9E9CC01B90757200EF8E01 /* Emirates SM.otf in Resources */,
 				6E451B211B88BC8C007188AB /* bg-addbutton.png in Resources */,
+				6E49732A1B90D96B00DBC922 /* loc1.jpeg in Resources */,
+				6E4973321B90D96B00DBC922 /* dayNight.gif in Resources */,
+				6E4973271B90D96B00DBC922 /* dubai16.tiff in Resources */,
+				6E49732E1B90D96B00DBC922 /* Plus.png in Resources */,
+				6E9E9CBE1B90757200EF8E01 /* Emirates SB.otf in Resources */,
 				6E4E0D281B8E49F8003A3F60 /* banner_dubai_Al_Arab.jpg in Resources */,
 				6E451AFE1B88B024007188AB /* Images.xcassets in Resources */,
 				6E451B251B88BC8C007188AB /* bg-menuitem.png in Resources */,
+				6E4973291B90D96B00DBC922 /* like.png in Resources */,
+				6E49732D1B90D96B00DBC922 /* Minus.png in Resources */,
 				07DBA5481B8E37D80089972F /* LocusLabsSDK.bundle in Resources */,
 				9A4420921B903D0C00C1CF9A /* Dubai.jpg in Resources */,
 				6E451B201B88BC8C007188AB /* bg-addbutton-highlighted@2x.png in Resources */,
 				6E451B291B88BC8C007188AB /* icon-plus.png in Resources */,
+				6E4973241B90D96B00DBC922 /* dubai13.tiff in Resources */,
+				6E49732C1B90D96B00DBC922 /* Metro.png in Resources */,
+				6E4973341B90D96B00DBC922 /* walk.png in Resources */,
+				6E4973261B90D96B00DBC922 /* dubai15.tiff in Resources */,
 				6E451B271B88BC8C007188AB /* icon-plus-highlighted.png in Resources */,
 				6E4E0D2B1B8E4CBE003A3F60 /* Burj_Al_Arab400*300.jpg in Resources */,
 				6E451B221B88BC8C007188AB /* bg-addbutton@2x.png in Resources */,
@@ -490,9 +643,12 @@
 				9A4420931B903D0C00C1CF9A /* khalifa.jpg in Resources */,
 				6E451B2B1B88BC8C007188AB /* icon-star.png in Resources */,
 				9A44208F1B903B7900C1CF9A /* DCTimeLineCustomCell.xib in Resources */,
+				6E49732F1B90D96B00DBC922 /* RedAlert.jpeg in Resources */,
+				6E9E9CBF1B90757200EF8E01 /* Emirates SL.otf in Resources */,
 				6E451B231B88BC8C007188AB /* bg-menuitem-highlighted.png in Resources */,
 				6E451B241B88BC8C007188AB /* bg-menuitem-highlighted@2x.png in Resources */,
 				6E451B1F1B88BC8C007188AB /* bg-addbutton-highlighted.png in Resources */,
+				6E4973211B90D96B00DBC922 /* Default.jpg in Resources */,
 				6E4E0D2C1B8E4CBE003A3F60 /* burj-al-arab-dubai-960x640.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,6 +668,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AD5D67E1B8B5C1C00DD10DC /* DCFacebookManager.m in Sources */,
+				6E9E9CD81B909CEB00EF8E01 /* MPSkewedCollectionViewLayoutAttributes.m in Sources */,
 				6E451ADA1B88AE4D007188AB /* AppDelegate.m in Sources */,
 				9AD5D66C1B8B5A2D00DD10DC /* DCLoginViewController.m in Sources */,
 				6E4E0CF21B8B9A5E003A3F60 /* BLKFlexibleHeightBar.m in Sources */,
@@ -521,20 +678,27 @@
 				6E451AE01B88AE4D007188AB /* DCTimeLineViewController.m in Sources */,
 				6E4E0D101B8DC3C2003A3F60 /* DCSearchResultsTableViewController.m in Sources */,
 				6E4E0CF61B8B9A5E003A3F60 /* DCSquareCashStyleBehaviorDefiner.m in Sources */,
+				6ED5D4201B90CE8E00977FE4 /* MTBBarcodeScanner.m in Sources */,
 				6E4E0D221B8DF3B8003A3F60 /* DraggableViewBackground.m in Sources */,
 				9AD5D67F1B8B5C1C00DD10DC /* ServiceCallManager.m in Sources */,
+				6E9E9CE31B90B21D00EF8E01 /* DCBarCodeVC.m in Sources */,
 				6E4E0CF11B8B9A5E003A3F60 /* BLKDelegateSplitter.m in Sources */,
+				6E9E9CD71B909CEB00EF8E01 /* MPSkewedCell.m in Sources */,
 				6E4E0CF41B8B9A5E003A3F60 /* BLKFlexibleHeightBarSubviewLayoutAttributes.m in Sources */,
 				6E451B091B88B763007188AB /* QuadCurveMenu.m in Sources */,
 				6E4E0CF71B8B9A5E003A3F60 /* UIView+BLKFlexibleHeightBarSubview.m in Sources */,
+				6E9E9CDF1B90A33000EF8E01 /* MPNavigationController.m in Sources */,
+				6ED5D4231B90D0F600977FE4 /* DCScannerVC.m in Sources */,
 				6E4E0D211B8DF3B8003A3F60 /* DraggableView.m in Sources */,
 				6E4E0D011B8BB14A003A3F60 /* DCBookingViewController.m in Sources */,
+				6E9E9CDC1B909D1200EF8E01 /* MPViewController.m in Sources */,
 				6E451B021B88B2EB007188AB /* DCTimeLineDetailViewController.m in Sources */,
 				6E4E0D261B8E007A003A3F60 /* DCSwipeSplashViewController.m in Sources */,
 				6E451B0A1B88B763007188AB /* QuadCurveMenuItem.m in Sources */,
 				07DBA54C1B8E39BF0089972F /* MapViewController.m in Sources */,
 				6E451AD71B88AE4D007188AB /* main.m in Sources */,
 				6E4E0CF31B8B9A5E003A3F60 /* BLKFlexibleHeightBarBehaviorDefiner.m in Sources */,
+				6E9E9CD91B909CEB00EF8E01 /* MPSkewedParallaxLayout.m in Sources */,
 				6E4E0D231B8DF3B8003A3F60 /* OverlayView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

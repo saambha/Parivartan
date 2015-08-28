@@ -13,9 +13,13 @@
 #import "DCTimeLineViewController.h"
 #import "MapViewController.h"
 
+#import "DCSwipeSplashViewController.h"
+
+
 @interface DCLoginViewController ()
 
 @property (nonatomic , strong)  DCFacebookManager *objFBManager;
+
 
 
 @end
@@ -24,6 +28,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    _bgView.animationImages = [NSArray arrayWithObjects:
+//                               [UIImage imageNamed:@"dubai11.tiff"],
+//                               [UIImage imageNamed:@"dubai12.tiff"],
+//                               [UIImage imageNamed:@"dubai13.tiff"],
+//                               [UIImage imageNamed:@"dubai14.tiff"], nil];;
+//    
+//    [_bgView startAnimating];
+    _bgView.image = [UIImage imageNamed:@"Default.jpg"];
     // Do any additional setup after loading the view.
 }
 
@@ -43,8 +56,12 @@
     
     if (success) {
         
-        DCTimeLineViewController *dctimeLineVC =[[DCTimeLineViewController alloc] initWithNibName:@"DCTimeLineViewController" bundle:nil];
-        [self presentViewController:dctimeLineVC animated:YES completion:NULL];
+//        DCTimeLineViewController *dctimeLineVC =[[DCTimeLineViewController alloc] initWithNibName:@"DCTimeLineViewController" bundle:nil];
+//        [self presentViewController:dctimeLineVC animated:YES completion:NULL];//
+        
+//        DCSwipeSplashViewController *dctimeLineVC =[[DCSwipeSplashViewController alloc] initWithNibName:@"DCSwipeSplashViewController" bundle:nil];
+//        [self presentViewController:dctimeLineVC animated:YES completion:NULL];//DCSwipeSplashViewController
+//
     }
 }
 

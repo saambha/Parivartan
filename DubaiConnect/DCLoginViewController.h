@@ -11,6 +11,7 @@
 
 @interface DCLoginViewController : UIViewController <FbManagerDelegate>
 
+@property (nonatomic , weak) IBOutlet UIImageView *bgView;
 
 
 @end

@@ -9,14 +9,18 @@
 #import "DCSwipeSplashViewController.h"
 #import "DCTimeLineViewController.h"
 
-@interface DCSwipeSplashViewController ()
+@interface DCSwipeSplashViewController (){
 
+    CGFloat progress;
+}
 @end
 
 @implementation DCSwipeSplashViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.title = @"Set your preferences";
     // Do any additional setup after loading the view.
     DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame:self.view.frame];
     draggableBackground.delegateCardOver = self;
@@ -54,5 +58,6 @@
     
     
 }
+
 
 @end

@@ -19,9 +19,18 @@
 #import "MapViewController.h"
 #import "DCBookingViewController.h"
 #import "DCTimeLine.h"
+#import "MPNavigationController.h"
+
+#import <MediaPlayer/MediaPlayer.h>
+
+
+
 
 CGFloat kSizeZero = 0;
 CGFloat kHeaderHeightBuffer = 170;
+
+const int kHeaderBtn_X                  = 150;
+
 
 @interface DCTimeLineViewController () {
     UIImageView *imageView;
@@ -40,6 +49,19 @@ CGFloat kHeaderHeightBuffer = 170;
 
 @property (nonatomic , strong) NSMutableArray *arr_timelineObjs;
 
+@property (nonatomic , strong)  MPMoviePlayerController *moviePlayer;
+
+@property (nonatomic , strong) UILabel *lblHours;
+
+@property (nonatomic , assign) int hours;
+
+@property (nonatomic , strong) UIView *error_notificationView;
+
+@property (nonatomic , strong) UIView *error_notificationView_Alert;
+
+
+
+
 @end
 
 @implementation DCTimeLineViewController
@@ -54,6 +76,8 @@ CGFloat kHeaderHeightBuffer = 170;
 {
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
+    
+    _hours = 9;
     
     [self setLimeLineObjects];
     //Setup FaceBook
@@ -123,7 +147,19 @@ CGFloat kHeaderHeightBuffer = 170;
     //self.tableView.tableHeaderView = self.myCustomBar;
     [self.view addSubview:self.myCustomBar];
 
-    self.myCustomBar.backgroundColor =  [UIColor colorWithPatternImage:[UIImage imageNamed:@"Dubai.jpg"]];
+    self.myCustomBar.backgroundColor =  [UIColor colorWithPatternImage:[UIImage imageNamed:@"burj-al-arab-dubai-960x640"]];
+    
+       // self.myCustomBar.backgroundColor =  [UIColor colorWithPatternImage:[UIImage animatedImageNamed:@"dayNight.gif" duration:30.0]];
+    
+//    _bgView.animationImages = [NSArray arrayWithObjects:
+//                               [UIImage imageNamed:@"dubai11.tiff"],
+//                               [UIImage imageNamed:@"dubai12.tiff"],
+//                               [UIImage imageNamed:@"dubai13.tiff"],
+//                               [UIImage imageNamed:@"dubai14.tiff"], nil];;
+//    
+//    [_bgView startAnimating];
+
+    ;
     
 //    // Setup the table view
   //  [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
@@ -132,22 +168,78 @@ CGFloat kHeaderHeightBuffer = 170;
 
 //
     
+    
+   
     // Add close button - it's pinned to the top right corner, so it doesn't need to respond to bar height changes
-    UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    closeButton.frame = CGRectMake(self.myCustomBar.frame.size.width-40.0, 25.0, 30.0, 30.0);
-    closeButton.tintColor = [UIColor whiteColor];
-    [closeButton setImage:[UIImage imageNamed:@"BookNow"] forState:UIControlStateNormal];
-    [closeButton addTarget:self action:@selector(closeViewController:) forControlEvents:UIControlEventTouchUpInside];
-    [self.myCustomBar addSubview:closeButton];
+    UIButton *minusButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    minusButton.frame = CGRectMake(self.myCustomBar.frame.size.width-80.0, 25.0, 30.0, 30.0);
+    minusButton.tintColor = [UIColor whiteColor];
+    [minusButton setImage:[UIImage imageNamed:@"Minus.png"] forState:UIControlStateNormal];
+    [minusButton addTarget:self action:@selector(minusButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.myCustomBar addSubview:minusButton];
+    minusButton.backgroundColor = [UIColor clearColor];
     
     
     
+     _lblHours = [[UILabel alloc] init];
+    _lblHours.frame = CGRectMake(self.myCustomBar.frame.size.width-48.0, 25.0, 18.0, 30.0);
+    _lblHours.text = [NSString stringWithFormat:@"%i",_hours];
+    _lblHours.font = [UIFont fontWithName:@"HelveticaNeue" size:13.0];
+    _lblHours.backgroundColor = [UIColor clearColor];
+    _lblHours.textColor = [UIColor whiteColor];
+    [self.myCustomBar addSubview:_lblHours];
+
+
     UIButton *plusButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    plusButton.frame = CGRectMake(self.myCustomBar.frame.size.width-80.0, 25.0, 30.0, 30.0);
+    plusButton.frame = CGRectMake(self.myCustomBar.frame.size.width-32.0, 25.0, 30.0, 30.0);
     plusButton.tintColor = [UIColor whiteColor];
-    [plusButton setImage:[UIImage imageNamed:@"BookNow"] forState:UIControlStateNormal];
+    [plusButton setImage:[UIImage imageNamed:@"Plus.png"] forState:UIControlStateNormal];
     [plusButton addTarget:self action:@selector(plusButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.myCustomBar addSubview:plusButton];
+    plusButton.backgroundColor = [UIColor clearColor];
+
+    
+
+    
+    
+
+    [self creatHeader];
+    
+    //[self showNotification:@"Test"];
+}
+
+-(void)creatHeader {
+    UIView *header =[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+    
+    header.backgroundColor = [UIColor colorWithRed:231/255.0 green:228/255.0 blue:223/255.0 alpha:1.0];//231 228 223 //[UIColor colorWithRed:0.84 green:0.10 blue:0.12 alpha:1];
+    
+    UIButton *fbButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    fbButton.frame = CGRectMake(kHeaderBtn_X, 10, 30.0, 20.0);
+    fbButton.tintColor = [UIColor whiteColor];
+    [fbButton setImage:[UIImage imageNamed:@"like.png"] forState:UIControlStateNormal];
+    [fbButton addTarget:self action:@selector(fbButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [header addSubview:fbButton];
+    
+    
+    UIButton *lnButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    lnButton.frame = CGRectMake(kHeaderBtn_X+50, 10, 30.0, 20.0);
+    lnButton.tintColor = [UIColor whiteColor];
+    [lnButton setImage:[UIImage imageNamed:@"like.png"] forState:UIControlStateNormal];
+    [lnButton addTarget:self action:@selector(lnButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [header addSubview:lnButton];
+
+    
+    UIButton *twitterButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    twitterButton.frame = CGRectMake(kHeaderBtn_X+100, 10, 30.0, 20.0);
+    twitterButton.tintColor = [UIColor whiteColor];
+    [twitterButton setImage:[UIImage imageNamed:@"like.png"] forState:UIControlStateNormal];
+    [twitterButton addTarget:self action:@selector(twitterButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [header addSubview:twitterButton];
+    
+    
+    self.tableView.tableHeaderView = header;
+
+
     
 }
 
@@ -170,6 +262,16 @@ CGFloat kHeaderHeightBuffer = 170;
     imgView_Place.layer.cornerRadius = 25.0;
     imgView_Place.layer.borderWidth = 1.0;
     imgView_Place.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    
+    if (indexPath.row == 0) {
+        UIImageView *imgView_Location = (UIImageView *)[cell.contentView viewWithTag:13];
+        
+        imgView_Location.animationImages = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"loc1.jpeg"], [UIImage imageNamed:@"loc1.jpeg"],[UIImage imageNamed:@"loc1.jpeg"],[UIImage imageNamed:@"loc1.jpeg"],[UIImage imageNamed:@"loc1.jpeg"],[UIImage imageNamed:@"loc1.jpeg"],[UIImage imageNamed:@"loc1.jpeg"],[UIImage imageNamed:@"loc1.jpeg"],[UIImage imageNamed:@"loc1.jpeg"],[UIImage imageNamed:@"loc1.jpeg"],[UIImage imageNamed:@"loc2.png"],[UIImage imageNamed:@"loc2.png"],[UIImage imageNamed:@"loc2.png"],[UIImage imageNamed:@"loc2.png"],[UIImage imageNamed:@"loc2.png"],[UIImage imageNamed:@"loc2.png"],nil];
+        [imgView_Location startAnimating];
+    }
+    
+    
     
     DCTimeLine *obj = [self.arr_timelineObjs objectAtIndex:indexPath.row];
     CGRect frame2;
@@ -203,7 +305,7 @@ CGFloat kHeaderHeightBuffer = 170;
     }
     if (!([self.arr_timelineObjs count]-1 == indexPath.row)) {
         UIImageView *imgView_line =[[UIImageView alloc] initWithFrame:frame2];
-        imgView_line.backgroundColor = [UIColor redColor];
+        imgView_line.backgroundColor = [UIColor colorWithRed:231/255.0 green:228/255.0 blue:223/255.0 alpha:1.0];//231 228 223
         [cell.contentView addSubview:imgView_line];
 
     }
@@ -343,7 +445,7 @@ CGFloat kHeaderHeightBuffer = 170;
 //        frame.size.height -= scrollView.contentOffset.y;
 //        self.tableView.tableHeaderView.frame = CGRectMake(0, 0, 320, 0);
 //}
-- (IBAction)closeViewController:(id)sender
+- (IBAction)minusButtonAction:(id)sender
 {
 //    [self presentViewController:dcBookingVC animated:YES completion:nil];
     
@@ -354,27 +456,83 @@ CGFloat kHeaderHeightBuffer = 170;
 //    // Configure the new view controller here.
 //    
 //    [self presentViewController:dcBookingVC animated:YES completion:nil];
+    _hours = _hours- 2;
+    _lblHours.text = [NSString stringWithFormat:@"%i",_hours];
     
-    self.myCustomBar.backgroundColor =[UIColor redColor];
+    if (_hours < 9) {
+        [self showErrorNotification:@"Do you want In"];
+
+    }
+    
     [self setLimeLineObjects1];
     [self.tableView reloadData];
 }
 
 - (IBAction)plusButtonAction:(id)sender
 {
-    //    [self presentViewController:dcBookingVC animated:YES completion:nil];
     
-    //    UIStoryboard *storyboard = self.storyboard;
-    //    DCBookingViewController *dcBookingVC = [storyboard instantiateViewControllerWithIdentifier:@"DCTimeLineDetailViewController"];
-    //    dcBookingVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    //
-    //    // Configure the new view controller here.
-    //
-    //    [self presentViewController:dcBookingVC animated:YES completion:nil];
+//    self.myCustomBar.backgroundColor =  [UIColor colorWithPatternImage:[UIImage imageNamed:@"Dubai.jpg"]];
+//    [self setLimeLineObjects];
+
+    _hours = _hours + 2;
+        _lblHours.text = [NSString stringWithFormat:@"%i",_hours];
     
-    self.myCustomBar.backgroundColor =  [UIColor colorWithPatternImage:[UIImage imageNamed:@"Dubai.jpg"]];
-    [self setLimeLineObjects];
-    [self.tableView reloadData];
+        [self.tableView reloadData];
+    
+    //[self playVideo:@"https://www.youtube.com/watch?v=5kdcROjK3Us&spfreload=10"];
+    
+    
+}
+
+-(void)showNotification:(NSString *)Text {
+    
+    
+    UIView *notificationView;
+    UILabel *notificationLbl;
+    
+    
+    notificationView =[[UIView alloc] initWithFrame:CGRectMake(0, -50, 400, 100)];
+    //notificationView =[[UIView alloc] init];
+
+    notificationLbl =[[UILabel alloc] initWithFrame:CGRectMake(50, 20,300,30)];
+    [notificationView addSubview:notificationLbl];
+    
+    notificationLbl.text = [NSString stringWithFormat:@"%@",Text];
+    notificationLbl.backgroundColor = [UIColor clearColor];
+    notificationLbl.textColor = [UIColor whiteColor];
+    
+    notificationView.backgroundColor = [UIColor colorWithRed:42/255.0 green:96/255.0 blue:152/255.0 alpha:1.0];//231 228 223 //[UIColor colorWithRed:0.84 green:
+    
+    notificationView.hidden = NO;
+//    _notificationView.alpha = 1.0f;
+    [UIView animateWithDuration:0.4
+                          delay:0.0
+                        options:UIViewAnimationOptionTransitionFlipFromTop
+                     animations:^
+     {
+         notificationView.frame = CGRectMake(0, 0, 400, 100);
+         [self.view addSubview:notificationView];
+     }
+                     completion:nil];
+
+    
+    [UIView animateWithDuration:0.5
+                          delay:1.0
+                        options:UIViewAnimationOptionTransitionFlipFromBottom
+                     animations:^
+     {
+
+         notificationView.frame = CGRectMake(0, -50, 400, 100);
+         //notificationView.alpha = 0.0f;
+
+         [self.view addSubview:notificationView];
+     }
+                     completion:^(BOOL finished) {
+                         // Once the animation is completed and the alpha has gone to 0.0, hide the view for good
+                         notificationView.hidden = YES;
+                     }];
+
+    
 }
 
 
@@ -382,9 +540,11 @@ CGFloat kHeaderHeightBuffer = 170;
 - (void)quadCurveMenu:(QuadCurveMenu *)menu didSelectIndex:(NSInteger)idx
 {
     NSLog(@"Select the index : %ld",(long)idx);
+    UIStoryboard *storyboard = self.storyboard;
+    MPNavigationController *visaViewController;
     switch (idx) {
         case 0:{
-                UIStoryboard *storyboard = self.storyboard;
+            
                 MapViewController *map = [storyboard instantiateViewControllerWithIdentifier:@"MapViewController"];
                 map.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
             
@@ -395,6 +555,13 @@ CGFloat kHeaderHeightBuffer = 170;
             break;
         case 1:
             
+            //UIStoryboard *storyboard = self.storyboard;
+            visaViewController = [storyboard instantiateViewControllerWithIdentifier:@"MPNavigationController"];
+
+//            visaViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+            
+            // Configure the new view controller here.
+            [self presentViewController:visaViewController animated:YES completion:nil];
             break;
         case 2:
             
@@ -500,5 +667,281 @@ CGFloat kHeaderHeightBuffer = 170;
     
 }
 
+-(void)fbButtonAction:(id)sender {
+    
+}
+
+-(void)lnButtonAction:(id)sender {
+    
+}
+
+
+-(void)twitterButtonAction:(id)sender {
+    
+}
+
+
+-(void)playVideo:(NSString *)movieUrl {
+    
+    NSURL *fileURL = [NSURL URLWithString:movieUrl];
+    
+    self.moviePlayer = [[MPMoviePlayerController alloc] init];
+    self.moviePlayer .contentURL = fileURL;
+    [self.moviePlayer  prepareToPlay];
+    //[moviePlayer.view setFrame:CGRectMake(itemImageView.frame.origin.x,itemImageView.frame.origin.y,itemImageView.frame.size.width,(itemImageView.frame.size.height))];
+    //[popView addSubview:[moviePlayer view]];
+    
+    self.moviePlayer .controlStyle = MPMovieControlStyleEmbedded;
+    self.moviePlayer .scalingMode = MPMovieScalingModeAspectFit;
+    self.moviePlayer .view.frame = self.view.frame;
+    //[popView addSubview:[mPlayer view]];
+    if (self.moviePlayer)
+    {
+        [self.moviePlayer setShouldAutoplay:YES];
+        [self.moviePlayer play];
+    }
+    [self.view addSubview:self.moviePlayer.view];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoPlayerPlaybackFinished:) name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoPlayerPlaybackWillExitFullscreen:) name:MPMoviePlayerDidExitFullscreenNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoPlayerPlaybackWillEnterFullscreen:) name:MPMoviePlayerWillEnterFullscreenNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoPlayerLoadStateChanged:) name:MPMoviePlayerLoadStateDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoPlayerPlaybackStateChanged:) name:MPMoviePlayerPlaybackStateDidChangeNotification object:nil];
+    
+}
+
+//------------------------------------------------------------------------------------------
+//	Function Name	:   videoPlayerPlaybackFinished
+//	Description		:   stop playback state finshed handler
+//  params        :       none
+//	return			:       void
+//  author         :        Jeetendra
+//------------------------------------------------------------------------------------------
+-(void)videoPlayerPlaybackFinished:(NSNotification*)notification
+{
+    [self stopPlaying];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+}
+
+-(void)stopPlaying
+{
+    if ([self.moviePlayer isPreparedToPlay])
+    {
+        [UIView beginAnimations:@"animation" context:nil];
+        [UIView setAnimationBeginsFromCurrentState:YES];
+        [UIView setAnimationDuration:0.5];
+        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+        //[self performSelector:@selector(removePopOver) withObject:nil afterDelay:0.0];
+       // [self removePopOver];
+        //  [self.iceBaseVC updateView:[[UIApplication sharedApplication] statusBarOrientation]];
+        [UIView commitAnimations];
+    }
+    //[self removeNotification];
+    
+//    if (_urlRequest) {
+//        _urlRequest= nil;
+//    }
+//    if (_urlConnection) {
+//        [_urlConnection cancel];
+//        _urlConnection = nil;
+//    }
+}
+
+//------------------------------------------------------------------------------------------
+//	Function Name	:   videoPlayerPlaybackWillExitFullscreen
+//	Description		:   exit full screen handler
+//  params        :       none
+//	return			:       void
+//  author         :        Jeetendra
+//------------------------------------------------------------------------------------------
+-(void)videoPlayerPlaybackWillExitFullscreen:(NSNotification*)notification
+{
+    [UIView beginAnimations:@"animation" context:nil];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDuration:0.5];
+    //[UIView setAnimationCurve:UIViewAnimationCurveLinear];
+    // [self.iceBaseVC updateView:[[UIApplication sharedApplication] statusBarOrientation]];
+    // moviePlayer.fullscreen = NO
+    if (self.moviePlayer.playbackState == MPMoviePlaybackStatePaused)
+    {
+        [self.moviePlayer pause];
+    }
+    else if (self.moviePlayer.playbackState == MPMoviePlaybackStatePlaying)
+    {
+        [self.moviePlayer prepareToPlay];
+        [self.moviePlayer play];
+    }
+    else if (self.moviePlayer.playbackState == MPMoviePlaybackStateStopped)
+    {
+        [self.moviePlayer stop];
+    }
+    
+    [UIView commitAnimations];
+}
+
+
+
+-(void)videoPlayerLoadStateChanged:(NSNotification *)notification
+{
+    //[self removeActivitySpinner];
+    if (self.moviePlayer.loadState == MPMovieLoadStatePlayable) {
+        if ([self.moviePlayer isPreparedToPlay]) {
+            [self.moviePlayer setShouldAutoplay:YES];
+            [self.moviePlayer prepareToPlay];
+            [self.moviePlayer play];
+        }
+    }
+}
+
+-(void)videoPlayerPlaybackStateChanged:(NSNotification *)notification
+{
+    if (self.moviePlayer.playbackState == MPMoviePlaybackStatePaused)
+    {
+        [self.moviePlayer pause];
+    }
+    else if (self.moviePlayer.playbackState == MPMoviePlaybackStateStopped)
+    {
+        [self.moviePlayer stop];
+    }
+    else if (self.moviePlayer.playbackState == MPMoviePlaybackStatePlaying)
+    {
+        [self.moviePlayer play];
+    }
+    
+}
+
+
+-(void)showErrorNotification:(NSString *)Text {
+    
+    
+    _error_notificationView =[[UIView alloc] initWithFrame:CGRectMake(0, 700, 400, 80)];
+    //notificationView =[[UIView alloc] init];
+    
+//    notificationLbl =[[UILabel alloc] initWithFrame:CGRectMake(50, 20,300,30)];
+//    [_error_notificationView addSubview:notificationLbl];
+//    
+//    notificationLbl.text = [NSString stringWithFormat:@"%@",Text];
+//    notificationLbl.backgroundColor = [UIColor clearColor];
+ //   notificationLbl.textColor = [UIColor whiteColor];
+    
+    //_error_notificationView.backgroundColor = [UIColor colorWithRed:231/255.0 green:228/255.0 blue:223/255.0 alpha:1.0];
+    _error_notificationView.backgroundColor = [UIColor lightTextColor];
+
+    
+    UIButton *yesButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    yesButton.frame = CGRectMake(280, 23,50,33);
+    //yesButton.titleLabel.text = @"YES";
+    //yesButton.tintColor = [UIColor whiteColor];
+    [yesButton setImage:[UIImage imageNamed:@"RedAlert.jpeg"] forState:UIControlStateNormal];
+    [yesButton addTarget:self action:@selector(RedAlertButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [_error_notificationView addSubview:yesButton];
+    yesButton.backgroundColor = [UIColor redColor];
+    
+
+    
+    
+    _error_notificationView.hidden = NO;
+    //    _notificationView.alpha = 1.0f;
+    [UIView animateWithDuration:0.4
+                          delay:0.0
+                        options:UIViewAnimationOptionTransitionFlipFromBottom//UIViewAnimationOptionTransitionFlipFromBottom
+                     animations:^
+     {
+         _error_notificationView.frame = CGRectMake(0, 475, 400, 70);
+         [self.view addSubview:_error_notificationView];
+     }
+                     completion:nil];
+    
+    
+    
+//    [UIView animateWithDuration:0.5
+//                          delay:1.0
+//                        options:UIViewAnimationOptionTransitionFlipFromTop
+//                     animations:^
+//     {
+//         
+//         notificationView.frame = CGRectMake(0, 700, 400, 100);
+//         //notificationView.alpha = 0.0f;
+//         
+//         [self.view addSubview:notificationView];
+//     }
+//                     completion:^(BOOL finished) {
+//                         // Once the animation is completed and the alpha has gone to 0.0, hide the view for good
+//                         notificationView.hidden = YES;
+//                     }];
+    
+    
+}
+
+-(void)RedAlertButtonAction:(id)sender {
+    [_error_notificationView removeFromSuperview];
+    [self show_error_notificationViewAlert:@"Do you want to continue"];
+
+}
+
+-(void)show_error_notificationViewAlert:(NSString *)text {
+    
+    _error_notificationView_Alert =[[UIView alloc] initWithFrame:CGRectMake(0, 700, 400, 100)];
+    
+        UILabel *notificationLbl =[[UILabel alloc] initWithFrame:CGRectMake(50, 10,300,30)];
+        [_error_notificationView_Alert addSubview:notificationLbl];
+    
+        notificationLbl.text = [NSString stringWithFormat:@"%@",text];
+        notificationLbl.backgroundColor = [UIColor clearColor];
+       notificationLbl.textColor = [UIColor whiteColor];
+    
+    _error_notificationView_Alert.backgroundColor = [UIColor colorWithRed:42/255.0 green:96/255.0 blue:152/255.0 alpha:1.0];
+    //_error_notificationView_Alert.backgroundColor = [UIColor lightTextColor];
+    
+    
+    UIButton *yesButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    yesButton.frame = CGRectMake(120, 40,50,33);
+    
+    [yesButton setTitle:@"YES" forState:UIControlStateNormal];
+
+
+    [yesButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+
+    [yesButton addTarget:self action:@selector(yesBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+    [_error_notificationView_Alert addSubview:yesButton];
+    
+    
+    
+    UIButton *noButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    noButton.frame = CGRectMake(160, 40,50,33);
+    
+    [noButton setTitle:@"NO" forState:UIControlStateNormal];
+    [noButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+
+    
+    [noButton addTarget:self action:@selector(yesBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+    [_error_notificationView_Alert addSubview:noButton];
+    
+    
+
+    
+    
+    _error_notificationView_Alert.hidden = NO;
+    //    _notificationView.alpha = 1.0f;
+    [UIView animateWithDuration:0.4
+                          delay:0.0
+                        options:UIViewAnimationOptionTransitionFlipFromBottom//UIViewAnimationOptionTransitionFlipFromBottom
+                     animations:^
+     {
+         _error_notificationView_Alert.frame = CGRectMake(0, 475, 400, 100);
+         [self.view addSubview:_error_notificationView_Alert];
+     }
+                     completion:nil];
+
+}
+
+-(void)yesBtnAction:(id)sender {
+    
+    [_error_notificationView_Alert removeFromSuperview];
+    
+    _hours = 9;
+    _lblHours.text = @"9";
+    [_tableView reloadData];
+    
+}
 
 @end

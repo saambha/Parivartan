@@ -13,4 +13,8 @@
 
 @property (nonatomic , strong) UIImageView *profileImageView;
 
+@property (nonatomic , strong) UIButton *btn_Fb;
+@property (nonatomic , strong) UIButton *btn_linkedIn;
+@property (nonatomic , strong) UIButton *btn_transitMate;
+
 @end
