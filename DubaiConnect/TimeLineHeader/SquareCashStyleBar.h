@@ -11,4 +11,6 @@
 
 @interface SquareCashStyleBar : BLKFlexibleHeightBar
 
+@property (nonatomic , strong) UIImageView *profileImageView;
+
 @end

@@ -51,29 +51,29 @@
     
     
     // Add and configure profile image
-    UIImageView *profileImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"AnoopPP"]];
-    profileImageView.contentMode = UIViewContentModeScaleAspectFill;
-    profileImageView.clipsToBounds = YES;
-    profileImageView.layer.cornerRadius = 35.0;
-    profileImageView.layer.borderWidth = 2.0;
-    profileImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+    _profileImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"AnoopPP"]];
+    _profileImageView.contentMode = UIViewContentModeScaleAspectFill;
+    _profileImageView.clipsToBounds = YES;
+    _profileImageView.layer.cornerRadius = 35.0;
+    _profileImageView.layer.borderWidth = 2.0;
+    _profileImageView.layer.borderColor = [UIColor whiteColor].CGColor;
     
     BLKFlexibleHeightBarSubviewLayoutAttributes *initialProfileImageViewLayoutAttributes = [[BLKFlexibleHeightBarSubviewLayoutAttributes alloc] init];
     initialProfileImageViewLayoutAttributes.size = CGSizeMake(70.0, 70.0);
     initialProfileImageViewLayoutAttributes.center = CGPointMake(self.frame.size.width*0.5, self.maximumBarHeight-110.0);
-    [profileImageView addLayoutAttributes:initialProfileImageViewLayoutAttributes forProgress:0.0];
+    [_profileImageView addLayoutAttributes:initialProfileImageViewLayoutAttributes forProgress:0.0];
     
     BLKFlexibleHeightBarSubviewLayoutAttributes *midwayProfileImageViewLayoutAttributes = [[BLKFlexibleHeightBarSubviewLayoutAttributes alloc] initWithExistingLayoutAttributes:initialProfileImageViewLayoutAttributes];
     midwayProfileImageViewLayoutAttributes.center = CGPointMake(self.frame.size.width*0.5, (self.maximumBarHeight-self.minimumBarHeight)*0.8+self.minimumBarHeight-110.0);
-    [profileImageView addLayoutAttributes:midwayProfileImageViewLayoutAttributes forProgress:0.2];
+    [_profileImageView addLayoutAttributes:midwayProfileImageViewLayoutAttributes forProgress:0.2];
     
     BLKFlexibleHeightBarSubviewLayoutAttributes *finalProfileImageViewLayoutAttributes = [[BLKFlexibleHeightBarSubviewLayoutAttributes alloc] initWithExistingLayoutAttributes:midwayProfileImageViewLayoutAttributes];
     finalProfileImageViewLayoutAttributes.center = CGPointMake(self.frame.size.width*0.5, (self.maximumBarHeight-self.minimumBarHeight)*0.64+self.minimumBarHeight-110.0);
     finalProfileImageViewLayoutAttributes.transform = CGAffineTransformMakeScale(0.5, 0.5);
     finalProfileImageViewLayoutAttributes.alpha = 0.0;
-    [profileImageView addLayoutAttributes:finalProfileImageViewLayoutAttributes forProgress:0.5];
+    [_profileImageView addLayoutAttributes:finalProfileImageViewLayoutAttributes forProgress:0.5];
     
-    [self addSubview:profileImageView];
+    [self addSubview:_profileImageView];
     
     
 }

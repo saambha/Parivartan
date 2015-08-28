@@ -52,6 +52,10 @@
 		6E4E0D281B8E49F8003A3F60 /* banner_dubai_Al_Arab.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E4E0D271B8E49F8003A3F60 /* banner_dubai_Al_Arab.jpg */; };
 		6E4E0D2B1B8E4CBE003A3F60 /* Burj_Al_Arab400*300.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E4E0D291B8E4CBE003A3F60 /* Burj_Al_Arab400*300.jpg */; };
 		6E4E0D2C1B8E4CBE003A3F60 /* burj-al-arab-dubai-960x640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E4E0D2A1B8E4CBE003A3F60 /* burj-al-arab-dubai-960x640.jpg */; };
+		9A44208E1B903B7900C1CF9A /* DCTimeLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A44208C1B903B7800C1CF9A /* DCTimeLine.m */; };
+		9A44208F1B903B7900C1CF9A /* DCTimeLineCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A44208D1B903B7800C1CF9A /* DCTimeLineCustomCell.xib */; };
+		9A4420921B903D0C00C1CF9A /* Dubai.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A4420901B903D0C00C1CF9A /* Dubai.jpg */; };
+		9A4420931B903D0C00C1CF9A /* khalifa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A4420911B903D0C00C1CF9A /* khalifa.jpg */; };
 		9AD5D66C1B8B5A2D00DD10DC /* DCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5D66B1B8B5A2D00DD10DC /* DCLoginViewController.m */; };
 		9AD5D6741B8B5ADB00DD10DC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD5D6721B8B5ADB00DD10DC /* FBSDKCoreKit.framework */; };
 		9AD5D6751B8B5ADB00DD10DC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD5D6731B8B5ADB00DD10DC /* FBSDKLoginKit.framework */; };
@@ -139,6 +143,11 @@
 		6E4E0D271B8E49F8003A3F60 /* banner_dubai_Al_Arab.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner_dubai_Al_Arab.jpg; sourceTree = "<group>"; };
 		6E4E0D291B8E4CBE003A3F60 /* Burj_Al_Arab400*300.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Burj_Al_Arab400*300.jpg"; sourceTree = "<group>"; };
 		6E4E0D2A1B8E4CBE003A3F60 /* burj-al-arab-dubai-960x640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "burj-al-arab-dubai-960x640.jpg"; sourceTree = "<group>"; };
+		9A44208B1B903B7800C1CF9A /* DCTimeLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTimeLine.h; sourceTree = "<group>"; };
+		9A44208C1B903B7800C1CF9A /* DCTimeLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTimeLine.m; sourceTree = "<group>"; };
+		9A44208D1B903B7800C1CF9A /* DCTimeLineCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCTimeLineCustomCell.xib; sourceTree = "<group>"; };
+		9A4420901B903D0C00C1CF9A /* Dubai.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dubai.jpg; sourceTree = "<group>"; };
+		9A4420911B903D0C00C1CF9A /* khalifa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = khalifa.jpg; sourceTree = "<group>"; };
 		9AD5D66A1B8B5A2D00DD10DC /* DCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCLoginViewController.h; path = DubaiConnect/DCLoginViewController.h; sourceTree = SOURCE_ROOT; };
 		9AD5D66B1B8B5A2D00DD10DC /* DCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCLoginViewController.m; path = DubaiConnect/DCLoginViewController.m; sourceTree = SOURCE_ROOT; };
 		9AD5D6721B8B5ADB00DD10DC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = DubaiConnect/FrameWorks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -205,11 +214,9 @@
 		6E451AD31B88AE4D007188AB /* DubaiConnect */ = {
 			isa = PBXGroup;
 			children = (
-
+				9A44208A1B903B5500C1CF9A /* TimeLine */,
 				6E4E0D111B8DF23F003A3F60 /* Swipe Control */,
-
 				07DBA5451B8E33D60089972F /* BeaconMap */,
-
 				6E4E0CDE1B8B9A23003A3F60 /* TimeLineHeader */,
 				9AD5D6781B8B5C1C00DD10DC /* FBManager */,
 				9AD5D67B1B8B5C1C00DD10DC /* ServiceManager */,
@@ -280,6 +287,8 @@
 			isa = PBXGroup;
 			children = (
 				6E4E0D291B8E4CBE003A3F60 /* Burj_Al_Arab400*300.jpg */,
+				9A4420901B903D0C00C1CF9A /* Dubai.jpg */,
+				9A4420911B903D0C00C1CF9A /* khalifa.jpg */,
 				6E4E0D2A1B8E4CBE003A3F60 /* burj-al-arab-dubai-960x640.jpg */,
 				6E4E0D271B8E49F8003A3F60 /* banner_dubai_Al_Arab.jpg */,
 				9AD5D6761B8B5BAC00DD10DC /* Facebook.png */,
@@ -341,6 +350,16 @@
 				6E4E0D201B8DF3B8003A3F60 /* OverlayView.m */,
 			);
 			path = "Swipe Control";
+			sourceTree = "<group>";
+		};
+		9A44208A1B903B5500C1CF9A /* TimeLine */ = {
+			isa = PBXGroup;
+			children = (
+				9A44208B1B903B7800C1CF9A /* DCTimeLine.h */,
+				9A44208C1B903B7800C1CF9A /* DCTimeLine.m */,
+				9A44208D1B903B7800C1CF9A /* DCTimeLineCustomCell.xib */,
+			);
+			path = TimeLine;
 			sourceTree = "<group>";
 		};
 		9AD5D6711B8B5AC300DD10DC /* FrameWorks */ = {
@@ -455,6 +474,7 @@
 				6E451AFE1B88B024007188AB /* Images.xcassets in Resources */,
 				6E451B251B88BC8C007188AB /* bg-menuitem.png in Resources */,
 				07DBA5481B8E37D80089972F /* LocusLabsSDK.bundle in Resources */,
+				9A4420921B903D0C00C1CF9A /* Dubai.jpg in Resources */,
 				6E451B201B88BC8C007188AB /* bg-addbutton-highlighted@2x.png in Resources */,
 				6E451B291B88BC8C007188AB /* icon-plus.png in Resources */,
 				6E451B271B88BC8C007188AB /* icon-plus-highlighted.png in Resources */,
@@ -467,7 +487,9 @@
 				6E451AE31B88AE4D007188AB /* Main.storyboard in Resources */,
 				6E451AE81B88AE4D007188AB /* LaunchScreen.xib in Resources */,
 				6E451B281B88BC8C007188AB /* icon-plus-highlighted@2x.png in Resources */,
+				9A4420931B903D0C00C1CF9A /* khalifa.jpg in Resources */,
 				6E451B2B1B88BC8C007188AB /* icon-star.png in Resources */,
+				9A44208F1B903B7900C1CF9A /* DCTimeLineCustomCell.xib in Resources */,
 				6E451B231B88BC8C007188AB /* bg-menuitem-highlighted.png in Resources */,
 				6E451B241B88BC8C007188AB /* bg-menuitem-highlighted@2x.png in Resources */,
 				6E451B1F1B88BC8C007188AB /* bg-addbutton-highlighted.png in Resources */,
@@ -493,6 +515,7 @@
 				6E451ADA1B88AE4D007188AB /* AppDelegate.m in Sources */,
 				9AD5D66C1B8B5A2D00DD10DC /* DCLoginViewController.m in Sources */,
 				6E4E0CF21B8B9A5E003A3F60 /* BLKFlexibleHeightBar.m in Sources */,
+				9A44208E1B903B7900C1CF9A /* DCTimeLine.m in Sources */,
 				6E451ADD1B88AE4D007188AB /* DubaiConnect.xcdatamodeld in Sources */,
 				6E4E0CE11B8B9A23003A3F60 /* SquareCashStyleBar.m in Sources */,
 				6E451AE01B88AE4D007188AB /* DCTimeLineViewController.m in Sources */,
