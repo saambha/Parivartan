@@ -20,6 +20,7 @@
 #import "DCBookingViewController.h"
 #import "DCTimeLine.h"
 #import "MPNavigationController.h"
+#import "DCTimeLineCustomCell.h"
 
 #import <MediaPlayer/MediaPlayer.h>
 
@@ -246,23 +247,39 @@ const int kHeaderBtn_X                  = 150;
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    DCTimeLineCustomCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
-        //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+//        cell = [[DCTimeLineCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"DCTimeLineCustomCell" owner:self options:nil];//
         cell = [topLevelObjects objectAtIndex:0];
     }
 
     
     UIImageView *imgView_Place = (UIImageView *)[cell.contentView viewWithTag:11];
-    imgView_Place.image = [UIImage imageNamed:@"khalifa.jpg"];
+    imgView_Place.image = [UIImage imageNamed:@"dubai_icon"];
     imgView_Place.contentMode = UIViewContentModeScaleAspectFill;
     imgView_Place.clipsToBounds = YES;
     imgView_Place.layer.cornerRadius = 25.0;
     imgView_Place.layer.borderWidth = 1.0;
     imgView_Place.layer.borderColor = [UIColor whiteColor].CGColor;
+    imgView_Place.backgroundColor = [UIColor clearColor];
     
+     UILabel *primaryLabel = (UILabel *)[cell.contentView viewWithTag:1];
+     UILabel *secondaryLabel = (UILabel *)[cell.contentView viewWithTag:5];
+    UILabel *durationLabel = (UILabel *)[cell.contentView viewWithTag:3];
+    UILabel *distanceLabel = (UILabel *)[cell.contentView viewWithTag:6];
+    
+    [primaryLabel setFont:[UIFont fontWithName:@"Emirates SB" size:12.0f]];
+    [secondaryLabel setFont:[UIFont fontWithName:@"Emirates SL" size:12.0f]];
+    [durationLabel setFont:[UIFont fontWithName:@"Emirates SL" size:10.0f]];
+    [distanceLabel setFont:[UIFont fontWithName:@"Emirates SL" size:10.0f]];
+    
+
+        [primaryLabel setTextAlignment:NSTextAlignmentLeft];
+     [secondaryLabel setTextAlignment:NSTextAlignmentLeft];
+     [durationLabel setTextAlignment:NSTextAlignmentRight];
+     [distanceLabel setTextAlignment:NSTextAlignmentRight];
     
     if (indexPath.row == 0) {
         UIImageView *imgView_Location = (UIImageView *)[cell.contentView viewWithTag:13];
@@ -306,6 +323,11 @@ const int kHeaderBtn_X                  = 150;
     if (!([self.arr_timelineObjs count]-1 == indexPath.row)) {
         UIImageView *imgView_line =[[UIImageView alloc] initWithFrame:frame2];
         imgView_line.backgroundColor = [UIColor colorWithRed:231/255.0 green:228/255.0 blue:223/255.0 alpha:1.0];//231 228 223
+        
+        imgView_line.clipsToBounds = YES;
+        imgView_line.layer.cornerRadius = 2;
+        imgView_line.layer.borderWidth = 5;
+        imgView_line.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor colorWithRed:49 green:65 blue:132 alpha:1]);
         [cell.contentView addSubview:imgView_line];
 
     }

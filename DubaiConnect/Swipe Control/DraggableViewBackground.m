@@ -40,7 +40,9 @@ static const float TELL_ME_LABEL = 90;
     if (self) {
         [super layoutSubviews];
         [self setupView];
-        exampleCardLabels = [[NSArray alloc]initWithObjects:@"first flsdhlkgjdslk", @"dfdfgfdgfdgfd",@"dfdfgfdgfdgfd",@"dfdfgfdgfdgfd",@"dfdfgfdgfdgfd",@"dfdfgfdgfdgfd", nil]; //%%% placeholder for card-specific information
+        exampleCardLabels = [[NSArray alloc]initWithObjects:@"first flsdhlkgjdslk",  nil]; //%%% placeholder for card-specific information
+        
+        //@"dfdfgfdgfdgfd",@"dfdfgfdgfdgfd",@"dfdfgfdgfdgfd",@"dfdfgfdgfdgfd",@"dfdfgfdgfdgfd",
         loadedCards = [[NSMutableArray alloc] init];
         allCards = [[NSMutableArray alloc] init];
         cardsLoadedIndex = 0;

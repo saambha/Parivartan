@@ -81,6 +81,8 @@
 		6E9E9CDC1B909D1200EF8E01 /* MPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E9CDB1B909D1200EF8E01 /* MPViewController.m */; };
 		6E9E9CDF1B90A33000EF8E01 /* MPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E9CDE1B90A33000EF8E01 /* MPNavigationController.m */; };
 		6E9E9CE31B90B21D00EF8E01 /* DCBarCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E9CE21B90B21D00EF8E01 /* DCBarCodeVC.m */; };
+		6EB22D361B90EC6E0029E21B /* DCTimeLineCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB22D351B90EC6E0029E21B /* DCTimeLineCustomCell.m */; };
+		6EB22D391B90F8E00029E21B /* dubai_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB22D381B90F8E00029E21B /* dubai_icon.png */; };
 		6ED5D4201B90CE8E00977FE4 /* MTBBarcodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5D41F1B90CE8E00977FE4 /* MTBBarcodeScanner.m */; };
 		6ED5D4231B90D0F600977FE4 /* DCScannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5D4221B90D0F600977FE4 /* DCScannerVC.m */; };
 		9A44208E1B903B7900C1CF9A /* DCTimeLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A44208C1B903B7800C1CF9A /* DCTimeLine.m */; };
@@ -209,6 +211,9 @@
 		6E9E9CDE1B90A33000EF8E01 /* MPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPNavigationController.m; sourceTree = "<group>"; };
 		6E9E9CE11B90B21D00EF8E01 /* DCBarCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBarCodeVC.h; sourceTree = "<group>"; };
 		6E9E9CE21B90B21D00EF8E01 /* DCBarCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBarCodeVC.m; sourceTree = "<group>"; };
+		6EB22D341B90EC6E0029E21B /* DCTimeLineCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTimeLineCustomCell.h; sourceTree = "<group>"; };
+		6EB22D351B90EC6E0029E21B /* DCTimeLineCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTimeLineCustomCell.m; sourceTree = "<group>"; };
+		6EB22D381B90F8E00029E21B /* dubai_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dubai_icon.png; sourceTree = "<group>"; };
 		6ED5D41E1B90CE8E00977FE4 /* MTBBarcodeScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBBarcodeScanner.h; sourceTree = "<group>"; };
 		6ED5D41F1B90CE8E00977FE4 /* MTBBarcodeScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBBarcodeScanner.m; sourceTree = "<group>"; };
 		6ED5D4211B90D0F600977FE4 /* DCScannerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCScannerVC.h; sourceTree = "<group>"; };
@@ -367,6 +372,7 @@
 		6E451B101B88BC8C007188AB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6EB22D381B90F8E00029E21B /* dubai_icon.png */,
 				6E49730D1B90D96B00DBC922 /* Default.jpg */,
 				6E49730E1B90D96B00DBC922 /* dubai11.tiff */,
 				6E49730F1B90D96B00DBC922 /* dubai12.tiff */,
@@ -491,6 +497,8 @@
 				9A44208B1B903B7800C1CF9A /* DCTimeLine.h */,
 				9A44208C1B903B7800C1CF9A /* DCTimeLine.m */,
 				9A44208D1B903B7800C1CF9A /* DCTimeLineCustomCell.xib */,
+				6EB22D341B90EC6E0029E21B /* DCTimeLineCustomCell.h */,
+				6EB22D351B90EC6E0029E21B /* DCTimeLineCustomCell.m */,
 			);
 			path = TimeLine;
 			sourceTree = "<group>";
@@ -643,6 +651,7 @@
 				9A4420931B903D0C00C1CF9A /* khalifa.jpg in Resources */,
 				6E451B2B1B88BC8C007188AB /* icon-star.png in Resources */,
 				9A44208F1B903B7900C1CF9A /* DCTimeLineCustomCell.xib in Resources */,
+				6EB22D391B90F8E00029E21B /* dubai_icon.png in Resources */,
 				6E49732F1B90D96B00DBC922 /* RedAlert.jpeg in Resources */,
 				6E9E9CBF1B90757200EF8E01 /* Emirates SL.otf in Resources */,
 				6E451B231B88BC8C007188AB /* bg-menuitem-highlighted.png in Resources */,
@@ -699,6 +708,7 @@
 				6E451AD71B88AE4D007188AB /* main.m in Sources */,
 				6E4E0CF31B8B9A5E003A3F60 /* BLKFlexibleHeightBarBehaviorDefiner.m in Sources */,
 				6E9E9CD91B909CEB00EF8E01 /* MPSkewedParallaxLayout.m in Sources */,
+				6EB22D361B90EC6E0029E21B /* DCTimeLineCustomCell.m in Sources */,
 				6E4E0D231B8DF3B8003A3F60 /* OverlayView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
