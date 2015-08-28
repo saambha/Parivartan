@@ -15,7 +15,7 @@
 #define STARTPOINT CGPointMake(200, 444)
 #define STARTPOINTFORITEM CGPointMake(200, 444)
 #define TIMEOFFSET 0.026f
-#define ROTATEANGLE 5.5
+#define ROTATEANGLE 5.57
 #define MENUWHOLEANGLE  M_PI*3/5
 
 static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float angle)

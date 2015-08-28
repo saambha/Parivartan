@@ -214,20 +214,20 @@ const int kHeaderBtn_X                  = 150;
     
     
     UIButton *lnButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    lnButton.frame = CGRectMake(20, 8, 25.0, 25.0);
+    lnButton.frame = CGRectMake(30, 8, 25.0, 25.0);
     lnButton.tintColor = [UIColor whiteColor];
     [lnButton setImage:[UIImage imageNamed:@"like"] forState:UIControlStateNormal];
     [lnButton addTarget:self action:@selector(lnButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [header addSubview:lnButton];
     
     UIButton *fbButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    fbButton.frame = CGRectMake(kHeaderBtn_X+47, 8, 25.0, 25.0);
+    fbButton.frame = CGRectMake(kHeaderBtn_X+57, 8, 25.0, 25.0);
     fbButton.tintColor = [UIColor whiteColor];
     [fbButton setImage:[UIImage imageNamed:@"popular.png"] forState:UIControlStateNormal];
     [fbButton addTarget:self action:@selector(fbButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [header addSubview:fbButton];
     
-    UILabel *popularity =[[UILabel alloc] initWithFrame:CGRectMake(kHeaderBtn_X+80, 8, 25.0, 25.0)];
+    UILabel *popularity =[[UILabel alloc] initWithFrame:CGRectMake(kHeaderBtn_X+90, 8, 25.0, 25.0)];
     popularity.text = @"400";
     [popularity setFont:[UIFont fontWithName:@"Emirates SB" size:14.0f]];
     popularity.textColor = [UIColor colorWithRed:49 green:65 blue:132 alpha:1];
@@ -235,14 +235,14 @@ const int kHeaderBtn_X                  = 150;
     
     
     UIButton *twitterButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    twitterButton.frame = CGRectMake(kHeaderBtn_X+140, 8, 25.0, 25.0);
+    twitterButton.frame = CGRectMake(kHeaderBtn_X+150, 8, 25.0, 25.0);
     twitterButton.tintColor = [UIColor whiteColor];
     [twitterButton setImage:[UIImage imageNamed:@"facebook_Friends"] forState:UIControlStateNormal];
     [twitterButton addTarget:self action:@selector(twitterButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [header addSubview:twitterButton];
     
-    UILabel *fbFriends =[[UILabel alloc] initWithFrame:CGRectMake(kHeaderBtn_X+167, 8, 25.0, 25.0)];
-    fbFriends.text = @"400";
+    UILabel *fbFriends =[[UILabel alloc] initWithFrame:CGRectMake(kHeaderBtn_X+177, 8, 25.0, 25.0)];
+    fbFriends.text = @"23";
     [fbFriends setFont:[UIFont fontWithName:@"Emirates SB" size:14.0f]];
     fbFriends.textColor = [UIColor colorWithRed:49 green:65 blue:132 alpha:1];
     [header addSubview:fbFriends];
@@ -331,12 +331,12 @@ const int kHeaderBtn_X                  = 150;
     }
     if (!([self.arr_timelineObjs count]-1 == indexPath.row)) {
         UIImageView *imgView_line =[[UIImageView alloc] initWithFrame:frame2];
-        imgView_line.backgroundColor = [UIColor colorWithRed:231/255.0 green:228/255.0 blue:223/255.0 alpha:1.0];//231 228 223
+        imgView_line.backgroundColor = [UIColor colorWithRed:124/255.0 green:153/255.0 blue:193/255.0 alpha:0.3];//231 228 223
         
         imgView_line.clipsToBounds = YES;
         imgView_line.layer.cornerRadius = 2;
         imgView_line.layer.borderWidth = 5;
-        imgView_line.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor colorWithRed:49 green:65 blue:132 alpha:1]);
+        imgView_line.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor colorWithRed:231/255.0 green:228/255.0 blue:223/255.0 alpha:0.3]);
         [cell.contentView addSubview:imgView_line];
 
     }
@@ -397,16 +397,16 @@ const int kHeaderBtn_X                  = 150;
     DCTimeLine *obj = [self.arr_timelineObjs objectAtIndex:indexPath.row];
     
     
-    if ([obj.distanceFromAirport integerValue] == 2) {
+    if ([obj.distanceFromAirport integerValue] <= 10) {
         return 94;
     }
-    if ([obj.distanceFromAirport integerValue] == 3) {
+    if ([obj.distanceFromAirport integerValue] <= 15) {
         return 94+22;
     }
-    if ([obj.distanceFromAirport integerValue] == 4) {
+    if ([obj.distanceFromAirport integerValue] <= 20) {
         return 94+22*2;
     }
-    if ([obj.distanceFromAirport integerValue] == 5) {
+    if ([obj.distanceFromAirport integerValue] <= 25) {
         return 94+22*3;
     }
     return 94+22*4;
@@ -448,15 +448,15 @@ const int kHeaderBtn_X                  = 150;
                                                                highlightedImage:storyMenuItemImagePressed
                                                                    ContentImage:starImage
                                                         highlightedContentImage:nil];
-    QuadCurveMenuItem *starMenuItem5 = [[QuadCurveMenuItem alloc] initWithImage:storyMenuItemImage
-                                                               highlightedImage:storyMenuItemImagePressed
-                                                                   ContentImage:starImage
-                                                        highlightedContentImage:nil];
-    QuadCurveMenuItem *starMenuItem6 = [[QuadCurveMenuItem alloc] initWithImage:storyMenuItemImage
-                                                               highlightedImage:storyMenuItemImagePressed
-                                                                   ContentImage:starImage
-                                                        highlightedContentImage:nil];
-    NSArray *menus = [NSArray arrayWithObjects:starMenuItem1, starMenuItem2, starMenuItem3, starMenuItem4, starMenuItem5, starMenuItem6, nil];
+//    QuadCurveMenuItem *starMenuItem5 = [[QuadCurveMenuItem alloc] initWithImage:storyMenuItemImage
+//                                                               highlightedImage:storyMenuItemImagePressed
+//                                                                   ContentImage:starImage
+//                                                        highlightedContentImage:nil];
+//    QuadCurveMenuItem *starMenuItem6 = [[QuadCurveMenuItem alloc] initWithImage:storyMenuItemImage
+//                                                               highlightedImage:storyMenuItemImagePressed
+//                                                                   ContentImage:starImage
+//                                                        highlightedContentImage:nil];
+    NSArray *menus = [NSArray arrayWithObjects:starMenuItem1, starMenuItem2, starMenuItem3, starMenuItem4, /*starMenuItem5, starMenuItem6,*/ nil];
     
     
     
@@ -491,7 +491,7 @@ const int kHeaderBtn_X                  = 150;
     _lblHours.text = [NSString stringWithFormat:@"%i",_hours];
     
     if (_hours < 9) {
-        [self showErrorNotification:@"Do you want In"];
+        [self showErrorNotification:@"You cann't accomplish this part of your transit story with your current layover period."];
 
     }
     
@@ -614,42 +614,123 @@ const int kHeaderBtn_X                  = 150;
         self.arr_timelineObjs = nil;
     }
     self.arr_timelineObjs =[[NSMutableArray alloc]init];
-    for (int i =0; i< 2; i++) {
-        
-        DCTimeLine *obj_TimeLine =[[DCTimeLine alloc] init];
-        obj_TimeLine.placeName = @"Burj Khalifa";
-        obj_TimeLine.placeDescription = @"description";
-        obj_TimeLine.taxiTime = @"3 hr";
-        obj_TimeLine.distanceFromAirport = @"2";
-        obj_TimeLine.weatherInfo =@"30";
+    //11 AM in the morning
+    
+    DCTimeLine *obj_TimeLine_Airport1 =[[DCTimeLine alloc] init];
+    obj_TimeLine_Airport1.placeName = @"Dubai Airport";
+    obj_TimeLine_Airport1.placeDescription = @"description";
+    obj_TimeLine_Airport1.taxiTime = @"4 hrs";
+    obj_TimeLine_Airport1.distanceFromAirport = @"14";
+    obj_TimeLine_Airport1.weatherInfo =@"30";
+    obj_TimeLine_Airport1.imgName =@"Airport1.png";
 
-        [self.arr_timelineObjs addObject:obj_TimeLine];
-    }
     
     DCTimeLine *obj_TimeLine1 =[[DCTimeLine alloc] init];
     obj_TimeLine1.placeName = @"Burj Khalifa";
     obj_TimeLine1.placeDescription = @"description";
-    obj_TimeLine1.taxiTime = @"3 hr";
-    obj_TimeLine1.distanceFromAirport = @"3";
+    obj_TimeLine1.taxiTime = @"4 hrs";
+    obj_TimeLine1.distanceFromAirport = @"15";
     obj_TimeLine1.weatherInfo =@"30";
+    obj_TimeLine1.imgName =@"khalifa.jpg";
+
     
+    //3 Pm
     DCTimeLine *obj_TimeLine2 =[[DCTimeLine alloc] init];
-    obj_TimeLine2.placeName = @"Burj Khalifa";
+    obj_TimeLine2.placeName = @"Burj Al Arab";
     obj_TimeLine2.placeDescription = @"description";
-    obj_TimeLine2.taxiTime = @"3 hr";
+    obj_TimeLine2.taxiTime = @"3";
     obj_TimeLine2.distanceFromAirport = @"4";
     obj_TimeLine2.weatherInfo =@"30";
+    obj_TimeLine2.imgName = @"alarab.jpg";
+    
+    
+
+    DCTimeLine *obj_TimeLine5 =[[DCTimeLine alloc] init];
+    obj_TimeLine5.placeName = @"Ski Dubai";
+    obj_TimeLine5.placeDescription = @"description";
+    obj_TimeLine5.taxiTime = @"3 hr";
+    obj_TimeLine5.distanceFromAirport = @"6";
+    obj_TimeLine5.weatherInfo =@"30";
+    obj_TimeLine5.imgName = @"ski dubai.jpg";
+
+
+    DCTimeLine *obj_TimeLine6 =[[DCTimeLine alloc] init];
+    obj_TimeLine6.placeName = @"Dubai Dolphinarium";
+    obj_TimeLine6.placeDescription = @"description";
+    obj_TimeLine6.taxiTime = @"3 hr";
+    obj_TimeLine6.distanceFromAirport = @"12";
+    obj_TimeLine6.weatherInfo =@"30";
+    obj_TimeLine6.imgName = @"museum.jpg";
+
+
+    DCTimeLine *obj_TimeLine7 =[[DCTimeLine alloc] init];
+    obj_TimeLine7.placeName = @"Wild Wadi ";
+    obj_TimeLine7.placeDescription = @"description";
+    obj_TimeLine7.taxiTime = @"3 hr";
+    obj_TimeLine7.distanceFromAirport = @"10";
+    obj_TimeLine7.weatherInfo =@"30";
+    obj_TimeLine7.imgName = @"wild wadi.jpg";
+
+
+    DCTimeLine *obj_TimeLine8 =[[DCTimeLine alloc] init];
+    obj_TimeLine8.placeName = @"Dubai Marina";
+    obj_TimeLine8.placeDescription = @"description";
+    obj_TimeLine8.taxiTime = @"3 hr";
+    obj_TimeLine8.distanceFromAirport = @"8";
+    obj_TimeLine8.weatherInfo =@"30";
+    obj_TimeLine8.imgName = @"kids-beach.jpg";
+
+
+    DCTimeLine *obj_TimeLine9 =[[DCTimeLine alloc] init];
+    obj_TimeLine9.placeName = @"Dubai Zoo";
+    obj_TimeLine9.placeDescription = @"description";
+    obj_TimeLine9.taxiTime = @"3 hr";
+    obj_TimeLine9.distanceFromAirport = @"5";
+    obj_TimeLine9.weatherInfo =@"30";
+    obj_TimeLine9.imgName = @"Zoo.jpeg";
+
+
+    DCTimeLine *obj_TimeLine10 =[[DCTimeLine alloc] init];
+    obj_TimeLine10.placeName = @"Jumeirah Beach";
+    obj_TimeLine10.placeDescription = @"description";
+    obj_TimeLine10.taxiTime = @"3 hr";
+    obj_TimeLine10.distanceFromAirport = @"6";
+    obj_TimeLine10.weatherInfo =@"30";
+    obj_TimeLine10.imgName = @"kids-beach.jpg";
+
     
     DCTimeLine *obj_TimeLine3 =[[DCTimeLine alloc] init];
-    obj_TimeLine3.placeName = @"Burj Khalifa";
+    obj_TimeLine3.placeName = @"Dubai Museum";
     obj_TimeLine3.placeDescription = @"description";
-    obj_TimeLine3.taxiTime = @"3 hr";
-    obj_TimeLine3.distanceFromAirport = @"5";
+    obj_TimeLine3.taxiTime = @"2";
+    obj_TimeLine3.distanceFromAirport = @"11";
     obj_TimeLine3.weatherInfo =@"30";
+    obj_TimeLine3.imgName = @"museum.jpg";
+
+
     
+    DCTimeLine *obj_TimeLine_Airport2 =[[DCTimeLine alloc] init];
+    obj_TimeLine_Airport2.placeName = @"Dubai Airport";
+    obj_TimeLine_Airport2.placeDescription = @"description";
+    obj_TimeLine_Airport2.taxiTime = @"4 hrs";
+    obj_TimeLine_Airport2.distanceFromAirport = @"5";
+    obj_TimeLine_Airport2.weatherInfo =@"30";
+    obj_TimeLine_Airport2.imgName =@"Airport2.png";
+    
+    [self.arr_timelineObjs addObject:obj_TimeLine_Airport1];
+
     [self.arr_timelineObjs addObject:obj_TimeLine1];
     [self.arr_timelineObjs addObject:obj_TimeLine2];
     [self.arr_timelineObjs addObject:obj_TimeLine3];
+//    [self.arr_timelineObjs addObject:obj_TimeLine4];
+    [self.arr_timelineObjs addObject:obj_TimeLine5];
+    [self.arr_timelineObjs addObject:obj_TimeLine6];
+    [self.arr_timelineObjs addObject:obj_TimeLine7];
+    [self.arr_timelineObjs addObject:obj_TimeLine8];
+    [self.arr_timelineObjs addObject:obj_TimeLine9];
+    [self.arr_timelineObjs addObject:obj_TimeLine10];
+    [self.arr_timelineObjs addObject:obj_TimeLine_Airport2];
+
     
 }
 
@@ -659,42 +740,35 @@ const int kHeaderBtn_X                  = 150;
         self.arr_timelineObjs = nil;
     }
     self.arr_timelineObjs =[[NSMutableArray alloc]init];
-//    for (int i =0; i< 2; i++) {
-//        
-//        DCTimeLine *obj_TimeLine =[[DCTimeLine alloc] init];
-//        obj_TimeLine.placeName = @"Burj Khalifa";
-//        obj_TimeLine.placeDescription = @"description";
-//        obj_TimeLine.taxiTime = @"3 hr";
-//        obj_TimeLine.distanceFromAirport = @"2";
-//        obj_TimeLine.weatherInfo =@"30";
-//        
-//        [self.arr_timelineObjs addObject:obj_TimeLine];
-//    }
+    
+    DCTimeLine *obj_TimeLine_Airport1 =[[DCTimeLine alloc] init];
+    obj_TimeLine_Airport1.placeName = @"Dubai Airport";
+    obj_TimeLine_Airport1.placeDescription = @"description";
+    obj_TimeLine_Airport1.taxiTime = @"4 hrs";
+    obj_TimeLine_Airport1.distanceFromAirport = @"14";
+    obj_TimeLine_Airport1.weatherInfo =@"30";
+    obj_TimeLine_Airport1.imgName =@"Airport1.png";
+    
     
     DCTimeLine *obj_TimeLine1 =[[DCTimeLine alloc] init];
     obj_TimeLine1.placeName = @"Burj Khalifa";
     obj_TimeLine1.placeDescription = @"description";
-    obj_TimeLine1.taxiTime = @"3 hr";
-    obj_TimeLine1.distanceFromAirport = @"3";
+    obj_TimeLine1.taxiTime = @"4 hrs";
+    obj_TimeLine1.distanceFromAirport = @"15";
     obj_TimeLine1.weatherInfo =@"30";
+    obj_TimeLine1.imgName =@"khalifa.jpg";
+    DCTimeLine *obj_TimeLine_Airport2 =[[DCTimeLine alloc] init];
+    obj_TimeLine_Airport2.placeName = @"Dubai Airport";
+    obj_TimeLine_Airport2.placeDescription = @"description";
+    obj_TimeLine_Airport2.taxiTime = @"4 hrs";
+    obj_TimeLine_Airport2.distanceFromAirport = @"5";
+    obj_TimeLine_Airport2.weatherInfo =@"30";
+    obj_TimeLine_Airport2.imgName =@"Airport2.png";
     
-    DCTimeLine *obj_TimeLine2 =[[DCTimeLine alloc] init];
-    obj_TimeLine2.placeName = @"Burj Khalifa";
-    obj_TimeLine2.placeDescription = @"description";
-    obj_TimeLine2.taxiTime = @"3 hr";
-    obj_TimeLine2.distanceFromAirport = @"4";
-    obj_TimeLine2.weatherInfo =@"30";
-    
-    DCTimeLine *obj_TimeLine3 =[[DCTimeLine alloc] init];
-    obj_TimeLine3.placeName = @"Burj Khalifa";
-    obj_TimeLine3.placeDescription = @"description";
-    obj_TimeLine3.taxiTime = @"3 hr";
-    obj_TimeLine3.distanceFromAirport = @"5";
-    obj_TimeLine3.weatherInfo =@"30";
+    [self.arr_timelineObjs addObject:obj_TimeLine_Airport1];
     
     [self.arr_timelineObjs addObject:obj_TimeLine1];
-    [self.arr_timelineObjs addObject:obj_TimeLine2];
-    [self.arr_timelineObjs addObject:obj_TimeLine3];
+    [self.arr_timelineObjs addObject:obj_TimeLine_Airport2];
     
 }
 
@@ -847,19 +921,22 @@ const int kHeaderBtn_X                  = 150;
     _error_notificationView =[[UIView alloc] initWithFrame:CGRectMake(0, 700, 400, 80)];
     //notificationView =[[UIView alloc] init];
     
-//    notificationLbl =[[UILabel alloc] initWithFrame:CGRectMake(50, 20,300,30)];
-//    [_error_notificationView addSubview:notificationLbl];
-//    
-//    notificationLbl.text = [NSString stringWithFormat:@"%@",Text];
-//    notificationLbl.backgroundColor = [UIColor clearColor];
- //   notificationLbl.textColor = [UIColor whiteColor];
+    UILabel *notificationLbl =[[UILabel alloc] initWithFrame:CGRectMake(30, 20,250,60)];
+    notificationLbl.numberOfLines = 0;
+    [_error_notificationView addSubview:notificationLbl];
+    
+    notificationLbl.text = [NSString stringWithFormat:@"%@",Text];
+    notificationLbl.backgroundColor = [UIColor clearColor];
+    notificationLbl.textColor = [UIColor redColor];
+    notificationLbl.font = [UIFont fontWithName:@"HelveticaNeue" size:13.0];
+
     
     //_error_notificationView.backgroundColor = [UIColor colorWithRed:231/255.0 green:228/255.0 blue:223/255.0 alpha:1.0];
     _error_notificationView.backgroundColor = [UIColor lightTextColor];
 
     
     UIButton *yesButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    yesButton.frame = CGRectMake(280, 23,50,33);
+    yesButton.frame = CGRectMake(280, 28,50,33);
     //yesButton.titleLabel.text = @"YES";
     //yesButton.tintColor = [UIColor whiteColor];
     [yesButton setImage:[UIImage imageNamed:@"RedAlert.jpeg"] forState:UIControlStateNormal];
@@ -877,7 +954,7 @@ const int kHeaderBtn_X                  = 150;
                         options:UIViewAnimationOptionTransitionFlipFromBottom//UIViewAnimationOptionTransitionFlipFromBottom
                      animations:^
      {
-         _error_notificationView.frame = CGRectMake(0, 475, 400, 70);
+         _error_notificationView.frame = CGRectMake(0, 430, 400, 70);
          [self.view addSubview:_error_notificationView];
      }
                      completion:nil];
@@ -905,7 +982,7 @@ const int kHeaderBtn_X                  = 150;
 
 -(void)RedAlertButtonAction:(id)sender {
     [_error_notificationView removeFromSuperview];
-    [self show_error_notificationViewAlert:@"Do you want to continue"];
+    [self show_error_notificationViewAlert:@"Would you like us to book you the next best Flight?"];
 
 }
 
@@ -913,19 +990,21 @@ const int kHeaderBtn_X                  = 150;
     
     _error_notificationView_Alert =[[UIView alloc] initWithFrame:CGRectMake(0, 700, 400, 100)];
     
-        UILabel *notificationLbl =[[UILabel alloc] initWithFrame:CGRectMake(50, 10,300,30)];
+        UILabel *notificationLbl =[[UILabel alloc] initWithFrame:CGRectMake(50, 10,300,40)];
         [_error_notificationView_Alert addSubview:notificationLbl];
     
         notificationLbl.text = [NSString stringWithFormat:@"%@",text];
         notificationLbl.backgroundColor = [UIColor clearColor];
        notificationLbl.textColor = [UIColor whiteColor];
     
+    notificationLbl.font = [UIFont fontWithName:@"HelveticaNeue" size:13.0];
+
     _error_notificationView_Alert.backgroundColor = [UIColor colorWithRed:42/255.0 green:96/255.0 blue:152/255.0 alpha:1.0];
     //_error_notificationView_Alert.backgroundColor = [UIColor lightTextColor];
     
     
     UIButton *yesButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    yesButton.frame = CGRectMake(120, 40,50,33);
+    yesButton.frame = CGRectMake(130, 40,50,33);
     
     [yesButton setTitle:@"YES" forState:UIControlStateNormal];
 
@@ -938,7 +1017,7 @@ const int kHeaderBtn_X                  = 150;
     
     
     UIButton *noButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    noButton.frame = CGRectMake(160, 40,50,33);
+    noButton.frame = CGRectMake(170, 40,50,33);
     
     [noButton setTitle:@"NO" forState:UIControlStateNormal];
     [noButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
@@ -958,7 +1037,7 @@ const int kHeaderBtn_X                  = 150;
                         options:UIViewAnimationOptionTransitionFlipFromBottom//UIViewAnimationOptionTransitionFlipFromBottom
                      animations:^
      {
-         _error_notificationView_Alert.frame = CGRectMake(0, 475, 400, 100);
+         _error_notificationView_Alert.frame = CGRectMake(0, 520, 400, 100);
          [self.view addSubview:_error_notificationView_Alert];
      }
                      completion:nil];

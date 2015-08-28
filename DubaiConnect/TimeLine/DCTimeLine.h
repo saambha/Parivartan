@@ -16,6 +16,7 @@
 @property (nonatomic , retain) NSString *taxiTime;
 @property (nonatomic , retain) NSString *distanceFromAirport;
 @property (nonatomic , retain) NSString *weatherInfo;
+@property (nonatomic , retain) NSString *imgName;
 
 
 @end

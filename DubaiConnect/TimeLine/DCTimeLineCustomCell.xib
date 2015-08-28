@@ -22,17 +22,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="93.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dJp-ei-uWa">
-                        <rect key="frame" x="30" y="0.0" width="50" height="50"/>
-                        <animations/>
-                        <color key="backgroundColor" red="0.99215686270000003" green="0.98431372549999996" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
-                    </imageView>
                     <imageView userInteractionEnabled="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eAD-hg-15i">
                         <rect key="frame" x="52" y="50" width="6" height="44"/>
                         <animations/>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
-                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cm_separator.png" translatesAutoresizingMaskIntoConstraints="NO" id="O7D-aS-yLJ">
+                    <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dJp-ei-uWa">
+                        <rect key="frame" x="30" y="0.0" width="50" height="50"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.98431372549999996" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" tag="13" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ayo-nw-AVN">
+                        <rect key="frame" x="46" y="55" width="18" height="18"/>
+                        <animations/>
+                    </imageView>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="uber" translatesAutoresizingMaskIntoConstraints="NO" id="O7D-aS-yLJ">
                         <rect key="frame" x="60" y="92" width="378" height="1"/>
                         <animations/>
                     </imageView>
@@ -64,26 +68,22 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" tag="13" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ayo-nw-AVN">
-                        <rect key="frame" x="61" y="51" width="18" height="18"/>
+                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbd-qa-rBK">
+                        <rect key="frame" x="266" y="65" width="12" height="12"/>
                         <animations/>
-                    </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbd-qa-rBK">
-                        <rect key="frame" x="266" y="65" width="10" height="10"/>
-                        <animations/>
-                        <state key="normal" title="Button" image="Uber.jpeg">
+                        <state key="normal" title="Button" image="uber">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWI-bc-CgU">
-                        <rect key="frame" x="283" y="65" width="10" height="10"/>
+                        <rect key="frame" x="283" y="65" width="12" height="12"/>
                         <animations/>
                         <state key="normal" title="Button" image="Metro.png">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPY-B3-UTr">
-                        <rect key="frame" x="302" y="65" width="10" height="10"/>
+                        <rect key="frame" x="302" y="65" width="12" height="12"/>
                         <animations/>
                         <state key="normal" title="Button" image="Sunny.png">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -100,7 +100,6 @@
     <resources>
         <image name="Metro.png" width="10" height="11"/>
         <image name="Sunny.png" width="8" height="10"/>
-        <image name="Uber.jpeg" width="10" height="10"/>
-        <image name="cm_separator.png" width="1" height="1"/>
+        <image name="uber" width="1" height="1"/>
     </resources>
 </document>

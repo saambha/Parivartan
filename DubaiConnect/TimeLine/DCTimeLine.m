@@ -14,5 +14,6 @@
 @synthesize taxiTime;
 @synthesize distanceFromAirport;
 @synthesize weatherInfo;
+@synthesize imgName;
 
 @end
