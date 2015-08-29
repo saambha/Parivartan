@@ -23,7 +23,7 @@
 //this makes it so only two cards are loaded at a time to
 //avoid performance and memory costs
 static const int MAX_BUFFER_SIZE = 2; //%%% max number of cards loaded at any given time, must be greater than 1
-static const float CARD_HEIGHT = 360; //%%% height of the draggable card
+static const float CARD_HEIGHT = 380; //%%% height of the draggable card
 static const float CARD_WIDTH = 280; //%%% width of the draggable card
 static const float BUTTON_SIZE = 59;
 static const float BUTTON_X_BUFFER = 10;
@@ -33,6 +33,7 @@ static const float TELL_ME_LABEL = 90;
 @synthesize exampleCardLabels; //%%% all the labels I'm using as example data at the moment
 @synthesize allCards;//%%% all the cards
 @synthesize delegateCardOver;
+@synthesize exampleCardsImages;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -40,8 +41,8 @@ static const float TELL_ME_LABEL = 90;
     if (self) {
         [super layoutSubviews];
         [self setupView];
-        exampleCardLabels = [[NSArray alloc]initWithObjects:@"first flsdhlkgjdslk",  nil]; //%%% placeholder for card-specific information
-        
+        exampleCardLabels = [[NSArray alloc]initWithObjects:@"#BurjKhalifa", @"#BurjALArab", @"#DesertSafari", @"#Dolphinarium",  @"#DubaiShoppingFestival",   nil]; //%%% placeholder for card-specific information
+        exampleCardsImages = [[NSArray alloc]initWithObjects:@"burj_khalifa.jpg", @"burj-al-arab-dubai-960x640.jpg", @"silhouette-desert-safari.jpg", @"Ski-Dubai.jpg", @"DSF.jpeg",  nil];
         //@"dfdfgfdgfdgfd",@"dfdfgfdgfdgfd",@"dfdfgfdgfdgfd",@"dfdfgfdgfdgfd",@"dfdfgfdgfdgfd",
         loadedCards = [[NSMutableArray alloc] init];
         allCards = [[NSMutableArray alloc] init];
@@ -82,7 +83,7 @@ static const float TELL_ME_LABEL = 90;
 {
     DraggableView *draggableView = [[DraggableView alloc]initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT)];
     draggableView.information.text = [exampleCardLabels objectAtIndex:index]; //%%% placeholder for card-specific information
-    //draggableView.
+    draggableView.bgImageView.image = [UIImage imageNamed:[exampleCardsImages objectAtIndex:index]];
     draggableView.delegate = self;
     return draggableView;
 }

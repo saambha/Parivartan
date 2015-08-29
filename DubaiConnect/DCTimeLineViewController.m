@@ -56,6 +56,9 @@ const int kHeaderBtn_X                  = 150;
 
 @property (nonatomic , assign) int hours;
 
+@property (nonatomic , assign) int selctedTag;
+
+
 @property (nonatomic , strong) UIView *error_notificationView;
 
 @property (nonatomic , strong) UIView *error_notificationView_Alert;
@@ -80,7 +83,10 @@ const int kHeaderBtn_X                  = 150;
     
     _hours = 9;
     
-    [self setLimeLineObjects];
+    //[self setLimeLineObjects];
+    
+    DCTimeLine *obj = [[DCTimeLine alloc] init];
+    self.arr_timelineObjs = [obj setLimeLineObjects:_selctedTag];
     //Setup FaceBook
     [[DCFacebookManager getSharedInstance] getFBData];
     [DCFacebookManager getSharedInstance].fbDelegate = self;
@@ -285,7 +291,7 @@ const int kHeaderBtn_X                  = 150;
     [distanceLabel setFont:[UIFont fontWithName:@"Emirates SL" size:10.0f]];
     
 
-        [primaryLabel setTextAlignment:NSTextAlignmentLeft];
+    [primaryLabel setTextAlignment:NSTextAlignmentLeft];
      [secondaryLabel setTextAlignment:NSTextAlignmentLeft];
      [durationLabel setTextAlignment:NSTextAlignmentRight];
      [distanceLabel setTextAlignment:NSTextAlignmentRight];
@@ -297,9 +303,29 @@ const int kHeaderBtn_X                  = 150;
         [imgView_Location startAnimating];
     }
     
+    if (indexPath.row == 0 || indexPath.row == [self.arr_timelineObjs count]-1) {
+        
+        UIImageView *imgView1 = (UIImageView *)[cell.contentView viewWithTag:51];
+        UIImageView *imgView2 = (UIImageView *)[cell.contentView viewWithTag:52];
+        UIImageView *imgView3 = (UIImageView *)[cell.contentView viewWithTag:53];
+
+        secondaryLabel.hidden = YES;
+        durationLabel.hidden = YES;
+        distanceLabel.hidden = YES;
+        
+        imgView1.hidden = YES;
+        imgView2.hidden = YES;
+        imgView3.hidden = YES;
+    }
     
     
     DCTimeLine *obj = [self.arr_timelineObjs objectAtIndex:indexPath.row];
+    
+    primaryLabel.text = obj.placeName;
+    durationLabel.text =[NSString stringWithFormat:@"%li kms from the airport",(long)[obj.distanceFromAirport integerValue]];
+    secondaryLabel.text =[NSString stringWithFormat:@"%@ miles or %@ cash",obj.miles,obj.cash];
+    distanceLabel.text =obj.taxiTime;
+    
     CGRect frame2;
 
 
@@ -336,7 +362,7 @@ const int kHeaderBtn_X                  = 150;
         imgView_line.clipsToBounds = YES;
         imgView_line.layer.cornerRadius = 2;
         imgView_line.layer.borderWidth = 5;
-        imgView_line.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor colorWithRed:231/255.0 green:228/255.0 blue:223/255.0 alpha:0.3]);
+        imgView_line.layer.borderColor = (__bridge CGColorRef)([UIColor colorWithRed:231/255.0 green:228/255.0 blue:223/255.0 alpha:0.3]);
         [cell.contentView addSubview:imgView_line];
 
     }
@@ -431,19 +457,22 @@ const int kHeaderBtn_X                  = 150;
     UIImage *storyMenuItemImagePressed = [UIImage imageNamed:@"bg-menuitem-highlighted.png"];
     
     UIImage *starImage = [UIImage imageNamed:@"icon-star.png"];
-    UIImage *mapImage  = [UIImage imageNamed:@""];
+    
+    UIImage *shareImg = [UIImage imageNamed:@"Share.jpeg"];
+
+
     
     QuadCurveMenuItem *starMenuItem1 = [[QuadCurveMenuItem alloc] initWithImage:storyMenuItemImage
                                                                highlightedImage:storyMenuItemImagePressed
-                                                                   ContentImage:mapImage
+                                                                   ContentImage:starImage
                                                         highlightedContentImage:nil];
     QuadCurveMenuItem *starMenuItem2 = [[QuadCurveMenuItem alloc] initWithImage:storyMenuItemImage
                                                                highlightedImage:storyMenuItemImagePressed
                                                                    ContentImage:starImage
                                                         highlightedContentImage:nil];
-    QuadCurveMenuItem *starMenuItem3 = [[QuadCurveMenuItem alloc] initWithImage:storyMenuItemImage
-                                                               highlightedImage:storyMenuItemImagePressed
-                                                                   ContentImage:starImage
+    QuadCurveMenuItem *starMenuItem3 = [[QuadCurveMenuItem alloc] initWithImage:shareImg
+                                                               highlightedImage:shareImg
+                                                                   ContentImage:shareImg
                                                         highlightedContentImage:nil];
     QuadCurveMenuItem *starMenuItem4 = [[QuadCurveMenuItem alloc] initWithImage:storyMenuItemImage
                                                                highlightedImage:storyMenuItemImagePressed
@@ -489,14 +518,25 @@ const int kHeaderBtn_X                  = 150;
 //    
 //    [self presentViewController:dcBookingVC animated:YES completion:nil];
     _hours = _hours- 2;
+    _selctedTag--;
+    
     _lblHours.text = [NSString stringWithFormat:@"%i",_hours];
+    
+    self.myCustomBar.nameLabel.text = [NSString stringWithFormat:@"%i Hours",_hours];
+
     
     if (_hours < 9) {
         [self showErrorNotification:@"You cann't accomplish this part of your transit story with your current layover period."];
 
     }
+    else {
+        [self.arr_timelineObjs removeAllObjects];
+        self.arr_timelineObjs = nil;
+        DCTimeLine *obj =[[DCTimeLine alloc]init];
+        self.arr_timelineObjs = [obj setLimeLineObjects:_selctedTag];
+
+    }
     
-    [self setLimeLineObjects1];
     [self.tableView reloadData];
 }
 
@@ -507,9 +547,15 @@ const int kHeaderBtn_X                  = 150;
 //    [self setLimeLineObjects];
 
         _hours = _hours + 2;
-        self.myCustomBar.nameLabel.text = [NSString stringWithFormat:@"%i Hours",_hours];
+    _selctedTag++;
+    [self.arr_timelineObjs removeAllObjects];
+    self.arr_timelineObjs = nil;
+    DCTimeLine *obj =[[DCTimeLine alloc]init];
+    self.arr_timelineObjs = [obj setLimeLineObjects:_selctedTag];
     
-        [self.tableView reloadData];
+    self.myCustomBar.nameLabel.text = [NSString stringWithFormat:@"%i Hours",_hours];
+    
+    [self.tableView reloadData];
     
     //[self playVideo:@"https://www.youtube.com/watch?v=5kdcROjK3Us&spfreload=10"];
     
@@ -596,7 +642,16 @@ const int kHeaderBtn_X                  = 150;
             [self presentViewController:visaViewController animated:YES completion:nil];
             break;
         case 2:
+        {
             
+            UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Share"
+                                                                     delegate:self
+                                                            cancelButtonTitle:@"Cancel"
+                                                       destructiveButtonTitle:nil
+                                                            otherButtonTitles:@"Share via Chat", @"Share via Facebook", nil];
+            [actionSheet showInView:self.view];
+
+                                          }
             break;
         case 3:
             
@@ -918,11 +973,12 @@ const int kHeaderBtn_X                  = 150;
 
 -(void)showErrorNotification:(NSString *)Text {
     
+    [_error_notificationView removeFromSuperview];
     
     _error_notificationView =[[UIView alloc] initWithFrame:CGRectMake(0, 700, 400, 80)];
     //notificationView =[[UIView alloc] init];
     
-    UILabel *notificationLbl =[[UILabel alloc] initWithFrame:CGRectMake(30, 20,250,60)];
+    UILabel *notificationLbl =[[UILabel alloc] initWithFrame:CGRectMake(70, 20,250,60)];
     notificationLbl.numberOfLines = 0;
     [_error_notificationView addSubview:notificationLbl];
     
@@ -937,7 +993,7 @@ const int kHeaderBtn_X                  = 150;
 
     
     UIButton *yesButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    yesButton.frame = CGRectMake(280, 28,50,33);
+    yesButton.frame = CGRectMake(310, 28,50,33);
     //yesButton.titleLabel.text = @"YES";
     //yesButton.tintColor = [UIColor whiteColor];
     [yesButton setImage:[UIImage imageNamed:@"RedAlert.jpeg"] forState:UIControlStateNormal];
@@ -988,6 +1044,8 @@ const int kHeaderBtn_X                  = 150;
 }
 
 -(void)show_error_notificationViewAlert:(NSString *)text {
+    
+    [_error_notificationView_Alert removeFromSuperview];
     
     _error_notificationView_Alert =[[UIView alloc] initWithFrame:CGRectMake(0, 700, 400, 100)];
     
@@ -1055,4 +1113,30 @@ const int kHeaderBtn_X                  = 150;
     
 }
 
+
+- (void)actionSheet:(UIActionSheet *)popup clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    switch (buttonIndex) {
+        case 0: {
+            [self takeScreenshot];
+        }
+    }
+}
+
+-(void)takeScreenshot {
+    
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
+        UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, NO, [UIScreen mainScreen].scale);
+    else
+        UIGraphicsBeginImageContext(self.view.bounds.size);
+    
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    NSData * imgData = UIImagePNGRepresentation(image);
+    if(imgData)
+        [imgData writeToFile:@"screenshot.png" atomically:YES];
+    else
+        NSLog(@"error while taking screenshot");
+}
 @end

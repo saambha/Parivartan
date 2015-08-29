@@ -49,6 +49,6 @@
 @property (weak) id <DCSwipeSplashDelegate> delegateCardOver;
 @property (retain,nonatomic)NSArray* exampleCardLabels; //%%% the labels the cards
 @property (retain,nonatomic)NSMutableArray* allCards; //%%% the labels the cards
-
+@property (retain,nonatomic)NSArray* exampleCardsImages;
 
 @end

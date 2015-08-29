@@ -50,7 +50,7 @@
         
         bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(IMAGE_INSET_BUFFER, IMAGE_INSET_BUFFER, self.frame.size.width- 2*IMAGE_INSET_BUFFER, self.frame.size.height- (2*IMAGE_INSET_BUFFER + CAPTION_HEIGHT ))];
         //bgImageView.layer.contentsRect = CGRectMake(0.0, 0.0, 0.3, 0.3);
-        bgImageView.image = [UIImage imageNamed:@"burj-al-arab-dubai-960x640.jpg"];
+//        bgImageView.image = [UIImage imageNamed:@"burj-al-arab-dubai-960x640.jpg"];
         
 //#warning placeholder stuff, replace with card-specific information }
         

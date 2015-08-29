@@ -17,6 +17,10 @@
 @property (nonatomic , retain) NSString *distanceFromAirport;
 @property (nonatomic , retain) NSString *weatherInfo;
 @property (nonatomic , retain) NSString *imgName;
+@property (nonatomic , retain) NSString *miles;
+@property (nonatomic , retain) NSString *cash;
 
+
+-(NSMutableArray *)setLimeLineObjects:(int)tag;
 
 @end

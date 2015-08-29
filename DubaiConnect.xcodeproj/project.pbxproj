@@ -102,6 +102,14 @@
 		6EB22D6B1B9115BE0029E21B /* Dubai-Dolphinarium.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6EB22D581B9115BE0029E21B /* Dubai-Dolphinarium.jpg */; };
 		6EB22D6C1B9115BE0029E21B /* Airport1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB22D591B9115BE0029E21B /* Airport1.png */; };
 		6EB22D6D1B9115BE0029E21B /* Zoo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6EB22D5A1B9115BE0029E21B /* Zoo.jpeg */; };
+		6EB22D741B912E390029E21B /* Balloon over Desert 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6EB22D6E1B912E390029E21B /* Balloon over Desert 1.jpg */; };
+		6EB22D751B912E390029E21B /* silhouette-desert-safari.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6EB22D6F1B912E390029E21B /* silhouette-desert-safari.jpg */; };
+		6EB22D761B912E390029E21B /* burj_khalifa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6EB22D701B912E390029E21B /* burj_khalifa.jpg */; };
+		6EB22D771B912E390029E21B /* Ski-Dubai.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6EB22D711B912E390029E21B /* Ski-Dubai.jpg */; };
+		6EB22D781B912E390029E21B /* Desertsafari.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6EB22D721B912E390029E21B /* Desertsafari.jpg */; };
+		6EB22D791B912E390029E21B /* SkyDive_Dubai.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6EB22D731B912E390029E21B /* SkyDive_Dubai.jpg */; };
+		6EB22D7B1B9130810029E21B /* DSF.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6EB22D7A1B9130810029E21B /* DSF.jpeg */; };
+		6EB22D7D1B91323C0029E21B /* Share.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6EB22D7C1B91323C0029E21B /* Share.jpeg */; };
 		6ED5D4201B90CE8E00977FE4 /* MTBBarcodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5D41F1B90CE8E00977FE4 /* MTBBarcodeScanner.m */; };
 		6ED5D4231B90D0F600977FE4 /* DCScannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5D4221B90D0F600977FE4 /* DCScannerVC.m */; };
 		9A44208E1B903B7900C1CF9A /* DCTimeLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A44208C1B903B7800C1CF9A /* DCTimeLine.m */; };
@@ -252,6 +260,14 @@
 		6EB22D581B9115BE0029E21B /* Dubai-Dolphinarium.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Dubai-Dolphinarium.jpg"; sourceTree = "<group>"; };
 		6EB22D591B9115BE0029E21B /* Airport1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Airport1.png; sourceTree = "<group>"; };
 		6EB22D5A1B9115BE0029E21B /* Zoo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Zoo.jpeg; sourceTree = "<group>"; };
+		6EB22D6E1B912E390029E21B /* Balloon over Desert 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Balloon over Desert 1.jpg"; sourceTree = "<group>"; };
+		6EB22D6F1B912E390029E21B /* silhouette-desert-safari.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "silhouette-desert-safari.jpg"; sourceTree = "<group>"; };
+		6EB22D701B912E390029E21B /* burj_khalifa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = burj_khalifa.jpg; sourceTree = "<group>"; };
+		6EB22D711B912E390029E21B /* Ski-Dubai.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ski-Dubai.jpg"; sourceTree = "<group>"; };
+		6EB22D721B912E390029E21B /* Desertsafari.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Desertsafari.jpg; sourceTree = "<group>"; };
+		6EB22D731B912E390029E21B /* SkyDive_Dubai.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SkyDive_Dubai.jpg; sourceTree = "<group>"; };
+		6EB22D7A1B9130810029E21B /* DSF.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DSF.jpeg; sourceTree = "<group>"; };
+		6EB22D7C1B91323C0029E21B /* Share.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Share.jpeg; sourceTree = "<group>"; };
 		6ED5D41E1B90CE8E00977FE4 /* MTBBarcodeScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBBarcodeScanner.h; sourceTree = "<group>"; };
 		6ED5D41F1B90CE8E00977FE4 /* MTBBarcodeScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBBarcodeScanner.m; sourceTree = "<group>"; };
 		6ED5D4211B90D0F600977FE4 /* DCScannerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCScannerVC.h; sourceTree = "<group>"; };
@@ -410,6 +426,14 @@
 		6E451B101B88BC8C007188AB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6EB22D7C1B91323C0029E21B /* Share.jpeg */,
+				6EB22D7A1B9130810029E21B /* DSF.jpeg */,
+				6EB22D6E1B912E390029E21B /* Balloon over Desert 1.jpg */,
+				6EB22D6F1B912E390029E21B /* silhouette-desert-safari.jpg */,
+				6EB22D701B912E390029E21B /* burj_khalifa.jpg */,
+				6EB22D711B912E390029E21B /* Ski-Dubai.jpg */,
+				6EB22D721B912E390029E21B /* Desertsafari.jpg */,
+				6EB22D731B912E390029E21B /* SkyDive_Dubai.jpg */,
 				6EB22D481B9115BE0029E21B /* alarab.jpg */,
 				6EB22D491B9115BE0029E21B /* dubai13.tiff */,
 				6EB22D4A1B9115BE0029E21B /* dubai11.tiff */,
@@ -668,6 +692,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EB22D3D1B90FBDE0029E21B /* Arrow_Right2.png in Resources */,
+				6EB22D761B912E390029E21B /* burj_khalifa.jpg in Resources */,
 				6EB22D451B910AD30029E21B /* popular.png in Resources */,
 				6E4973301B90D96B00DBC922 /* Sunny.png in Resources */,
 				6E49732B1B90D96B00DBC922 /* loc2.png in Resources */,
@@ -679,16 +704,21 @@
 				6EB22D6A1B9115BE0029E21B /* Airport2.png in Resources */,
 				6EB22D641B9115BE0029E21B /* museum.jpg in Resources */,
 				6E9E9CC01B90757200EF8E01 /* Emirates SM.otf in Resources */,
+				6EB22D781B912E390029E21B /* Desertsafari.jpg in Resources */,
+				6EB22D771B912E390029E21B /* Ski-Dubai.jpg in Resources */,
 				6E451B211B88BC8C007188AB /* bg-addbutton.png in Resources */,
 				6E49732A1B90D96B00DBC922 /* loc1.jpeg in Resources */,
 				6EB22D5B1B9115BE0029E21B /* alarab.jpg in Resources */,
 				6E4973321B90D96B00DBC922 /* dayNight.gif in Resources */,
 				6EB22D431B9101930029E21B /* like_icon.png in Resources */,
 				6EB22D671B9115BE0029E21B /* dubai14.tiff in Resources */,
+				6EB22D7B1B9130810029E21B /* DSF.jpeg in Resources */,
 				6E49732E1B90D96B00DBC922 /* Plus.png in Resources */,
 				6E9E9CBE1B90757200EF8E01 /* Emirates SB.otf in Resources */,
 				6EB22D601B9115BE0029E21B /* dubai16.tiff in Resources */,
+				6EB22D7D1B91323C0029E21B /* Share.jpeg in Resources */,
 				6EB22D3C1B90FBDE0029E21B /* Arrow_Left2.png in Resources */,
+				6EB22D751B912E390029E21B /* silhouette-desert-safari.jpg in Resources */,
 				6E4E0D281B8E49F8003A3F60 /* banner_dubai_Al_Arab.jpg in Resources */,
 				6E451AFE1B88B024007188AB /* Images.xcassets in Resources */,
 				6E451B251B88BC8C007188AB /* bg-menuitem.png in Resources */,
@@ -712,6 +742,7 @@
 				6EB22D421B9101930029E21B /* facebook_Friends.png in Resources */,
 				6EB22D691B9115BE0029E21B /* ski dubai.jpg in Resources */,
 				6E451B2C1B88BC8C007188AB /* icon-star@2x.png in Resources */,
+				6EB22D791B912E390029E21B /* SkyDive_Dubai.jpg in Resources */,
 				6E451B2A1B88BC8C007188AB /* icon-plus@2x.png in Resources */,
 				6E451B261B88BC8C007188AB /* bg-menuitem@2x.png in Resources */,
 				6E451AE31B88AE4D007188AB /* Main.storyboard in Resources */,
@@ -730,6 +761,7 @@
 				6EB22D651B9115BE0029E21B /* goldSouk.jpeg in Resources */,
 				6E451B241B88BC8C007188AB /* bg-menuitem-highlighted@2x.png in Resources */,
 				6EB22D3F1B9100050029E21B /* plus1.png in Resources */,
+				6EB22D741B912E390029E21B /* Balloon over Desert 1.jpg in Resources */,
 				6EB22D6C1B9115BE0029E21B /* Airport1.png in Resources */,
 				6E451B1F1B88BC8C007188AB /* bg-addbutton-highlighted.png in Resources */,
 				6EB22D5C1B9115BE0029E21B /* dubai13.tiff in Resources */,

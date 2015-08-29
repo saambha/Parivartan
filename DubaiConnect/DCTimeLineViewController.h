@@ -12,7 +12,7 @@
 #import "DCSwipeSplashViewController.h"
 
 
-@interface DCTimeLineViewController : UIViewController <UITableViewDataSource, UITableViewDelegate,QuadCurveMenuDelegate , FbManagerDelegate>{
+@interface DCTimeLineViewController : UIViewController <UITableViewDataSource, UITableViewDelegate,QuadCurveMenuDelegate , FbManagerDelegate , UIActionSheetDelegate>{
 
 
 
