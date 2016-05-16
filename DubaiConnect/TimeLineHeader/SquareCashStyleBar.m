@@ -36,7 +36,7 @@
      _nameLabel.font = [UIFont systemFontOfSize:22.0];
     [_nameLabel setFont:[UIFont fontWithName:@"Emirates SB" size:15.0f]];
      _nameLabel.textColor = [UIColor whiteColor];
-     _nameLabel.text = @"   9 Hours    ";
+     _nameLabel.text = @"   9 Hours Transit   ";
     
      BLKFlexibleHeightBarSubviewLayoutAttributes *initialNameLabelLayoutAttributes = [[BLKFlexibleHeightBarSubviewLayoutAttributes alloc] init];
     initialNameLabelLayoutAttributes.size = [_nameLabel sizeThatFits:CGSizeZero];

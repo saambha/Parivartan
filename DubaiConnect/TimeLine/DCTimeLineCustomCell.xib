@@ -27,7 +27,7 @@
                         <animations/>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dJp-ei-uWa">
+                    <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dJp-ei-uWa">
                         <rect key="frame" x="30" y="0.0" width="50" height="50"/>
                         <animations/>
                         <color key="backgroundColor" red="0.99215686270000003" green="0.98431372549999996" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -69,7 +69,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbd-qa-rBK">
-                        <rect key="frame" x="266" y="65" width="12" height="12"/>
+                        <rect key="frame" x="265" y="65" width="14" height="12"/>
                         <animations/>
                         <state key="normal" title="Button" image="uber">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -100,6 +100,6 @@
     <resources>
         <image name="Metro.png" width="10" height="11"/>
         <image name="Sunny.png" width="8" height="10"/>
-        <image name="uber" width="1" height="1"/>
+        <image name="uber" width="302" height="75"/>
     </resources>
 </document>

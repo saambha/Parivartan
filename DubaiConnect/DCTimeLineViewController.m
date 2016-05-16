@@ -81,7 +81,8 @@ const int kHeaderBtn_X                  = 150;
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
     
-    _hours = 9;
+    _hours = 15;
+    _selctedTag = 4;
     
     //[self setLimeLineObjects];
     
@@ -272,7 +273,7 @@ const int kHeaderBtn_X                  = 150;
 
     
     UIImageView *imgView_Place = (UIImageView *)[cell.contentView viewWithTag:11];
-    imgView_Place.image = [UIImage imageNamed:@"dubai_icon"];
+    //imgView_Place.image = [UIImage imageNamed:@"dubai_icon"];
     imgView_Place.contentMode = UIViewContentModeScaleAspectFill;
     imgView_Place.clipsToBounds = YES;
     imgView_Place.layer.cornerRadius = 25.0;
@@ -325,6 +326,8 @@ const int kHeaderBtn_X                  = 150;
     durationLabel.text =[NSString stringWithFormat:@"%li kms from the airport",(long)[obj.distanceFromAirport integerValue]];
     secondaryLabel.text =[NSString stringWithFormat:@"%@ miles or %@ cash",obj.miles,obj.cash];
     distanceLabel.text =obj.taxiTime;
+    
+    imgView_Place.image = [UIImage imageNamed:obj.imgName];
     
     CGRect frame2;
 
@@ -458,25 +461,26 @@ const int kHeaderBtn_X                  = 150;
     
     UIImage *starImage = [UIImage imageNamed:@"icon-star.png"];
     
-    UIImage *shareImg = [UIImage imageNamed:@"Share.jpeg"];
-
-
+    UIImage *shareImg = [UIImage imageNamed:@"Share"];
+    UIImage *mapIcon = [UIImage imageNamed:@"map-icon-compass"];
+    UIImage *passportIcn = [UIImage imageNamed:@"passport"];
+    UIImage *settings = [UIImage imageNamed:@"settings"];
     
     QuadCurveMenuItem *starMenuItem1 = [[QuadCurveMenuItem alloc] initWithImage:storyMenuItemImage
                                                                highlightedImage:storyMenuItemImagePressed
-                                                                   ContentImage:starImage
+                                                                   ContentImage:mapIcon
                                                         highlightedContentImage:nil];
     QuadCurveMenuItem *starMenuItem2 = [[QuadCurveMenuItem alloc] initWithImage:storyMenuItemImage
                                                                highlightedImage:storyMenuItemImagePressed
-                                                                   ContentImage:starImage
+                                                                   ContentImage:passportIcn
                                                         highlightedContentImage:nil];
-    QuadCurveMenuItem *starMenuItem3 = [[QuadCurveMenuItem alloc] initWithImage:shareImg
-                                                               highlightedImage:shareImg
+    QuadCurveMenuItem *starMenuItem3 = [[QuadCurveMenuItem alloc] initWithImage:storyMenuItemImagePressed
+                                                               highlightedImage:storyMenuItemImagePressed
                                                                    ContentImage:shareImg
                                                         highlightedContentImage:nil];
     QuadCurveMenuItem *starMenuItem4 = [[QuadCurveMenuItem alloc] initWithImage:storyMenuItemImage
                                                                highlightedImage:storyMenuItemImagePressed
-                                                                   ContentImage:starImage
+                                                                   ContentImage:settings
                                                         highlightedContentImage:nil];
 //    QuadCurveMenuItem *starMenuItem5 = [[QuadCurveMenuItem alloc] initWithImage:storyMenuItemImage
 //                                                               highlightedImage:storyMenuItemImagePressed
@@ -522,7 +526,7 @@ const int kHeaderBtn_X                  = 150;
     
     _lblHours.text = [NSString stringWithFormat:@"%i",_hours];
     
-    self.myCustomBar.nameLabel.text = [NSString stringWithFormat:@"%i Hours",_hours];
+    self.myCustomBar.nameLabel.text = [NSString stringWithFormat:@"%i Hours Transit",_hours];
 
     
     if (_hours < 9) {

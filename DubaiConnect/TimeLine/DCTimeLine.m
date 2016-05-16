@@ -40,7 +40,7 @@
     obj_TimeLine1.taxiTime = @"3 hours";
     obj_TimeLine1.distanceFromAirport = @"15";
     obj_TimeLine1.weatherInfo =@"30";
-    obj_TimeLine1.imgName =@"khalifa.jpg";
+    obj_TimeLine1.imgName =@"burj_khalifa.jpg";
     obj_TimeLine1.miles = @"4000";
     obj_TimeLine1.cash = @"300";
     
@@ -52,7 +52,7 @@
     obj_TimeLine2.taxiTime = @"2 hours";
     obj_TimeLine2.distanceFromAirport = @"4";
     obj_TimeLine2.weatherInfo =@"30";
-    obj_TimeLine2.imgName = @"alarab.jpg";
+    obj_TimeLine2.imgName = @"burj-al-arab-dubai-960x640.jpg";
     obj_TimeLine2.miles = @"3000";
     obj_TimeLine2.cash = @"200";
 
@@ -64,7 +64,7 @@
     obj_TimeLine5.taxiTime = @"3 hours";
     obj_TimeLine5.distanceFromAirport = @"6";
     obj_TimeLine5.weatherInfo =@"30";
-    obj_TimeLine5.imgName = @"ski dubai.jpg";
+    obj_TimeLine5.imgName = @"Ski-Dubai.jpg";
     obj_TimeLine5.miles = @"6000";
     obj_TimeLine5.cash = @"500";
 
@@ -76,7 +76,7 @@
     obj_TimeLine6.taxiTime = @"3 hours";
     obj_TimeLine6.distanceFromAirport = @"12";
     obj_TimeLine6.weatherInfo =@"30";
-    obj_TimeLine6.imgName = @"museum.jpg";
+    obj_TimeLine6.imgName = @"DSF.jpeg";
     obj_TimeLine6.miles = @"8000";
     obj_TimeLine6.cash = @"700";
 
@@ -88,7 +88,7 @@
     obj_TimeLine7.taxiTime = @"3 hours";
     obj_TimeLine7.distanceFromAirport = @"10";
     obj_TimeLine7.weatherInfo =@"30";
-    obj_TimeLine7.imgName = @"wild wadi.jpg";
+    obj_TimeLine7.imgName = @"dubai_icon.png";
     obj_TimeLine7.miles = @"2000";
     obj_TimeLine7.cash = @"150";
 
@@ -100,7 +100,7 @@
     obj_TimeLine8.taxiTime = @"3 hours";
     obj_TimeLine8.distanceFromAirport = @"8";
     obj_TimeLine8.weatherInfo =@"30";
-    obj_TimeLine8.imgName = @"kids-beach.jpg";
+    obj_TimeLine8.imgName = @"Balloon over Desert 1.jpg";
     obj_TimeLine8.miles = @"3000";
     obj_TimeLine8.cash = @"100";
 
@@ -112,7 +112,7 @@
     obj_TimeLine9.taxiTime = @"2 hours";
     obj_TimeLine9.distanceFromAirport = @"5";
     obj_TimeLine9.weatherInfo =@"30";
-    obj_TimeLine9.imgName = @"Zoo.jpeg";
+    obj_TimeLine9.imgName = @"dubai_icon.png";
     obj_TimeLine9.miles = @"3000";
     obj_TimeLine9.cash = @"100";
 
@@ -124,7 +124,7 @@
     obj_TimeLine10.taxiTime = @"2 hours";
     obj_TimeLine10.distanceFromAirport = @"6";
     obj_TimeLine10.weatherInfo =@"30";
-    obj_TimeLine10.imgName = @"kids-beach.jpg";
+    obj_TimeLine10.imgName = @"Ski-Dubai.jpg";
     obj_TimeLine10.miles = @"3000";
     obj_TimeLine10.cash = @"150";
 
@@ -136,7 +136,7 @@
     obj_TimeLine3.taxiTime = @"2 hours";
     obj_TimeLine3.distanceFromAirport = @"11";
     obj_TimeLine3.weatherInfo =@"30";
-    obj_TimeLine3.imgName = @"museum.jpg";
+    obj_TimeLine3.imgName = @"silhouette-desert-safari.jpg";
     obj_TimeLine3.miles = @"2000";
     obj_TimeLine3.cash = @"100";
 

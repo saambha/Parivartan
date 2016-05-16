@@ -7,6 +7,7 @@
 //
 
 #import "MapViewController.h"
+#import "ChatViewController.h"
 
 @interface MapViewController ()<LLLocusLabsDelegate, LLPersonLoaderDelegate>
 
@@ -23,6 +24,8 @@
 @property (strong, nonatomic) LLPOIDatabase *poiDatabase;
 @property (strong, nonatomic) LLPosition *startPosition;
 @property (strong, nonatomic) LLPosition *endPosition;
+@property (strong, nonatomic) NSArray *arr;
+@property (strong, nonatomic) NSArray *arrImg;
 
 @end
 
@@ -45,6 +48,8 @@
     self.locusLabs = [LLLocusLabs setup];
     self.locusLabs.accountId = @"A1692MM1LCG720"; //@"A11T21TUXQMY27";
     self.locusLabs.delegate = self;
+    _arr = [[NSArray alloc]initWithObjects:@"iGadget",@"Anoop's iPhone" ,nil];
+    _arrImg = [[NSArray alloc]initWithObjects:@"dubai12.tiff",@"dubai14.tiff" ,nil];
     // Create a new LLAirportDatabase object: our top-level entry point into the LocusLabs SDK functionality.
     // Set its delegate: asynchronous calls to LLAirportDatabase are fielded by delegate methods.
     // Initiate a request for the list of airports (to be processed later by LLAirportDatabaseDelegate.airportList)
@@ -70,7 +75,8 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    
+    cell.textLabel.text = [_arr objectAtIndex:indexPath.row];
+    cell.imageView.image = [UIImage imageNamed:[_arrImg objectAtIndex:indexPath.row]];
     return cell;
 }
 - (IBAction)backBtnClicked:(id)sender {
@@ -78,12 +84,20 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    UIStoryboard *storyboard = self.storyboard;
+    ChatViewController *chat = [storyboard instantiateViewControllerWithIdentifier:@"ChatViewController"];
+    chat.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    chat.nameLbl =  [[UILabel alloc]init];
+    chat.nameLbl.text = [_arr objectAtIndex:indexPath.row];
+    [_arr objectAtIndex:indexPath.row];
+    // Configure the new view controller here.
+    [self presentViewController:chat animated:YES completion:nil];
+
     
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 100;
+    return [_arr count];
 }
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
