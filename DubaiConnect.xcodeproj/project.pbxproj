@@ -48,7 +48,6 @@
 		6E4973311B90D96B00DBC922 /* Uber.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6E49731D1B90D96B00DBC922 /* Uber.jpeg */; };
 		6E4973321B90D96B00DBC922 /* dayNight.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6E49731E1B90D96B00DBC922 /* dayNight.gif */; };
 		6E4973331B90D96B00DBC922 /* dubai11.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6E49731F1B90D96B00DBC922 /* dubai11.gif */; };
-		6E4973341B90D96B00DBC922 /* walk.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4973201B90D96B00DBC922 /* walk.png */; };
 		6E4E0CE11B8B9A23003A3F60 /* SquareCashStyleBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0CE01B8B9A23003A3F60 /* SquareCashStyleBar.m */; };
 		6E4E0CF11B8B9A5E003A3F60 /* BLKDelegateSplitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0CE41B8B9A5E003A3F60 /* BLKDelegateSplitter.m */; };
 		6E4E0CF21B8B9A5E003A3F60 /* BLKFlexibleHeightBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4E0CE61B8B9A5E003A3F60 /* BLKFlexibleHeightBar.m */; };
@@ -186,7 +185,6 @@
 		6E49731D1B90D96B00DBC922 /* Uber.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Uber.jpeg; sourceTree = "<group>"; };
 		6E49731E1B90D96B00DBC922 /* dayNight.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dayNight.gif; sourceTree = "<group>"; };
 		6E49731F1B90D96B00DBC922 /* dubai11.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dubai11.gif; sourceTree = "<group>"; };
-		6E4973201B90D96B00DBC922 /* walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walk.png; sourceTree = "<group>"; };
 		6E4E0CDF1B8B9A23003A3F60 /* SquareCashStyleBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareCashStyleBar.h; sourceTree = "<group>"; };
 		6E4E0CE01B8B9A23003A3F60 /* SquareCashStyleBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareCashStyleBar.m; sourceTree = "<group>"; };
 		6E4E0CE31B8B9A5E003A3F60 /* BLKDelegateSplitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLKDelegateSplitter.h; sourceTree = "<group>"; };
@@ -473,7 +471,6 @@
 				6E49731D1B90D96B00DBC922 /* Uber.jpeg */,
 				6E49731E1B90D96B00DBC922 /* dayNight.gif */,
 				6E49731F1B90D96B00DBC922 /* dubai11.gif */,
-				6E4973201B90D96B00DBC922 /* walk.png */,
 				6E4E0D291B8E4CBE003A3F60 /* Burj_Al_Arab400*300.jpg */,
 				9A4420901B903D0C00C1CF9A /* Dubai.jpg */,
 				9A4420911B903D0C00C1CF9A /* khalifa.jpg */,
@@ -733,7 +730,6 @@
 				6E451B291B88BC8C007188AB /* icon-plus.png in Resources */,
 				6EB22D631B9115BE0029E21B /* dubai15.tiff in Resources */,
 				6E49732C1B90D96B00DBC922 /* Metro.png in Resources */,
-				6E4973341B90D96B00DBC922 /* walk.png in Resources */,
 				6EB22D6D1B9115BE0029E21B /* Zoo.jpeg in Resources */,
 				6E451B271B88BC8C007188AB /* icon-plus-highlighted.png in Resources */,
 				6E4E0D2B1B8E4CBE003A3F60 /* Burj_Al_Arab400*300.jpg in Resources */,
