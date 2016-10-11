@@ -121,6 +121,7 @@
 		9AD5D6771B8B5BAC00DD10DC /* Facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AD5D6761B8B5BAC00DD10DC /* Facebook.png */; };
 		9AD5D67E1B8B5C1C00DD10DC /* DCFacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5D67A1B8B5C1C00DD10DC /* DCFacebookManager.m */; };
 		9AD5D67F1B8B5C1C00DD10DC /* ServiceCallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5D67D1B8B5C1C00DD10DC /* ServiceCallManager.m */; };
+		D21AD11B1DAD79DD00BD1EE0 /* walk.png in Resources */ = {isa = PBXBuildFile; fileRef = D21AD11A1DAD79DD00BD1EE0 /* walk.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -284,6 +285,7 @@
 		9AD5D67A1B8B5C1C00DD10DC /* DCFacebookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFacebookManager.m; sourceTree = "<group>"; };
 		9AD5D67C1B8B5C1C00DD10DC /* ServiceCallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCallManager.h; sourceTree = "<group>"; };
 		9AD5D67D1B8B5C1C00DD10DC /* ServiceCallManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCallManager.m; sourceTree = "<group>"; };
+		D21AD11A1DAD79DD00BD1EE0 /* walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = walk.png; path = DubaiConnect/Images/walk.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +322,7 @@
 		6E451AC81B88AE4D007188AB = {
 			isa = PBXGroup;
 			children = (
+				D21AD11A1DAD79DD00BD1EE0 /* walk.png */,
 				9AD5D6721B8B5ADB00DD10DC /* FBSDKCoreKit.framework */,
 				9AD5D6731B8B5ADB00DD10DC /* FBSDKLoginKit.framework */,
 				6E451B0E1B88B7D2007188AB /* QuartzCore.framework */,
@@ -689,6 +692,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D21AD11B1DAD79DD00BD1EE0 /* walk.png in Resources */,
 				6EB22D3D1B90FBDE0029E21B /* Arrow_Right2.png in Resources */,
 				6EB22D761B912E390029E21B /* burj_khalifa.jpg in Resources */,
 				6EB22D451B910AD30029E21B /* popular.png in Resources */,
