@@ -285,7 +285,7 @@
 		9AD5D67A1B8B5C1C00DD10DC /* DCFacebookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFacebookManager.m; sourceTree = "<group>"; };
 		9AD5D67C1B8B5C1C00DD10DC /* ServiceCallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCallManager.h; sourceTree = "<group>"; };
 		9AD5D67D1B8B5C1C00DD10DC /* ServiceCallManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCallManager.m; sourceTree = "<group>"; };
-		D21AD11A1DAD79DD00BD1EE0 /* walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = walk.png; path = DubaiConnect/Images/walk.png; sourceTree = "<group>"; };
+		D21AD11A1DAD79DD00BD1EE0 /* walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walk.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,7 +322,6 @@
 		6E451AC81B88AE4D007188AB = {
 			isa = PBXGroup;
 			children = (
-				D21AD11A1DAD79DD00BD1EE0 /* walk.png */,
 				9AD5D6721B8B5ADB00DD10DC /* FBSDKCoreKit.framework */,
 				9AD5D6731B8B5ADB00DD10DC /* FBSDKLoginKit.framework */,
 				6E451B0E1B88B7D2007188AB /* QuartzCore.framework */,
@@ -427,6 +426,7 @@
 		6E451B101B88BC8C007188AB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D21AD11A1DAD79DD00BD1EE0 /* walk.png */,
 				6EB22D7C1B91323C0029E21B /* Share.jpeg */,
 				6EB22D7A1B9130810029E21B /* DSF.jpeg */,
 				6EB22D6E1B912E390029E21B /* Balloon over Desert 1.jpg */,
