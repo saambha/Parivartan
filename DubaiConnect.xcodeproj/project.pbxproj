@@ -879,7 +879,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Emirates Airlines";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Emirates Airlines";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -922,7 +923,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Emirates Airlines";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Emirates Airlines";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -958,10 +960,10 @@
 				INFOPLIST_FILE = DubaiConnect/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emirates.ipad.ekapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emirates.enterprise.EKiPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "46233d6b-1970-4847-80ca-9908af51b846";
-				PROVISIONING_PROFILE_SPECIFIER = "Emirates App Distribution Profile";
+				PROVISIONING_PROFILE = "e1085c78-33f0-4a56-9b50-aa08482bb3f5";
+				PROVISIONING_PROFILE_SPECIFIER = "Emirates iPhone App Enterprise";
 			};
 			name = Debug;
 		};
@@ -981,10 +983,10 @@
 				INFOPLIST_FILE = DubaiConnect/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emirates.ipad.ekapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emirates.enterprise.EKiPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "46233d6b-1970-4847-80ca-9908af51b846";
-				PROVISIONING_PROFILE_SPECIFIER = "Emirates App Distribution Profile";
+				PROVISIONING_PROFILE = "e1085c78-33f0-4a56-9b50-aa08482bb3f5";
+				PROVISIONING_PROFILE_SPECIFIER = "Emirates iPhone App Enterprise";
 			};
 			name = Release;
 		};
