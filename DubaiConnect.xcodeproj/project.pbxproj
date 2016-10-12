@@ -661,6 +661,7 @@
 					6E451AD01B88AE4D007188AB = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 747Z352EUZ;
+						ProvisioningStyle = Automatic;
 					};
 					6E451AEC1B88AE4D007188AB = {
 						CreatedOnToolsVersion = 6.4;
@@ -949,7 +950,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Emirates Airlines";
-				DEVELOPMENT_TEAM = 747Z352EUZ;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -962,8 +964,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.emirates.enterprise.EKiPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e1085c78-33f0-4a56-9b50-aa08482bb3f5";
-				PROVISIONING_PROFILE_SPECIFIER = "Emirates iPhone App Enterprise";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -972,7 +974,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Emirates Airlines";
-				DEVELOPMENT_TEAM = 747Z352EUZ;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -985,8 +988,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.emirates.enterprise.EKiPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e1085c78-33f0-4a56-9b50-aa08482bb3f5";
-				PROVISIONING_PROFILE_SPECIFIER = "Emirates iPhone App Enterprise";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
